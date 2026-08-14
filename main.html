@@ -5,151 +5,377 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA Master Tracker | Prepared by Devesh Tiwari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
+        :root {
+            --bg: #F7F8FA;
+            --surface: #FFFFFF;
+            --border: #E4E7EC;
+            --ink: #0F1420;
+            --ink-2: #4B5565;
+            --ink-3: #8A94A6;
+            --accent: #1D4ED8;
+            --accent-soft: #EEF2FF;
+            --success: #15803D;
+            --streak: #C2410C;
+            --code-bg: #0F172A;
+            --code-header-text: #94A3B8;
+            --code-text: #E2E8F0;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f8fafc;
-            color: #334155;
+            font-family: var(--font-sans);
+            background-color: var(--bg);
+            color: var(--ink-2);
             line-height: 1.6;
             margin: 0;
-            padding: 40px 20px;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 48px 20px 100px;
         }
 
         header {
-            text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
+        }
+
+        .eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 0 10px;
         }
 
         header h1 {
-            color: #0f172a;
-            margin-bottom: 10px;
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            margin: 0 0 10px;
         }
 
-        .progress-container {
-            background: #e2e8f0;
+        header .tagline {
+            margin: 0 0 24px;
+            max-width: 560px;
+            font-size: 0.98rem;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            min-width: 140px;
+            flex: 1 1 160px;
+        }
+
+        .stat-card .stat-label {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--ink-3);
+            margin-bottom: 6px;
+        }
+
+        .stat-card .stat-value {
+            font-family: var(--font-mono);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .stat-card.streak .stat-value {
+            color: var(--streak);
+        }
+
+        .stat-card.progress .progress-container {
+            background: var(--border);
             border-radius: 999px;
-            height: 12px;
-            margin: 20px auto 40px auto;
-            max-width: 400px;
+            height: 8px;
             overflow: hidden;
+            margin-top: 10px;
         }
 
         #progress-bar {
-            background: #2563eb;
+            background: var(--accent);
             height: 100%;
             width: 0%;
             transition: width 0.3s ease;
         }
 
-        #progress-text {
-            text-align: center;
-            font-weight: bold;
-            color: #475569;
+        .controls-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #search-input {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            color: var(--ink);
+            flex: 1 1 240px;
+            min-width: 200px;
+        }
+
+        .btn-ghost {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            color: var(--ink-2);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: border-color 150ms, color 150ms;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        #no-results {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--ink-3);
+            margin: 10px 0 0;
         }
 
         .topic-section {
-            background: white;
-            border-radius: 12px;
-            padding: 20px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 0;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 2px rgba(16, 20, 32, 0.04);
+            overflow: hidden;
         }
 
         .topic-title {
-            color: #1e293b;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 10px;
-            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--ink);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 22px;
+            margin: 0;
+            cursor: pointer;
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .topic-section.collapsed .topic-title {
+            border-bottom: none;
+        }
+
+        .topic-title:hover {
+            background: var(--bg);
+        }
+
+        .topic-title .topic-progress {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--ink-3);
+            margin-left: auto;
+        }
+
+        .topic-title .chevron {
+            font-size: 0.9rem;
+            color: var(--ink-3);
+            transition: transform 200ms ease;
+        }
+
+        .topic-section.collapsed .topic-title .chevron {
+            transform: rotate(-90deg);
         }
 
         .problem-row {
             display: flex;
             align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .problem-row:last-child {
-            border-bottom: none;
+            gap: 14px;
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
         }
 
         .custom-checkbox {
-            width: 24px;
-            height: 24px;
-            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            margin: 0;
             cursor: pointer;
-            accent-color: #10b981;
+            accent-color: var(--success);
+            flex-shrink: 0;
         }
 
         .problem-info {
             flex-grow: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .problem-name {
-            font-size: 1.1em;
+            font-family: var(--font-sans);
+            font-size: 1rem;
             font-weight: 600;
-            color: #2563eb;
+            color: var(--ink);
             cursor: pointer;
             background: none;
             border: none;
             padding: 0;
             text-align: left;
+            transition: color 150ms;
         }
 
         .problem-name:hover {
-            text-decoration: underline;
+            color: var(--accent);
         }
 
         .solution-section {
             display: none;
-            background: #f8fafc;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 15px;
-            border-left: 4px solid #3b82f6;
+            background: var(--bg);
+            border-radius: 0;
+            padding: 20px 22px 24px;
+            margin: 0;
+            border-top: 1px solid var(--border);
         }
 
         .solution-section.active {
             display: block;
+            animation: fadeIn 200ms ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .solution-section.active {
+                animation: none;
+            }
+        }
+
+        .solution-section h3 {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+            color: var(--ink-3);
+            margin: 16px 0 8px;
+        }
+
+        .solution-section h3:first-child {
+            margin-top: 0;
         }
 
         .explanation {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            border: 1px solid #e2e8f0;
+            background: var(--surface);
+            padding: 14px 16px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-bottom: 4px;
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            font-size: 0.92rem;
         }
 
         .code-block {
-            background: #1e293b;
-            color: #e2e8f0;
-            padding: 15px;
-            border-radius: 6px;
-            font-family: monospace;
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.83rem;
+            line-height: 1.6;
             overflow-x: auto;
-            margin-bottom: 15px;
+            margin: 0 0 4px;
         }
 
         .tag {
-            font-size: 0.8em;
-            padding: 3px 8px;
-            border-radius: 4px;
-            background: #dbeafe;
-            color: #1e40af;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
             text-decoration: none;
+            transition: background 150ms, color 150ms;
+        }
+
+        .tag:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .hidden-by-search {
+            display: none !important;
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #64748b;
+            margin-top: 40px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--ink-3);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .stat-card {
+                flex: 1 1 45%;
+            }
         }
     </style>
 </head>
@@ -157,12 +383,36 @@
 <body>
     <div class="container">
         <header>
-            <h1>DSA Preparation Tracker</h1>
-            <p>Master the core patterns. Read the explanations, review the code, and track your progress.</p>
-            <div id="progress-text">0 / 50 Completed</div>
-            <div class="progress-container">
-                <div id="progress-bar"></div>
+            <p class="eyebrow">DSA Preparation</p>
+            <h1>DSA Master Tracker</h1>
+            <p class="tagline">Master the core patterns. Read the explanations, review the code, and track your progress
+                — one problem at a time.</p>
+
+            <div class="stats-row">
+                <div class="stat-card progress">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value" id="progress-text">0 / 0</span>
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="stat-card streak">
+                    <span class="stat-label">Current Streak</span>
+                    <span class="stat-value" id="streak-current">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Best Streak</span>
+                    <span class="stat-value" id="streak-best">0</span>
+                </div>
             </div>
+
+            <div class="controls-row">
+                <input type="text" id="search-input" placeholder="Search a problem by name…"
+                    aria-label="Search problems">
+                <button class="btn-ghost" id="expand-all" type="button">Expand all</button>
+                <button class="btn-ghost" id="collapse-all" type="button">Collapse all</button>
+            </div>
+            <p id="no-results" style="display:none;">No problems match your search.</p>
         </header>
 
         <!-- TOPIC 1: ARRAYS & HASHING -->
@@ -1666,57 +1916,112 @@
                     <a href="https://leetcode.com/problems/number-of-provinstances/" target="_blank"
                         class="tag">LeetCode</a>
                 </div>
-           
-            <div id="sol-95" class="solution-section">
-                <h3>Explanation</h3>
-                <div class="explanation">Write logic here...</div>
-                <h3>Python</h3>
-                <pre class="code-block"><code># Code here...</code></pre>
-            </div>
-        </div>
 
-        <!-- TOPIC 20: TOPOLOGICAL SORT -->
+                <div id="sol-95" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+            </div>
+
+            <!-- TOPIC 20: TOPOLOGICAL SORT -->
+            <div class="topic-section">
+                <h2 class="topic-title">20. Topological Sort</h2>
+
+                <div class="problem-row">
+                    <input type="checkbox" class="custom-checkbox progress-cb" id="prob-96">
+                    <div class="problem-info">
+                        <button class="problem-name" onclick="toggleSolution('sol-96')">96. Course Schedule II</button>
+                        <a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank"
+                            class="tag">LeetCode</a>
+                    </div>
+                </div>
+                <div id="sol-96" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+
+                <div class="problem-row">
+                    <input type="checkbox" class="custom-checkbox progress-cb" id="prob-97">
+                    <div class="problem-info">
+                        <button class="problem-name" onclick="toggleSolution('sol-97')">97. Alien Dictionary
+                            (LintCode)</button>
+                        <a href="https://www.lintcode.com/problem/892/" target="_blank" class="tag">LintCode</a>
+                    </div>
+                </div>
+                <div id="sol-97" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+
+                <div class="problem-row">
+                    <input type="checkbox" class="custom-checkbox progress-cb" id="prob-98">
+                    <div class="problem-info">
+                        <button class="problem-name" onclick="toggleSolution('sol-98')">98. Minimum Height
+                            Trees</button>
+                        <a href="https://leetcode.com/problems/minimum-height-trees/" target="_blank"
+                            class="tag">LeetCode</a>
+                    </div>
+                </div>
+                <div id="sol-98" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+
+                <div class="problem-row">
+                    <input type="checkbox" class="custom-checkbox progress-cb" id="prob-99">
+                    <div class="problem-info">
+                        <button class="problem-name" onclick="toggleSolution('sol-99')">99. Find Eventual Safe
+                            States</button>
+                        <a href="https://leetcode.com/problems/find-eventual-safe-states/" target="_blank"
+                            class="tag">LeetCode</a>
+                    </div>
+                </div>
+                <div id="sol-99" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+
+                <div class="problem-row">
+                    <input type="checkbox" class="custom-checkbox progress-cb" id="prob-100">
+                    <div class="problem-info">
+                        <button class="problem-name" onclick="toggleSolution('sol-100')">100. Sequence Reconstruction
+                            (LintCode)</button>
+                        <a href="https://www.lintcode.com/problem/605/" target="_blank" class="tag">LintCode</a>
+                    </div>
+                </div>
+                <div id="sol-100" class="solution-section">
+                    <h3>Explanation</h3>
+                    <div class="explanation">Write logic here...</div>
+                    <h3>Python</h3>
+                    <pre class="code-block"><code># Code here...</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <!-- TOPIC 21: PREFIX SUM -->
         <div class="topic-section">
-            <h2 class="topic-title">20. Topological Sort</h2>
+            <h2 class="topic-title">21. Prefix Sum</h2>
 
             <div class="problem-row">
-                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-96">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-101">
                 <div class="problem-info">
-                    <button class="problem-name" onclick="toggleSolution('sol-96')">96. Course Schedule II</button>
-                    <a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank" class="tag">LeetCode</a>
-                </div>
-            </div>
-            <div id="sol-96" class="solution-section">
-                <h3>Explanation</h3>
-                <div class="explanation">Write logic here...</div>
-                <h3>Python</h3>
-                <pre class="code-block"><code># Code here...</code></pre>
-            </div>
-
-            <div class="problem-row">
-                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-97">
-                <div class="problem-info">
-                    <button class="problem-name" onclick="toggleSolution('sol-97')">97. Alien Dictionary
-                        (LintCode)</button>
-                    <a href="https://www.lintcode.com/problem/892/" target="_blank" class="tag">LintCode</a>
-                </div>
-            </div>
-            <div id="sol-97" class="solution-section">
-                <h3>Explanation</h3>
-                <div class="explanation">Write logic here...</div>
-                <h3>Python</h3>
-                <pre class="code-block"><code># Code here...</code></pre>
-            </div>
-
-            <div class="problem-row">
-                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-98">
-                <div class="problem-info">
-                    <button class="problem-name" onclick="toggleSolution('sol-98')">98. Minimum Height Trees</button>
-                    <a href="https://leetcode.com/problems/minimum-height-trees/" target="_blank"
+                    <button class="problem-name" onclick="toggleSolution('sol-101')">101. Range Sum Query -
+                        Immutable</button>
+                    <a href="https://leetcode.com/problems/range-sum-query-immutable/" target="_blank"
                         class="tag">LeetCode</a>
                 </div>
             </div>
-            <div id="sol-98" class="solution-section">
+            <div id="sol-101" class="solution-section">
                 <h3>Explanation</h3>
                 <div class="explanation">Write logic here...</div>
                 <h3>Python</h3>
@@ -1724,15 +2029,14 @@
             </div>
 
             <div class="problem-row">
-                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-99">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-102">
                 <div class="problem-info">
-                    <button class="problem-name" onclick="toggleSolution('sol-99')">99. Find Eventual Safe
-                        States</button>
-                    <a href="https://leetcode.com/problems/find-eventual-safe-states/" target="_blank"
+                    <button class="problem-name" onclick="toggleSolution('sol-102')">102. Subarray Sum Equals K</button>
+                    <a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank"
                         class="tag">LeetCode</a>
                 </div>
             </div>
-            <div id="sol-99" class="solution-section">
+            <div id="sol-102" class="solution-section">
                 <h3>Explanation</h3>
                 <div class="explanation">Write logic here...</div>
                 <h3>Python</h3>
@@ -1740,14 +2044,43 @@
             </div>
 
             <div class="problem-row">
-                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-100">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-103">
                 <div class="problem-info">
-                    <button class="problem-name" onclick="toggleSolution('sol-100')">100. Sequence Reconstruction
-                        (LintCode)</button>
-                    <a href="https://www.lintcode.com/problem/605/" target="_blank" class="tag">LintCode</a>
+                    <button class="problem-name" onclick="toggleSolution('sol-103')">103. Find Pivot Index</button>
+                    <a href="https://leetcode.com/problems/find-pivot-index/" target="_blank" class="tag">LeetCode</a>
                 </div>
             </div>
-            <div id="sol-100" class="solution-section">
+            <div id="sol-103" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-104">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-104')">104. Contiguous Array</button>
+                    <a href="https://leetcode.com/problems/contiguous-array/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-104" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-105">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-105')">105. Product of Array Except
+                        Self</button>
+                    <a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-105" class="solution-section">
                 <h3>Explanation</h3>
                 <div class="explanation">Write logic here...</div>
                 <h3>Python</h3>
@@ -1755,1218 +2088,1332 @@
             </div>
         </div>
 
-    </div>
-    <!-- TOPIC 21: PREFIX SUM -->
-    <div class="topic-section">
-        <h2 class="topic-title">21. Prefix Sum</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-101">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-101')">101. Range Sum Query -
-                    Immutable</button>
-                <a href="https://leetcode.com/problems/range-sum-query-immutable/" target="_blank"
-                    class="tag">LeetCode</a>
+        <!-- TOPIC 22: STRING MANIPULATION -->
+        <div class="topic-section">
+            <h2 class="topic-title">22. String Manipulation</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-106">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-106')">106. Palindromic
+                        Substrings</button>
+                    <a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-106" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-107">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-107')">107. Decode String</button>
+                    <a href="https://leetcode.com/problems/decode-string/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-107" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-108">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-108')">108. Find All Anagrams in a
+                        String</button>
+                    <a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-108" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-109">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-109')">109. Longest Common Prefix</button>
+                    <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-109" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-110">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-110')">110. Isomorphic Strings</button>
+                    <a href="https://leetcode.com/problems/isomorphic-strings/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-110" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 23: DESIGN -->
+        <div class="topic-section">
+            <h2 class="topic-title">23. Design</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-111">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-111')">111. LRU Cache</button>
+                    <a href="https://leetcode.com/problems/lru-cache/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-111" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-112">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-112')">112. Design Twitter</button>
+                    <a href="https://leetcode.com/problems/design-twitter/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-112" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-113">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-113')">113. Insert Delete GetRandom
+                        O(1)</button>
+                    <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-113" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-114">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-114')">114. Design Underground
+                        System</button>
+                    <a href="https://leetcode.com/problems/design-underground-system/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-114" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-115">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-115')">115. Time Based Key-Value
+                        Store</button>
+                    <a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-115" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 24: MATRIX / 2D ARRAYS -->
+        <div class="topic-section">
+            <h2 class="topic-title">24. Matrix</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-116">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-116')">116. Valid Sudoku</button>
+                    <a href="https://leetcode.com/problems/valid-sudoku/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-116" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-117">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-117')">117. Game of Life</button>
+                    <a href="https://leetcode.com/problems/game-of-life/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-117" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-118">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-118')">118. Maximal Square</button>
+                    <a href="https://leetcode.com/problems/maximal-square/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-118" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-119">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-119')">119. Surrounded Regions</button>
+                    <a href="https://leetcode.com/problems/surrounded-regions/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-119" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-120">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-120')">120. Set Matrix Zeroes</button>
+                    <a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-120" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 25: MONOTONIC STACK -->
+        <div class="topic-section">
+            <h2 class="topic-title">25. Monotonic Stack</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-121">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-121')">121. Next Greater Element
+                        I</button>
+                    <a href="https://leetcode.com/problems/next-greater-element-i/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-121" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-122">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-122')">122. Next Greater Element
+                        II</button>
+                    <a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-122" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-123">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-123')">123. Largest Rectangle in
+                        Histogram</button>
+                    <a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-123" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-124">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-124')">124. Maximal Rectangle</button>
+                    <a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-124" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-125">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-125')">125. Remove K Digits</button>
+                    <a href="https://leetcode.com/problems/remove-k-digits/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-125" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 26: BINARY SEARCH TREE -->
+        <div class="topic-section">
+            <h2 class="topic-title">26. Binary Search Tree (BST)</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-126">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-126')">126. Validate Binary Search
+                        Tree</button>
+                    <a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-126" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-127">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-127')">127. Kth Smallest Element in a
+                        BST</button>
+                    <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-127" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-128">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-128')">128. Construct Tree from Preorder
+                        and
+                        Inorder Traversal</button>
+                    <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+                        target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-128" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-129">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-129')">129. Binary Search Tree
+                        Iterator</button>
+                    <a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-129" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-130">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-130')">130. Delete Node in a BST</button>
+                    <a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-130" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 27: ADDITIONAL MATH -->
+        <div class="topic-section">
+            <h2 class="topic-title">27. Advanced Math</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-131">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-131')">131. Pow(x, n)</button>
+                    <a href="https://leetcode.com/problems/powx-n/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-131" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-132">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-132')">132. Multiply Strings</button>
+                    <a href="https://leetcode.com/problems/multiply-strings/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-132" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-133">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-133')">133. Integer to English
+                        Words</button>
+                    <a href="https://leetcode.com/problems/integer-to-english-words/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-133" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-134">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-134')">134. Excel Sheet Column
+                        Number</button>
+                    <a href="https://leetcode.com/problems/excel-sheet-column-number/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-134" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-135">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-135')">135. Roman to Integer</button>
+                    <a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-135" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 28: GRAPH TRAVERSAL -->
+        <div class="topic-section">
+            <h2 class="topic-title">28. Graph Traversal</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-136">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-136')">136. Word Ladder</button>
+                    <a href="https://leetcode.com/problems/word-ladder/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-136" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-137">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-137')">137. Shortest Path in Binary
+                        Matrix</button>
+                    <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-137" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-138">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-138')">138. Rotting Oranges</button>
+                    <a href="https://leetcode.com/problems/rotting-oranges/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-138" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-139">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-139')">139. Snakes and Ladders</button>
+                    <a href="https://leetcode.com/problems/snakes-and-ladders/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-139" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-140">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-140')">140. Open the Lock</button>
+                    <a href="https://leetcode.com/problems/open-the-lock/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-140" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 29: DP SEQUENCES -->
+        <div class="topic-section">
+            <h2 class="topic-title">29. DP Sequences</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-141">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-141')">141. Word Break</button>
+                    <a href="https://leetcode.com/problems/word-break/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-141" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-142">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-142')">142. Longest Increasing
+                        Subsequence</button>
+                    <a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-142" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-143">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-143')">143. Edit Distance</button>
+                    <a href="https://leetcode.com/problems/edit-distance/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-143" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-144">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-144')">144. Regular Expression
+                        Matching</button>
+                    <a href="https://leetcode.com/problems/regular-expression-matching/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-144" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-145">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-145')">145. Wildcard Matching</button>
+                    <a href="https://leetcode.com/problems/wildcard-matching/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-145" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 30: ADVANCED DATA STRUCTURES -->
+        <div class="topic-section">
+            <h2 class="topic-title">30. Advanced Data Structures</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-146">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-146')">146. Sliding Window
+                        Maximum</button>
+                    <a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-146" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-147">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-147')">147. Find Median from Data
+                        Stream</button>
+                    <a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-147" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-148">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-148')">148. Merge k Sorted Lists</button>
+                    <a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-148" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-149">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-149')">149. Range Sum Query -
+                        Mutable</button>
+                    <a href="https://leetcode.com/problems/range-sum-query-mutable/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-149" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-150">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-150')">150. Prefix and Suffix
+                        Search</button>
+                    <a href="https://leetcode.com/problems/prefix-and-suffix-search/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-150" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+        <!-- TOPIC 31: SORTING ALGORITHMS -->
+        <div class="topic-section">
+            <h2 class="topic-title">31. Sorting Algorithms</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-151">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-151')">151. Sort an Array</button>
+                    <a href="https://leetcode.com/problems/sort-an-array/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-151" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-152">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-152')">152. Sort Colors</button>
+                    <a href="https://leetcode.com/problems/sort-colors/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-152" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-153">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-153')">153. Wiggle Sort
+                        (LintCode)</button>
+                    <a href="https://www.lintcode.com/problem/508/" target="_blank" class="tag">LintCode</a>
+                </div>
+            </div>
+            <div id="sol-153" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-154">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-154')">154. Largest Number</button>
+                    <a href="https://leetcode.com/problems/largest-number/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-154" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-155">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-155')">155. Maximum Gap</button>
+                    <a href="https://leetcode.com/problems/maximum-gap/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-155" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 32: SHORTEST PATH GRAPH ALGORITHMS -->
+        <div class="topic-section">
+            <h2 class="topic-title">32. Shortest Path</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-156">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-156')">156. Path with Maximum
+                        Probability</button>
+                    <a href="https://leetcode.com/problems/path-with-maximum-probability/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-156" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-157">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-157')">157. Find the City With the
+                        Smallest
+                        Number
+                        of Neighbors</button>
+                    <a href="https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/"
+                        target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-157" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-158">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-158')">158. Minimum Obstacle Removal to
+                        Reach
+                        Corner</button>
+                    <a href="https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-158" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-159">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-159')">159. Path With Minimum
+                        Effort</button>
+                    <a href="https://leetcode.com/problems/path-with-minimum-effort/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-159" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-160">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-160')">160. Second Minimum Time to Reach
+                        Destination</button>
+                    <a href="https://leetcode.com/problems/second-minimum-time-to-reach-destination/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-160" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 33: SEGMENT & FENWICK TREES -->
+        <div class="topic-section">
+            <h2 class="topic-title">33. Segment & Fenwick Trees</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-161">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-161')">161. Count of Smaller Numbers After
+                        Self</button>
+                    <a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-161" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-162">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-162')">162. Reverse Pairs</button>
+                    <a href="https://leetcode.com/problems/reverse-pairs/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-162" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-163">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-163')">163. Falling Squares</button>
+                    <a href="https://leetcode.com/problems/falling-squares/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-163" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-164">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-164')">164. Range Module</button>
+                    <a href="https://leetcode.com/problems/range-module/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-164" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-165">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-165')">165. The Skyline Problem</button>
+                    <a href="https://leetcode.com/problems/the-skyline-problem/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-165" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 34: STRING MATCHING -->
+        <div class="topic-section">
+            <h2 class="topic-title">34. String Matching</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-166">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-166')">166. Find the Index of the First
+                        Occurrence</button>
+                    <a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+                        target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-166" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-167">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-167')">167. Shortest Palindrome</button>
+                    <a href="https://leetcode.com/problems/shortest-palindrome/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-167" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-168">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-168')">168. Repeated String Match</button>
+                    <a href="https://leetcode.com/problems/repeated-string-match/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-168" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-169">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-169')">169. Longest Happy Prefix</button>
+                    <a href="https://leetcode.com/problems/longest-happy-prefix/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-169" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-170">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-170')">170. Distinct Subsequences</button>
+                    <a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-170" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+        </div>
+
+        <!-- TOPIC 35: MISCELLANEOUS & ADVANCED LOGIC -->
+        <div class="topic-section">
+            <h2 class="topic-title">35. Miscellaneous & Cache</h2>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-171">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-171')">171. Nim Game</button>
+                    <a href="https://leetcode.com/problems/nim-game/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-171" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-172">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-172')">172. Bulb Switcher</button>
+                    <a href="https://leetcode.com/problems/bulb-switcher/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-172" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-173">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-173')">173. 132 Pattern</button>
+                    <a href="https://leetcode.com/problems/132-pattern/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-173" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-174">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-174')">174. Find All Duplicates in an
+                        Array</button>
+                    <a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank"
+                        class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-174" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
+            </div>
+
+            <div class="problem-row">
+                <input type="checkbox" class="custom-checkbox progress-cb" id="prob-175">
+                <div class="problem-info">
+                    <button class="problem-name" onclick="toggleSolution('sol-175')">175. LFU Cache</button>
+                    <a href="https://leetcode.com/problems/lfu-cache/" target="_blank" class="tag">LeetCode</a>
+                </div>
+            </div>
+            <div id="sol-175" class="solution-section">
+                <h3>Explanation</h3>
+                <div class="explanation">Write logic here...</div>
+                <h3>Python</h3>
+                <pre class="code-block"><code># Code here...</code></pre>
             </div>
-        </div>
-        <div id="sol-101" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-102">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-102')">102. Subarray Sum Equals K</button>
-                <a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-102" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-103">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-103')">103. Find Pivot Index</button>
-                <a href="https://leetcode.com/problems/find-pivot-index/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-103" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-104">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-104')">104. Contiguous Array</button>
-                <a href="https://leetcode.com/problems/contiguous-array/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-104" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-105">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-105')">105. Product of Array Except
-                    Self</button>
-                <a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-105" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 22: STRING MANIPULATION -->
-    <div class="topic-section">
-        <h2 class="topic-title">22. String Manipulation</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-106">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-106')">106. Palindromic Substrings</button>
-                <a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-106" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-107">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-107')">107. Decode String</button>
-                <a href="https://leetcode.com/problems/decode-string/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-107" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-108">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-108')">108. Find All Anagrams in a
-                    String</button>
-                <a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-108" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-109">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-109')">109. Longest Common Prefix</button>
-                <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-109" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-110">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-110')">110. Isomorphic Strings</button>
-                <a href="https://leetcode.com/problems/isomorphic-strings/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-110" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 23: DESIGN -->
-    <div class="topic-section">
-        <h2 class="topic-title">23. Design</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-111">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-111')">111. LRU Cache</button>
-                <a href="https://leetcode.com/problems/lru-cache/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-111" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-112">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-112')">112. Design Twitter</button>
-                <a href="https://leetcode.com/problems/design-twitter/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-112" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-113">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-113')">113. Insert Delete GetRandom
-                    O(1)</button>
-                <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-113" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-114">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-114')">114. Design Underground System</button>
-                <a href="https://leetcode.com/problems/design-underground-system/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-114" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-115">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-115')">115. Time Based Key-Value
-                    Store</button>
-                <a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-115" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 24: MATRIX / 2D ARRAYS -->
-    <div class="topic-section">
-        <h2 class="topic-title">24. Matrix</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-116">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-116')">116. Valid Sudoku</button>
-                <a href="https://leetcode.com/problems/valid-sudoku/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-116" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-117">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-117')">117. Game of Life</button>
-                <a href="https://leetcode.com/problems/game-of-life/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-117" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-118">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-118')">118. Maximal Square</button>
-                <a href="https://leetcode.com/problems/maximal-square/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-118" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-119">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-119')">119. Surrounded Regions</button>
-                <a href="https://leetcode.com/problems/surrounded-regions/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-119" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-120">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-120')">120. Set Matrix Zeroes</button>
-                <a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-120" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 25: MONOTONIC STACK -->
-    <div class="topic-section">
-        <h2 class="topic-title">25. Monotonic Stack</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-121">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-121')">121. Next Greater Element I</button>
-                <a href="https://leetcode.com/problems/next-greater-element-i/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-121" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-122">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-122')">122. Next Greater Element II</button>
-                <a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-122" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-123">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-123')">123. Largest Rectangle in
-                    Histogram</button>
-                <a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-123" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-124">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-124')">124. Maximal Rectangle</button>
-                <a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-124" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-125">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-125')">125. Remove K Digits</button>
-                <a href="https://leetcode.com/problems/remove-k-digits/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-125" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 26: BINARY SEARCH TREE -->
-    <div class="topic-section">
-        <h2 class="topic-title">26. Binary Search Tree (BST)</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-126">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-126')">126. Validate Binary Search
-                    Tree</button>
-                <a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-126" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-127">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-127')">127. Kth Smallest Element in a
-                    BST</button>
-                <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-127" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-128">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-128')">128. Construct Tree from Preorder and
-                    Inorder Traversal</button>
-                <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
-                    target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-128" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-129">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-129')">129. Binary Search Tree
-                    Iterator</button>
-                <a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-129" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-130">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-130')">130. Delete Node in a BST</button>
-                <a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-130" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 27: ADDITIONAL MATH -->
-    <div class="topic-section">
-        <h2 class="topic-title">27. Advanced Math</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-131">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-131')">131. Pow(x, n)</button>
-                <a href="https://leetcode.com/problems/powx-n/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-131" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-132">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-132')">132. Multiply Strings</button>
-                <a href="https://leetcode.com/problems/multiply-strings/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-132" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-133">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-133')">133. Integer to English Words</button>
-                <a href="https://leetcode.com/problems/integer-to-english-words/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-133" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-134">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-134')">134. Excel Sheet Column Number</button>
-                <a href="https://leetcode.com/problems/excel-sheet-column-number/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-134" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-135">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-135')">135. Roman to Integer</button>
-                <a href="https://leetcode.com/problems/roman-to-integer/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-135" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 28: GRAPH TRAVERSAL -->
-    <div class="topic-section">
-        <h2 class="topic-title">28. Graph Traversal</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-136">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-136')">136. Word Ladder</button>
-                <a href="https://leetcode.com/problems/word-ladder/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-136" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-137">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-137')">137. Shortest Path in Binary
-                    Matrix</button>
-                <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-137" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-138">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-138')">138. Rotting Oranges</button>
-                <a href="https://leetcode.com/problems/rotting-oranges/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-138" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-139">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-139')">139. Snakes and Ladders</button>
-                <a href="https://leetcode.com/problems/snakes-and-ladders/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-139" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-140">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-140')">140. Open the Lock</button>
-                <a href="https://leetcode.com/problems/open-the-lock/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-140" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 29: DP SEQUENCES -->
-    <div class="topic-section">
-        <h2 class="topic-title">29. DP Sequences</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-141">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-141')">141. Word Break</button>
-                <a href="https://leetcode.com/problems/word-break/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-141" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-142">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-142')">142. Longest Increasing
-                    Subsequence</button>
-                <a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-142" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-143">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-143')">143. Edit Distance</button>
-                <a href="https://leetcode.com/problems/edit-distance/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-143" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-144">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-144')">144. Regular Expression
-                    Matching</button>
-                <a href="https://leetcode.com/problems/regular-expression-matching/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-144" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-145">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-145')">145. Wildcard Matching</button>
-                <a href="https://leetcode.com/problems/wildcard-matching/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-145" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 30: ADVANCED DATA STRUCTURES -->
-    <div class="topic-section">
-        <h2 class="topic-title">30. Advanced Data Structures</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-146">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-146')">146. Sliding Window Maximum</button>
-                <a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-146" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-147">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-147')">147. Find Median from Data
-                    Stream</button>
-                <a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-147" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-148">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-148')">148. Merge k Sorted Lists</button>
-                <a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-148" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-149">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-149')">149. Range Sum Query - Mutable</button>
-                <a href="https://leetcode.com/problems/range-sum-query-mutable/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-149" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-150">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-150')">150. Prefix and Suffix Search</button>
-                <a href="https://leetcode.com/problems/prefix-and-suffix-search/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-150" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-    <!-- TOPIC 31: SORTING ALGORITHMS -->
-    <div class="topic-section">
-        <h2 class="topic-title">31. Sorting Algorithms</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-151">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-151')">151. Sort an Array</button>
-                <a href="https://leetcode.com/problems/sort-an-array/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-151" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-152">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-152')">152. Sort Colors</button>
-                <a href="https://leetcode.com/problems/sort-colors/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-152" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-153">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-153')">153. Wiggle Sort (LintCode)</button>
-                <a href="https://www.lintcode.com/problem/508/" target="_blank" class="tag">LintCode</a>
-            </div>
-        </div>
-        <div id="sol-153" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-154">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-154')">154. Largest Number</button>
-                <a href="https://leetcode.com/problems/largest-number/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-154" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-155">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-155')">155. Maximum Gap</button>
-                <a href="https://leetcode.com/problems/maximum-gap/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-155" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 32: SHORTEST PATH GRAPH ALGORITHMS -->
-    <div class="topic-section">
-        <h2 class="topic-title">32. Shortest Path</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-156">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-156')">156. Path with Maximum
-                    Probability</button>
-                <a href="https://leetcode.com/problems/path-with-maximum-probability/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-156" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-157">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-157')">157. Find the City With the Smallest
-                    Number
-                    of Neighbors</button>
-                <a href="https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/"
-                    target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-157" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-158">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-158')">158. Minimum Obstacle Removal to Reach
-                    Corner</button>
-                <a href="https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-158" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-159">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-159')">159. Path With Minimum Effort</button>
-                <a href="https://leetcode.com/problems/path-with-minimum-effort/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-159" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-160">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-160')">160. Second Minimum Time to Reach
-                    Destination</button>
-                <a href="https://leetcode.com/problems/second-minimum-time-to-reach-destination/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-160" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 33: SEGMENT & FENWICK TREES -->
-    <div class="topic-section">
-        <h2 class="topic-title">33. Segment & Fenwick Trees</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-161">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-161')">161. Count of Smaller Numbers After
-                    Self</button>
-                <a href="https://leetcode.com/problems/count-of-smaller-numbers-after-self/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-161" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-162">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-162')">162. Reverse Pairs</button>
-                <a href="https://leetcode.com/problems/reverse-pairs/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-162" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-163">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-163')">163. Falling Squares</button>
-                <a href="https://leetcode.com/problems/falling-squares/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-163" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-164">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-164')">164. Range Module</button>
-                <a href="https://leetcode.com/problems/range-module/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-164" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-165">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-165')">165. The Skyline Problem</button>
-                <a href="https://leetcode.com/problems/the-skyline-problem/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-165" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 34: STRING MATCHING -->
-    <div class="topic-section">
-        <h2 class="topic-title">34. String Matching</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-166">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-166')">166. Find the Index of the First
-                    Occurrence</button>
-                <a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
-                    target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-166" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-167">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-167')">167. Shortest Palindrome</button>
-                <a href="https://leetcode.com/problems/shortest-palindrome/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-167" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-168">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-168')">168. Repeated String Match</button>
-                <a href="https://leetcode.com/problems/repeated-string-match/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-168" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-169">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-169')">169. Longest Happy Prefix</button>
-                <a href="https://leetcode.com/problems/longest-happy-prefix/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-169" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-170">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-170')">170. Distinct Subsequences</button>
-                <a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-170" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-    </div>
-
-    <!-- TOPIC 35: MISCELLANEOUS & ADVANCED LOGIC -->
-    <div class="topic-section">
-        <h2 class="topic-title">35. Miscellaneous & Cache</h2>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-171">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-171')">171. Nim Game</button>
-                <a href="https://leetcode.com/problems/nim-game/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-171" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-172">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-172')">172. Bulb Switcher</button>
-                <a href="https://leetcode.com/problems/bulb-switcher/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-172" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-173">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-173')">173. 132 Pattern</button>
-                <a href="https://leetcode.com/problems/132-pattern/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-173" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-174">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-174')">174. Find All Duplicates in an
-                    Array</button>
-                <a href="https://leetcode.com/problems/find-all-duplicates-in-an-array/" target="_blank"
-                    class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-174" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
-        </div>
-
-        <div class="problem-row">
-            <input type="checkbox" class="custom-checkbox progress-cb" id="prob-175">
-            <div class="problem-info">
-                <button class="problem-name" onclick="toggleSolution('sol-175')">175. LFU Cache</button>
-                <a href="https://leetcode.com/problems/lfu-cache/" target="_blank" class="tag">LeetCode</a>
-            </div>
-        </div>
-        <div id="sol-175" class="solution-section">
-            <h3>Explanation</h3>
-            <div class="explanation">Write logic here...</div>
-            <h3>Python</h3>
-            <pre class="code-block"><code># Code here...</code></pre>
         </div>
     </div>
-    </div>
-            <footer>
-                Created and maintained by Devesh Tiwari.
-            </footer>
+    <footer>
+        Created and maintained by Devesh Tiwari.
+    </footer>
     <script>
+        // Used by every problem row's onclick — kept exactly as-is.
         function toggleSolution(id) {
             document.getElementById(id).classList.toggle('active');
         }
 
-        const checkboxes = document.querySelectorAll('.progress-cb');
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-text');
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('.progress-cb');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const topicSections = document.querySelectorAll('.topic-section');
 
-        function loadProgress() {
-            let completedCount = 0;
-            checkboxes.forEach(cb => {
-                const isChecked = localStorage.getItem(cb.id) === 'true';
-                cb.checked = isChecked;
-                if (isChecked) completedCount++;
+            // ---------- Collapsible topics + per-topic progress badge ----------
+            topicSections.forEach(function (section) {
+                const title = section.querySelector('.topic-title');
+                if (!title) return;
 
-                cb.addEventListener('change', function () {
-                    localStorage.setItem(this.id, this.checked);
-                    updateProgressBar();
+                const label = document.createElement('span');
+                label.className = 'topic-name';
+                label.textContent = title.textContent.trim();
+
+                const badge = document.createElement('span');
+                badge.className = 'topic-progress';
+
+                const chevron = document.createElement('span');
+                chevron.className = 'chevron';
+                chevron.textContent = '⌄';
+                chevron.setAttribute('aria-hidden', 'true');
+
+                title.textContent = '';
+                title.appendChild(label);
+                title.appendChild(badge);
+                title.appendChild(chevron);
+                title.setAttribute('role', 'button');
+                title.setAttribute('tabindex', '0');
+
+                const body = Array.prototype.filter.call(section.children, function (child) {
+                    return child !== title;
+                });
+
+                function setCollapsed(collapsed) {
+                    section.classList.toggle('collapsed', collapsed);
+                    body.forEach(function (el) { el.style.display = collapsed ? 'none' : ''; });
+                }
+
+                function updateBadge() {
+                    const boxes = section.querySelectorAll('.progress-cb');
+                    const done = Array.prototype.filter.call(boxes, function (cb) { return cb.checked; }).length;
+                    badge.textContent = done + ' / ' + boxes.length;
+                }
+
+                section._setCollapsed = setCollapsed;
+                section._updateBadge = updateBadge;
+
+                updateBadge();
+                setCollapsed(true); // start collapsed — 175 problems is a lot to scroll through
+
+                title.addEventListener('click', function () {
+                    setCollapsed(!section.classList.contains('collapsed'));
+                });
+                title.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setCollapsed(!section.classList.contains('collapsed'));
+                    }
                 });
             });
-            updateProgressBar();
-        }
 
-        function updateProgressBar() {
-            const total = checkboxes.length;
-            const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const percentage = total === 0 ? 0 : (completed / total) * 100;
+            document.getElementById('expand-all').addEventListener('click', function () {
+                topicSections.forEach(function (s) { s._setCollapsed(false); });
+            });
+            document.getElementById('collapse-all').addEventListener('click', function () {
+                topicSections.forEach(function (s) { s._setCollapsed(true); });
+            });
 
-            progressBar.style.width = percentage + '%';
-            progressText.innerText = `${completed} / ${total} Completed`;
-        }
+            // ---------- Search ----------
+            const searchInput = document.getElementById('search-input');
+            const noResults = document.getElementById('no-results');
+            searchInput.addEventListener('input', function () {
+                const q = searchInput.value.trim().toLowerCase();
+                let anyVisible = false;
 
-        loadProgress();
+                topicSections.forEach(function (section) {
+                    const rows = section.querySelectorAll('.problem-row');
+                    let sectionHasMatch = false;
+
+                    rows.forEach(function (row) {
+                        const nameBtn = row.querySelector('.problem-name');
+                        const name = nameBtn ? nameBtn.textContent.toLowerCase() : '';
+                        const match = q === '' || name.indexOf(q) !== -1;
+
+                        row.classList.toggle('hidden-by-search', !match);
+                        const sol = row.nextElementSibling;
+                        if (sol && sol.classList.contains('solution-section')) {
+                            sol.classList.toggle('hidden-by-search', !match);
+                        }
+                        if (match) sectionHasMatch = true;
+                    });
+
+                    if (q === '') {
+                        section.style.display = '';
+                    } else {
+                        section.style.display = sectionHasMatch ? '' : 'none';
+                        if (sectionHasMatch) section._setCollapsed(false);
+                    }
+                    if (sectionHasMatch) anyVisible = true;
+                });
+
+                noResults.style.display = (q !== '' && !anyVisible) ? 'block' : 'none';
+            });
+
+            // ---------- Daily streak ----------
+            const STREAK_KEY = 'algovault-activity-dates';
+
+            function todayStr(d) {
+                const dt = d || new Date();
+                return dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
+            }
+
+            function getActivityDates() {
+                try {
+                    return JSON.parse(localStorage.getItem(STREAK_KEY)) || [];
+                } catch (e) {
+                    return [];
+                }
+            }
+
+            function recordActivityToday() {
+                const dates = getActivityDates();
+                const today = todayStr();
+                if (dates.indexOf(today) === -1) {
+                    dates.push(today);
+                    localStorage.setItem(STREAK_KEY, JSON.stringify(dates));
+                }
+            }
+
+            function computeStreaks() {
+                const dates = new Set(getActivityDates());
+                const oneDay = 24 * 60 * 60 * 1000;
+
+                // Current streak, walking back from today. Falls back to yesterday so the
+                // streak doesn't reset to 0 before you've had a chance to solve something today.
+                let cursor = new Date();
+                if (!dates.has(todayStr(cursor)) && dates.has(todayStr(new Date(cursor - oneDay)))) {
+                    cursor = new Date(cursor - oneDay);
+                }
+                let current = 0;
+                while (dates.has(todayStr(cursor))) {
+                    current++;
+                    cursor = new Date(cursor - oneDay);
+                }
+
+                // Best streak across all recorded activity.
+                const sorted = Array.from(dates).sort();
+                let best = 0, run = 0, prev = null;
+                sorted.forEach(function (ds) {
+                    const d = new Date(ds + 'T00:00:00');
+                    run = (prev && (d - prev) === oneDay) ? run + 1 : 1;
+                    best = Math.max(best, run);
+                    prev = d;
+                });
+
+                return { current: current, best: Math.max(best, current) };
+            }
+
+            function updateStreakDisplay() {
+                const s = computeStreaks();
+                document.getElementById('streak-current').textContent = s.current + (s.current > 0 ? ' \uD83D\uDD25' : '');
+                document.getElementById('streak-best').textContent = s.best;
+            }
+
+            // ---------- Progress ----------
+            function updateProgressBar() {
+                const total = checkboxes.length;
+                const completed = Array.prototype.filter.call(checkboxes, function (cb) { return cb.checked; }).length;
+                const percentage = total === 0 ? 0 : (completed / total) * 100;
+
+                progressBar.style.width = percentage + '%';
+                progressText.textContent = completed + ' / ' + total;
+
+                topicSections.forEach(function (s) { s._updateBadge(); });
+            }
+
+            function loadProgress() {
+                checkboxes.forEach(function (cb) {
+                    const isChecked = localStorage.getItem(cb.id) === 'true';
+                    cb.checked = isChecked;
+
+                    cb.addEventListener('change', function () {
+                        localStorage.setItem(this.id, this.checked);
+                        if (this.checked) {
+                            recordActivityToday();
+                            updateStreakDisplay();
+                        }
+                        updateProgressBar();
+                    });
+                });
+                updateProgressBar();
+                updateStreakDisplay();
+            }
+
+            loadProgress();
+        });
     </script>
 </body>
 
