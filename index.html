@@ -428,11 +428,27 @@
             </div>
             <div id="sol-1" class="solution-section">
                 <h3>Explanation</h3>
-                <div class="explanation">Write your logic here...</div>
+                <div class="explanation">Core Logic: The "Seen Set" PatternThe algorithm processes the array in a single pass from left to right using a
+                temporary storage container called a set.seen = set(): This initializes an empty hash set. In Python, sets are designed
+                to store unique elements and are implemented as hash tables, which allow for extremely fast lookups and insertions.for
+                num in nums:: The code iterates through each number in the input list exactly once.if num in seen:: For every number,
+                the code checks if it is already present in the seen set.
+                If found: This means the number was encountered earlier in the
+                loop. The function immediately returns True because a duplicate exists.If not found: The code moves to the next
+                step.seen.add(num): If the number was not in the set, it is added to seen to record that it has now been
+                encountered.return False: If the loop finishes without finding any repeated values, the function returns False,
+                indicating all elements in the array are unique.</div>
                 <h3>Python</h3>
-                <pre class="code-block"><code># Code here...</code></pre>
-                <h3>Java</h3>
-                <pre class="code-block"><code>// Code here...</code></pre>
+                <pre class="code-block"><code>class Solution:
+                def containsDuplicate(self, nums: List[int]) -> bool:
+                
+                seen = set()
+                for num in nums:
+                if num in seen:
+                return True
+                seen.add(num)
+                return False</code></pre>
+
             </div>
 
             <div class="problem-row">
