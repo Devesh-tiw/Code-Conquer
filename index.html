@@ -629,6 +629,296 @@
             }
         }
     </style>
+    <style>
+        /* ============ v3: Pattern cheat sheet view ============ */
+        #cheat-view {
+            display: none;
+        }
+
+        main.cheat-mode #app {
+            display: none;
+        }
+
+        main.cheat-mode #cheat-view {
+            display: block;
+        }
+
+        .cheat-hero {
+            margin: 4px 0 20px;
+            padding: 20px 22px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .cheat-hero h2 {
+            margin: 0 0 6px;
+            font-family: var(--font-mono);
+            font-size: 1.35rem;
+            font-weight: 600;
+        }
+
+        .cheat-hero p {
+            margin: 0;
+            color: var(--ink-2);
+            font-size: 14px;
+            max-width: 720px;
+        }
+
+        .cheat-tools {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .cheat-group-title {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin: 26px 2px 10px;
+        }
+
+        details.cheat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        details.cheat-card>summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 10px;
+            padding: 13px 18px;
+            user-select: none;
+        }
+
+        details.cheat-card>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.cheat-card>summary:hover {
+            background: var(--bg);
+        }
+
+        details.cheat-card>summary .cc-idx {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1px 7px;
+        }
+
+        details.cheat-card>summary .cc-t {
+            font-family: var(--font-mono);
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        details.cheat-card>summary .cc-signal {
+            flex-basis: 100%;
+            color: var(--ink-3);
+            font-size: 13px;
+            line-height: 1.5;
+            padding-left: 34px;
+        }
+
+        details.cheat-card>summary .cc-arrow {
+            margin-left: auto;
+            color: var(--ink-3);
+            font-family: var(--font-mono);
+        }
+
+        details.cheat-card[open]>summary .cc-arrow {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+
+        .cc-body {
+            border-top: 1px solid var(--border);
+            padding: 16px 22px 18px;
+            background: var(--bg);
+        }
+
+        .cc-body h4 {
+            margin: 14px 0 6px;
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+        }
+
+        .cc-body h4:first-child {
+            margin-top: 0;
+        }
+
+        .cc-body ol {
+            margin: 0 0 4px;
+            padding-left: 20px;
+        }
+
+        .cc-body li {
+            color: var(--ink-2);
+            font-size: 13.8px;
+            margin-bottom: 6px;
+            line-height: 1.55;
+        }
+
+        .cc-watch {
+            background: rgba(214, 40, 40, .07);
+            border: 1px solid rgba(214, 40, 40, .18);
+            border-left: 3px solid rgba(214, 40, 40, .65);
+            color: var(--ink-2);
+            border-radius: 8px;
+            padding: 10px 13px;
+            font-size: 13.5px;
+            line-height: 1.55;
+            margin: 10px 0;
+        }
+
+        .cc-watch b {
+            color: #c23030;
+        }
+
+        .cc-speed {
+            font-family: var(--font-mono);
+            font-size: 12.5px;
+            color: var(--accent);
+            background: var(--surface);
+            border: 1px dashed var(--border);
+            border-radius: 7px;
+            padding: 7px 12px;
+            margin: 10px 0 0;
+            display: inline-block;
+        }
+
+        .cc-problems {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .cc-problems .pl {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-right: 2px;
+        }
+
+        .chip-btn {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--ink-2);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            padding: 5px 13px;
+            cursor: pointer;
+        }
+
+        .chip-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: #fff;
+        }
+
+        details.cc-framework>summary {
+            border-bottom: 1px dashed var(--border);
+        }
+
+        details.cc-framework .cc-body {
+            background: linear-gradient(180deg, #fff, var(--bg));
+        }
+
+        .runtime-line {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 4px 14px;
+            font-size: 13px;
+        }
+
+        .runtime-line b {
+            font-family: var(--font-mono);
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .runtime-line span {
+            color: var(--ink-2);
+        }
+
+        .runtime-grid {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            background: var(--surface);
+            margin: 8px 0;
+        }
+
+        .problem-row.flash {
+            animation: flashBg 0.5s ease 3;
+        }
+
+        @keyframes flashBg {
+            50% {
+                background: rgba(255, 196, 0, .30);
+            }
+        }
+
+        @media print {
+
+            #sidenav,
+            #sb-toggle,
+            #sb-backdrop,
+            .controls-row {
+                display: none !important;
+            }
+
+            body {
+                padding: 0 !important;
+            }
+
+            main.cheat-mode #app {
+                display: none !important;
+            }
+
+            #cheat-view {
+                display: block !important;
+            }
+
+            details.cheat-card .cc-body {
+                display: block !important;
+            }
+
+            details.cheat-card>summary .cc-arrow {
+                display: none;
+            }
+
+            details.cheat-card {
+                break-inside: avoid;
+            }
+
+            .cheat-card,
+            .cheat-hero {
+                box-shadow: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -953,6 +1243,18 @@
         topics.splice(treeBfsIdx + 1, 0, ["Tree BFS", ['Binary Tree Level Order Traversal', 'Binary Tree Right Side View', 'Binary Tree Zigzag Level Order Traversal', 'Vertical Order Traversal of a Binary Tree', 'Populating Next Right Pointers in Each Node']]);
         topics.push(["ML Engineer Coding", ['Linear Regression from Scratch', 'Logistic Regression from Scratch', 'K-Means Clustering', 'K-Nearest Neighbors', 'Multinomial Naive Bayes Classifier', 'Softmax & Cross-Entropy Loss', 'Neural Net Backprop (XOR)', 'Sparse Matrix Multiplication', 'TF-IDF Cosine Similarity']]);
 
+        // ================= v3: ultra-tier problems =================
+        const realSolutions3 = {
+            'Burst Balloons': ['Classic interval DP. Pad the array with virtual 1s at both ends and let dp[i][j] be the max coins from bursting every balloon strictly between i and j. Pick the LAST balloon k to burst in that gap: when it pops, only the two boundary balloons i and j remain beside it, so dp[i][j] = max over k of nums[i]*nums[k]*nums[j] + dp[i][k] + dp[k][j]. Iterate by gap length so smaller intervals are ready first.', 'def maxCoins(nums):\n    padded = [1] + nums + [1]\n    n = len(padded)\n    dp = [[0] * n for _ in range(n)]\n    for gap in range(2, n):            # interval length\n        for i in range(n - gap):\n            j = i + gap\n            for k in range(i + 1, j):  # last balloon burst in (i, j)\n                score = (padded[i] * padded[k] * padded[j]\n                         + dp[i][k] + dp[k][j])\n                dp[i][j] = max(dp[i][j], score)\n    return dp[0][n - 1]', 'O(n^3) time · O(n^2) space'],
+            'Shortest Path Visiting All Nodes': ['Bitmask BFS over states (current node, visited-mask): the mask records which of the n <= 12 nodes have been visited. Seed every node with its own bit set, expand to neighbours adding their bit, and the first state whose mask is all-ones gives the minimum steps. State space is only 2^n * n, so plain BFS is optimal.', 'from collections import deque\n\ndef shortestPathLength(graph):\n    n = len(graph)\n    full = (1 << n) - 1\n    q = deque()\n    seen = set()\n    for i in range(n):\n        state = (i, 1 << i)\n        q.append(state)\n        seen.add(state)\n    steps = 0\n    while q:\n        for _ in range(len(q)):\n            u, mask = q.popleft()\n            if mask == full:\n                return steps\n            for v in graph[u]:\n                nmask = mask | (1 << v)\n                if (v, nmask) not in seen:\n                    seen.add((v, nmask))\n                    q.append((v, nmask))\n        steps += 1\n    return -1', 'O(2^n * n * deg) time · O(2^n * n) space'],
+        };
+        Object.assign(custom, realSolutions3);
+        const extraInto = { '2D Dynamic Programming': ['Burst Balloons'], 'Advanced Graphs': ['Shortest Path Visiting All Nodes'] };
+        for (const cat of Object.keys(extraInto)) {
+            const entry = topics.find(t => t[0] === cat);
+            if (entry) entry[1].push(...extraInto[cat]);
+            else topics.push([cat, extraInto[cat]]);
+        }
         // original problem order (pre-v2), used to migrate saved progress ids
         const legacyNames = ["Contains Duplicate", "Valid Anagram", "Two Sum", "Group Anagrams", "Top K Frequent Elements", "Valid Palindrome", "Two Sum II", "3Sum", "Container With Most Water", "Trapping Rain Water", "Best Time to Buy and Sell Stock", "Longest Substring Without Repeating Characters", "Longest Repeating Character Replacement", "Permutation in String", "Minimum Window Substring", "Valid Parentheses", "Min Stack", "Evaluate Reverse Polish Notation", "Generate Parentheses", "Daily Temperatures", "Binary Search", "Search a 2D Matrix", "Koko Eating Bananas", "Find Minimum in Rotated Sorted Array", "Search in Rotated Sorted Array", "Reverse Linked List", "Merge Two Sorted Lists", "Reorder List", "Remove Nth Node From End of List", "Linked List Cycle", "Invert Binary Tree", "Maximum Depth of Binary Tree", "Diameter of Binary Tree", "Balanced Binary Tree", "Same Tree", "Number of Islands", "Clone Graph", "Max Area of Island", "Pacific Atlantic Water Flow", "Course Schedule", "Climbing Stairs", "Min Cost Climbing Stairs", "House Robber", "House Robber II", "Longest Palindromic Substring", "Kth Largest Element in a Stream", "Last Stone Weight", "K Closest Points to Origin", "Kth Largest Element in an Array", "Task Scheduler", "Subsets", "Combination Sum", "Permutations", "Subsets II", "Word Search", "Implement Trie (Prefix Tree)", "Design Add and Search Words Data Structure", "Word Search II", "Replace Words", "Maximum XOR of Two Numbers in an Array", "Reconstruct Itinerary", "Min Cost to Connect All Points", "Network Delay Time", "Swim in Rising Water", "Cheapest Flights Within K Stops", "Unique Paths", "Longest Common Subsequence", "Best Time to Buy and Sell Stock with Cooldown", "Coin Change II", "Target Sum", "Maximum Subarray", "Jump Game", "Jump Game II", "Gas Station", "Hand of Straights", "Insert Interval", "Merge Intervals", "Non-overlapping Intervals", "Meeting Rooms (LintCode)", "Meeting Rooms II (LintCode)", "Rotate Image", "Spiral Matrix", "Set Matrix Zeroes", "Happy Number", "Plus One", "Single Number", "Number of 1 Bits", "Counting Bits", "Reverse Bits", "Missing Number", "Redundant Connection", "Number of Connected Components (LintCode)", "Graph Valid Tree (LintCode)", "Accounts Merge", "Number of Provinces", "Course Schedule II", "Alien Dictionary (LintCode)", "Minimum Height Trees", "Find Eventual Safe States", "Sequence Reconstruction (LintCode)", "Range Sum Query - Immutable", "Subarray Sum Equals K", "Find Pivot Index", "Contiguous Array", "Product of Array Except Self", "Palindromic Substrings", "Decode String", "Find All Anagrams in a String", "Longest Common Prefix", "Isomorphic Strings", "LRU Cache", "Design Twitter", "Insert Delete GetRandom O(1)", "Design Underground System", "Time Based Key-Value Store", "Valid Sudoku", "Game of Life", "Maximal Square", "Surrounded Regions", "Set Matrix Zeroes", "Next Greater Element I", "Next Greater Element II", "Largest Rectangle in Histogram", "Maximal Rectangle", "Remove K Digits", "Validate Binary Search Tree", "Kth Smallest Element in a BST", "Construct Tree from Preorder and Inorder Traversal", "Binary Search Tree Iterator", "Delete Node in a BST", "Pow(x, n)", "Multiply Strings", "Integer to English Words", "Excel Sheet Column Number", "Roman to Integer", "Word Ladder", "Shortest Path in Binary Matrix", "Rotting Oranges", "Snakes and Ladders", "Open the Lock", "Word Break", "Longest Increasing Subsequence", "Edit Distance", "Regular Expression Matching", "Wildcard Matching", "Sliding Window Maximum", "Find Median from Data Stream", "Merge k Sorted Lists", "Range Sum Query - Mutable", "Prefix and Suffix Search", "Sort an Array", "Sort Colors", "Wiggle Sort (LintCode)", "Largest Number", "Maximum Gap", "Path with Maximum Probability", "Find the City With the Smallest Number of Neighbors", "Minimum Obstacle Removal to Reach Corner", "Path With Minimum Effort", "Second Minimum Time to Reach Destination", "Count of Smaller Numbers After Self", "Reverse Pairs", "Falling Squares", "Range Module", "The Skyline Problem", "Find the Index of the First Occurrence", "Shortest Palindrome", "Repeated String Match", "Longest Happy Prefix", "Distinct Subsequences", "Nim Game", "Bulb Switcher", "132 Pattern", "Find All Duplicates in an Array", "LFU Cache"];
         Object.assign(custom, {
@@ -1250,8 +1552,205 @@
             });
         })();
 
+
+        // ============ v3: Cheat-sheet view (patterns + approach techniques) ============
+        (function () {
+            'use strict';
+            const CHEATS = { "Arrays & Hashing": { "use": "Need fast lookups / \"have I seen this before?\" / counting frequencies, or the problem is about unsorted collections of numbers/strings.", "steps": ["Hash set → detect duplicates or membership in O(1) while streaming.", "Hash map (value → index / count) → two-sum style \"complement lookups\".", "Counter/bucket array → frequency problems (Top K, Anagrams grouping with sorted or counted key).", "If ordering matters, sort first, then apply two pointers or adjacent checks."], "watch": "Always insert after checking (two-sum) to avoid self-pairing; mind huge keys (use dict not array) and 0/negative values.", "speed": "Typical O(n) time · O(n) space; sort-and-scan is O(n log n).", "problems": ["Two Sum", "Top K Frequent Elements", "Group Anagrams", "Longest Consecutive Sequence"] }, "Two Pointers": { "use": "Sorted (or sortable) input; palindrome checks; looking for pairs/triplets; \"shrink or expand from both ends\" space saver.", "steps": ["Left = 0, right = n-1; move the pointer that can improve the result (smaller wall, smaller sum...).", "Sorted pairs: too small → left++, too big → right--.", "Triplets: fix one value then run two pointers on the rest; skip duplicates.", "Check termination (l < r) and update answer before moving."], "watch": "Only valid when the decision is monotonic — never skip a candidate that could improve the answer. Skip duplicate values to avoid repeated triplets/pairs.", "speed": "O(n) or O(n²) for triplets, O(1) extra space.", "problems": ["Valid Palindrome", "3Sum", "Container With Most Water", "Trapping Rain Water"] }, "Sliding Window": { "use": "Contiguous subarray/substring problem where you compute something over every window: max/min/longest/shortest, usually \"longest/shortest window with condition\".", "steps": ["Expand right pointer, adding the element to the window state.", "While the window violates the constraint, shrink from the left and update state.", "Record answer whenever the window is valid (longest: after shrinking; shortest: after each valid state).", "Fixed-size windows: add right, remove left each step."], "watch": "Only add/remove once per step for O(n). For \"shortest\" update after validity; for \"longest\" update after restoring validity. Duplicate tracking needs counts, not booleans.", "speed": "O(n) time · O(k) state space.", "problems": ["Longest Substring Without Repeating Characters", "Minimum Window Substring", "Permutation in String"] }, "Stack": { "use": "Nested/balanced structures, undo, \"next smaller/greater\", expression evaluation, or processing where the most recent unfinished item resolves first (LIFO).", "steps": ["Push items you cannot resolve yet.", "When the current item resolves the top (e.g. closing bracket, smaller temperature), pop and compute.", "Parentheses: push opens; matching close pops — stack empty at end ⇒ balanced.", "Iterative DFS and monotonic histories are also stacks."], "watch": "Check empty before peeking; push a sentinel (-1 / dummy) to simplify edge cases; make sure every element is popped once for O(n).", "speed": "O(n) time · O(n) space.", "problems": ["Valid Parentheses", "Daily Temperatures", "Evaluate Reverse Polish Notation", "Basic Calculator"] }, "Binary Search": { "use": "Sorted array / monotonic predicate. Look for a value, boundary (first/last), or the answer itself (\"minimum speed to finish in H hours\").", "steps": ["Define lo/hi on the answer or index range; ensure the predicate is monotonic.", "mid = (lo+hi)//2; if condition(mid) is true → search left (hi = mid), else lo = mid+1.", "Rotated arrays: decide which half is sorted, test if target lies in it.", "On 2D: flatten index = row*cols + col."], "watch": "Choose inclusive vs exclusive carefully; prefer the lo<hi with hi=mid pattern for boundary search; verify overflow-free middle; off-by-one at lo==hi.", "speed": "O(log n) time · O(1) space.", "problems": ["Binary Search", "Koko Eating Bananas", "Search in Rotated Sorted Array", "Median of Two Sorted Arrays"] }, "Linked List": { "use": "Problems about node chains: reversal, merging, cycle detection, removing from the end, deep copying.", "steps": ["Dummy head node eliminates empty-list special cases.", "Reversal: prev/curr/nxt three pointers; or recursion that reverses the tail first.", "Fast/slow pointers: cycle detection, find middle, k-th from end (fast first by k).", "Write down every rewiring step before coding — keep the \"next\" reference before overwriting."], "watch": "Losing the next pointer is the classic bug; ensure you never create cycles; k-group reversal needs group boundary checks; recursion depth can overflow for long lists.", "speed": "O(n) time · O(1) space (recursion costs O(n)).", "problems": ["Reverse Linked List", "Reverse Nodes in k-Group", "Copy List with Random Pointer", "Linked List Cycle"] }, "Trees": { "use": "Hierarchical data; recursion-friendly problems; height/depth/path/equality; results combine left+right answers (post-order) or carry state down (pre-order).", "steps": ["Base case = empty node (return 0 / None / False consistently).", "Post-order: solve children first, combine at node (diameter, max path sum, balance).", "Pre-order + bounds: validate BST; serialize with a null marker.", "Return a small \"summary object\" (height+valid, depth+ancestor) to do two jobs in one pass."], "watch": "Negative values break greedy \"max child only\" unless you clamp with 0; balance requires comparing subtree heights, not storing them globally; watch recursion depth on skewed trees (n up to 10^5 → use iterative).", "speed": "O(n) time · O(h) space (h = height).", "problems": ["Invert Binary Tree", "Diameter of Binary Tree", "Binary Tree Maximum Path Sum", "Serialize and Deserialize Binary Tree"] }, "Tree BFS": { "use": "Anything mentioning \"level\", \"row\", \"distance from root\", right/left side views, zigzag, or processing nearest nodes first.", "steps": ["Queue seeded with root; while queue: snapshot len(q) = current level size.", "Pop that many nodes → collect/process the level, pushing children for the next round.", "Right side view → keep last node of level; zigzag → reverse alternating levels.", "For level-linked problems keep the previous level pointer while walking."], "watch": "Never loop over the whole queue — use the level-size snapshot or levels merge; push only non-null children; perfect-tree-only tricks fail on general trees.", "speed": "O(n) time · O(n) space.", "problems": ["Binary Tree Level Order Traversal", "Binary Tree Right Side View", "Vertical Order Traversal of a Binary Tree"] }, "Graphs": { "use": "Connectivity, components, islands, reachability, shortest path in unweighted graphs, clone/copy graphs.", "steps": ["Build adjacency (list or dict) — do not scan the matrix repeatedly unless asked.", "DFS (stack/recursion) or BFS (queue). Mark visited BEFORE enqueue/push to avoid duplicates.", "Components: loop all nodes, start a search for each unvisited node.", "Grids: 4-directional neighbour generation with bounds checks; mark visited cells (flip to 0 or hash) to avoid revisits."], "watch": "Double-counting neighbours (mark on visit, not on pop); recursion limit for large graphs; clone graphs must map original→copy, not value→copy.", "speed": "O(V + E) time · O(V) space.", "problems": ["Number of Islands", "Clone Graph", "Pacific Atlantic Water Flow", "Course Schedule"] }, "1D Dynamic Programming": { "use": "Count ways / maximize-minimize over a sequence; each state depends on previous few states (stairs, robber, buy-sell); overlapping subproblems.", "steps": ["Define dp[i] precisely (e.g. best ending at i / total ways to reach i).", "Write the recurrence from the last step backwards (dp[i] = f(dp[i-1], dp[i-2], …)).", "Find base cases dp[0], dp[1] and iterate in order.", "Optimise: keep only the last k values (rolling variables) when recurrence is local."], "watch": "Indexing off-by-ones; forgetting that a state can be \"do nothing / skip\"; wrong base cases; only recurse when subproblems actually overlap.", "speed": "Usually O(n) time, O(1)–O(n) space.", "problems": ["Climbing Stairs", "House Robber", "Coin Change", "Decode Ways"] }, "Heap & Priority Queue": { "use": "Repeatedly need min/max: top-k, k-smallest/largest, task scheduling, merging, medians; or \"always process the best candidate next\".", "steps": ["Min-heap for k largest / k closest; max-heap (negate) for k smallest.", "Stream: push then evict beyond size k — heap top is the k-th.", "Two-heaps (min+max) keep medians; heap of (weight, id) with lazy deletion for dynamic updates.", "Custom ordering: heapify on tuples — put the sort key first."], "watch": "Python heapq is a min-heap — negate for max; stale entries must be skipped lazily; tie-breaking via tuples may need an index.", "speed": "O(log k) per push/pop · O(k) space.", "problems": ["Kth Largest Element in an Array", "K Closest Points to Origin", "Task Scheduler", "Find Median from Data Stream"] }, "Backtracking": { "use": "Generate ALL combinations/permutations/subsets, constraint satisfaction (N-Queens), search boards (Word Search) — the choice tree is exponential.", "steps": ["Frame recursion: (position/remaining choices, partial solution).", "Add candidate → recurse → remove candidate (the backtrack).", "Deduplicate: sort + skip equal neighbours at the same level (Subsets II); use start index to stop reordering.", "Prune hard: target exceeded, invalid prefix (N-Queens attacks), no-solution branches."], "watch": "Forgetting to undo (state leaks between branches); reusing elements when not allowed; duplicates when input has equal values; exponential blow-up without pruning.", "speed": "O(branches^depth) — 2^n subsets, n! permutations, with pruning when possible.", "problems": ["Subsets", "Combination Sum", "Permutations", "N-Queens"] }, "Tries": { "use": "Prefix-based operations: autocomplete, spell check, word search on a board, prefix counts, max XOR pair. Many strings share prefixes.", "steps": ["Node = dict of children + terminal flag (+ optional extra payload like word/count).", "Insert walks/creates children, marks end.", "Search with wildcards (.): DFS branching over children.", "Board problems: run DFS that simultaneously walks the trie; keep visited marks per path."], "watch": "Trie objects in Python via dicts of dicts are fine; wildcard search must not modify the trie; delete/compress not needed in interviews.", "speed": "O(L) per op, O(total characters) space.", "problems": ["Implement Trie (Prefix Tree)", "Word Search II", "Design Add and Search Words Data Structure", "Maximum XOR of Two Numbers in an Array"] }, "Advanced Graphs": { "use": "Weighted/special graphs: shortest path with weights (Dijkstra), negative edges (Bellman-Ford), MST (Prim/Kruskal), Euler paths, bridges, max bottleneck paths.", "steps": ["Dijkstra: min-heap of (cost, node), relax neighbours when cost improves — also solves \"minimax\" by storing max-edge-so-far as the cost.", "Bellman-Ford: relax all edges k+1 rounds for ≤ k stops; copy the array each round.", "Prim: heap over frontier edges; Kruskal: sort edges + union-find.", "Euler path (itinerary): DFS consuming edges, append on the way back, reverse. Bridges: Tarjan low-link."], "watch": "Dijkstra needs non-negative weights; k-stop Bellman-Ford must copy distances per round or it chains flights; visited-set vs stale-heap-entry handling.", "speed": "Dijkstra O(E log V) · Bellman-Ford O(kE) · Floyd O(V³) · Tarjan O(V+E).", "problems": ["Network Delay Time", "Cheapest Flights Within K Stops", "Min Cost to Connect All Points", "Critical Connections in a Network", "Shortest Path Visiting All Nodes"] }, "2D Dynamic Programming": { "use": "Grid paths, two-sequence matching (LCS, edit distance), counting with two parameters, DP where state = (i, j).", "steps": ["dp[i][j] = answer for prefixes/suffixes of the two inputs or the (i,j) sub-grid.", "Recurrence from the last characters/cells: equal → extend diagonal; else min/max of neighbours.", "Fill iteratively with sentinel row/col (index 0 = empty).", "Compress memory to 1–2 rows when a row depends only on the previous."], "watch": "Base row/column values; direction of filling must respect dependencies; for counting problems update sums not maxima.", "speed": "O(m·n) time; O(m·n) → O(n) space with rolling rows.", "problems": ["Unique Paths", "Longest Common Subsequence", "Coin Change II", "Target Sum", "Burst Balloons"] }, "Greedy": { "use": "Optimisation where a local best choice provably yields the global optimum: intervals by end time, jumps, gas station, candy, task scheduling.", "steps": ["Sort when order helps (by end time for intervals, by deadline/price…).", "Prove the exchange argument: any optimal solution can be swapped toward the greedy choice without loss.", "Track the current best reach/limit and update only when necessary (jump game II frontier).", "Ask: does the future ever punish my local choice? If no → greedy works."], "watch": "Using greedy where DP is required (only when no exchange argument exists); tie-breaking; resetting state at the right moment (gas station tank).", "speed": "O(n log n) when sorting is involved, else O(n).", "problems": ["Maximum Subarray", "Jump Game II", "Candy", "Partition Labels"] }, "Intervals": { "use": "Merge/insert/overlap/conflict questions on ranges: meetings, bookings, coverage.", "steps": ["Sort by start (or by end for activity selection).", "Merge: extend the current end while next.start ≤ current end.", "Conflicts/rooms: sweep events (start+1, end-1) or min-heap of end times for room reuse.", "Insert: pass non-overlapping left, merge the overlap, append the rest."], "watch": "Half-open vs closed endpoints ([a,b) meetings can touch); updating end = max(end, r) not = r; sorting stability for sweep lines (ends before starts at same time).", "speed": "O(n log n) dominated by sorting.", "problems": ["Merge Intervals", "Insert Interval", "Meeting Rooms II (LintCode)", "Non-overlapping Intervals"] }, "Math & Geometry": { "use": "Matrix transforms (rotate/spiral), number properties (happy, primes), in-place tricks, combinatorial reasoning.", "steps": ["Rotate 90° = transpose + reverse rows (clockwise).", "Spiral: shrink 4 boundaries (top/bottom/left/right) walking perimeter segments.", "In-place: use first row/col as flag storage; two booleans remember if they themselves are zeroed.", "Pattern problems: compute small cases to find periodicity (bulb, nim, happy number cycle detection)."], "watch": "In-place mutation order (save flags first); mod arithmetic with negatives; spiral duplicate cells on odd-sized matrices — guard each inner segment.", "speed": "O(n²) matrix ops / O(1)-O(n) number ops.", "problems": ["Rotate Image", "Spiral Matrix", "Set Matrix Zeroes", "Happy Number"] }, "Bit Manipulation": { "use": "On/off states, parity, power-of-two, missing/duplicate detection via XOR, bit counting, masks ≤ 32 bits.", "steps": ["XOR tricks: x^x = 0, x^0 = x → single non-duplicated number.", "n & (n-1) clears the lowest set bit (count bits, check power of two).", "Masks: bit = (x>>i)&1; set: x | (1<<i); flip: x ^ (1<<i).", "Sum without +: a^b and (a&b)<<1 loop."], "watch": "Python ints are unbounded — for 32-bit problems mask with & 0xFFFFFFFF; operator precedence of & vs == needs parentheses; right-shift of negatives.", "speed": "O(1)–O(bits) time · O(1) space.", "problems": ["Single Number", "Number of 1 Bits", "Counting Bits", "Missing Number"] }, "Union Find / Disjoint Set": { "use": "Dynamic connectivity: is a in the same set as b, components count, cycle detection in undirected graphs, accounts/emails merging.", "steps": ["parent array (+ rank/size). find with path compression: while x != parent[x]: parent[x] = parent[parent[x]].", "union: attach smaller rank under larger; return False if already same root (that edge is redundant / cycle).", "Start with n components; each successful union decrements the count.", "Grid problems: map cell (r,c) → r*cols+c to union neighbours."], "watch": "Forgetting path compression → worst-case chains; union must check roots first; vertex labels may need offset (1-based).", "speed": "≈ O(α(n)) per op — near constant.", "problems": ["Number of Provinces", "Redundant Connection", "Accounts Merge", "Graph Valid Tree (LintCode)"] }, "Topological Sort": { "use": "Ordering tasks with prerequisites; detecting cycles in directed graphs; \"can we finish all courses\".", "steps": ["Kahn (BFS): compute indegrees; queue nodes with 0; pop → append order, decrement neighbours, enqueue new zeros.", "DFS: 3-colour (0/visiting/done); visiting-hit ⇒ cycle; append post-order and reverse.", "Alien dictionary: build edges from first differing chars of adjacent words; word-prefix violation ⇒ impossible.", "Unique order: at every step exactly one zero-indegree candidate."], "watch": "Cycle ⇒ fewer nodes in order than total; indegree bookkeeping must only decrement once per edge; empty graph handling.", "speed": "O(V + E) time · O(V) space.", "problems": ["Course Schedule II", "Alien Dictionary (LintCode)", "Find Eventual Safe States", "Minimum Height Trees"] }, "Prefix Sum": { "use": "Range/contiguous subarray sums (equal to k, pivot, averages), counts over ranges, \"sum of any window in O(1)\".", "steps": ["prefix[i] = sum of first i elements (prefix[0] = 0).", "Range [l, r) sum = prefix[r] - prefix[l].", "Subarray-sum-equals-k: count previous prefix values equal to current - k in a hash map.", "0/1-balance problems: map 0 → -1 and look for repeated prefix (balanced windows)."], "watch": "Seed map with {0:1} before scanning; 1-based prefix arrays avoid index confusion; when values vary, use map not array.", "speed": "O(n) build · O(1) queries.", "problems": ["Range Sum Query - Immutable", "Subarray Sum Equals K", "Contiguous Array", "Product of Array Except Self"] }, "String Manipulation": { "use": "Pure string logic: palindrome counting, pattern windows, expansion/compression (decode), lexicographic tricks, prefix checks.", "steps": ["Palindromes: expand from each of the 2n-1 centres.", "Anagram windows: fixed-size Counter sliding, compare counters.", "Decode/compress: stack of (prefix, repeat) frames; numbers parsed digit-by-digit.", "Build results with lists of chunks, join at the end (O(n) not O(n²))."], "watch": "Character vs byte; case/punctuation normalisation; nested repeats recurse inner-first; empty strings and single chars as base cases.", "speed": "O(n) or O(n²) with constant space per centre-expansion.", "problems": ["Palindromic Substrings", "Decode String", "Find All Anagrams in a String", "Text Justification"] }, "Design": { "use": "Implement a class with a specified API under complexity guarantees: LRU/LFU, time-key stores, random access sets, systems (twitter).", "steps": ["Pick the core data structures for the REQUIRED complexities (LRU: dict + OrderedDict / doubly linked list).", "Enumerate each method and what it must do in O(1)/O(log n) — design the invariant first.", "Handle capacity overflow explicitly in put.", "Test the sequence: insert→evict→access-old (LRU), min-frequency tie-breaking (LFU)."], "watch": "Returning -1/empty on missing keys; updating recency on get for LRU (and not for LFU tie order rules); stale state after eviction.", "speed": "API-dependent: O(1) typical (hash + list/heap/OrderedDict), O(log n) for sorted structures.", "problems": ["LRU Cache", "LFU Cache", "Time Based Key-Value Store", "Insert Delete GetRandom O(1)"] }, "Matrix": { "use": "2D grids beyond plain DFS/BFS: game rules (life, sudoku), square sub-matrices, surrounded regions — often need clever state encoding.", "steps": ["Validations: row/col/box sets with box index 3*(r//3)+c//3.", "Simulate next state without overwriting current: encode next in the 2nd bit, shift at the end.", "Maximal square: dp side = 1 + min(up, left, diag).", "Flood-fill from borders (surrounded regions) to mark what must survive."], "watch": "Updating in place while old values are still needed; forgetting box grouping or cell bounds; char vs int grids.", "speed": "O(m·n) time, often O(1) extra space.", "problems": ["Valid Sudoku", "Game of Life", "Maximal Square", "Surrounded Regions"] }, "Monotonic Stack": { "use": "Next/previous GREATER or SMALLER element for every index — rectangles in histogram, daily temperatures, remove-k-digits, 132 pattern.", "steps": ["Keep stack of indices with monotone values (increasing for \"next smaller\").", "While the current element breaks monotonicity, pop — the popped index resolves NOW with the current element as its answer.", "Record left/right bounds on pop: width from stack top after popping.", "Append sentinel (0 / -1) to flush the stack at the end."], "watch": "Store indices (not values) when width matters; decide strict vs non-strict comparisons (duplicates!); two passes for circular arrays.", "speed": "O(n) — every index pushed/popped once.", "problems": ["Next Greater Element I", "Largest Rectangle in Histogram", "Maximal Rectangle", "Remove K Digits"] }, "Binary Search Tree (BST)": { "use": "Ordered tree problems: validation, k-th smallest, search/insert/delete, iterator, reconstruction from traversals.", "steps": ["Validate: DFS with (lo, hi) bounds — tightens for children.", "In-order = sorted → k-th smallest via iterative left-spine stack.", "Delete with 2 children: replace by in-order successor, recursively delete it.", "Build from pre+in: root = pre[0], split in-order by its index (hash map), recurse on ranges."], "watch": "Comparing only parent violates BST validity (needs ancestor bounds); iterator next amortised O(1) — each node pushed once; duplicate values handling.", "speed": "O(h) per op (h = height), O(n) build; balanced ⇒ O(log n).", "problems": ["Validate Binary Search Tree", "Kth Smallest Element in a BST", "Construct Tree from Preorder and Inorder Traversal", "Delete Node in a BST"] }, "Advanced Math": { "use": "Big-number arithmetic without overflow, conversions (Roman↔int, Excel columns, atoi, English words), fast power.", "steps": ["Fast exponentiation: square base, halve exponent; multiply res on set bits — O(log n).", "Big multiply: digit arrays, res[i+j+1] carries — process right to left.", "Conversions: value = value*base + digit (Excel); greedy table for Roman output.", "atoi: strip → sign → accumulate digits → clamp to 32-bit range."], "watch": "Negative exponents/zero; int overflow emulation (Python unbounded → clamp manually); subtractive Roman forms (IV, IX, CM…); leading zeros.", "speed": "O(log n) power · O(n·m) multiply · O(n) conversions.", "problems": ["Pow(x, n)", "Multiply Strings", "Integer to English Words", "String to Integer (atoi)"] }, "Graph Traversal": { "use": "Shortest path when the \"graph\" is implicit: word ladders, locks, boards with rules — count minimum steps until a target state.", "steps": ["Define the state (word/position) and its neighbours (one-letter edits, ±1 wheel turns, board moves).", "BFS from the start; level count = number of steps.", "Prune: remove/block dead-end states before enqueueing; dedupe visited states.", "Multi-source BFS: seed the queue with all sources (rotting oranges, 0/1 border)."], "watch": "Neighbour generation cost (26 letters × positions); revisiting states → infinite loop; blocking the start state; counting minutes vs rounds.", "speed": "O(states × transitions), typically O(n·L·26) for words.", "problems": ["Word Ladder", "Open the Lock", "Rotting Oranges", "Snakes and Ladders"] }, "DP Sequences": { "use": "Matching/segmentation on strings: word break, LIS, edit distance, regex/wildcard — states over prefixes.", "steps": ["dp[i][j] over prefixes; empty-prefix row/col are base cases.", "Regex/wildcard: match char or skip star (dp[i][j-2]) vs consume (dp[i-1][j]).", "LIS: patience-sorting tails + binary search (O(n log n)); edit distance rolls to one row.", "Word break: dp[i] true if any dp[j] and s[j:i] in dictionary."], "watch": "Star handling differs: regex star binds to previous char; wildcard star matches any chars. dp table size m·n can be big — roll rows when safe.", "speed": "O(n²) typical; edit distance O(m·n); LIS O(n log n).", "problems": ["Word Break", "Longest Increasing Subsequence", "Edit Distance", "Regular Expression Matching"] }, "Advanced Data Structures": { "use": "Composite structures to meet hard complexity targets: sliding window max, median stream, merge k lists, dynamic prefix sums, word filters.", "steps": ["Sliding max: monotonic deque of indices (values decreasing); pop smaller back, expire front.", "Median stream: max-heap + min-heap rebalanced to equal sizes.", "Dynamic range sums: Fenwick tree (point update, prefix query O(log n)).", "Merge k lists: heap of (val, listIdx, node), pop → append → push successor."], "watch": "Deque stores INDICES not values (expiry check); heaps for median must rebalance both directions; Fenwick updates require delta not set.", "speed": "O(log k) or amortised O(1) per step.", "problems": ["Sliding Window Maximum", "Find Median from Data Stream", "Merge k Sorted Lists", "Range Sum Query - Mutable"] }, "Sorting Algorithms": { "use": "Implement sorting itself, or sorts with special rules: in-place partition (colors), custom comparators (largest number), linear bucket tricks (max gap).", "steps": ["Know merge sort (stable, O(n log n), O(n) space) and quicksort (in-place, worst O(n²)).", "Dutch flag 3-way partition: walls for 0 and 2 + scanner i.", "Custom order: comparator a+b vs b+a (largest number); any all-equal prefix collapses to \"0\".", "Bucket by pigeonhole for max-gap: min/max per bucket, sweep neighbours."], "watch": "Comparator consistency (transitivity!) for largest-number; mutating input in place; empty/single element arrays.", "speed": "O(n log n) comparison sorts, O(n) special cases.", "problems": ["Sort an Array", "Sort Colors", "Largest Number", "Maximum Gap"] }, "Shortest Path": { "use": "Minimum cost/effort paths with weights, obstacles, signal waits; max-probability paths; second-shortest; all-pairs reachability.", "steps": ["0-1 weights → 0-1 BFS with deque (0-cost front, 1-cost back).", "Positive weights → Dijkstra; adapt cost: max-edge (effort), product (probability via -log or maximise with heap).", "All-pairs → Floyd-Warshall O(V³); k stops → Bellman-Ford rounds.", "Second shortest: keep two best distances per node."], "watch": "Never revisit settled nodes in Dijkstra unless improvement; probability multiply — compare via heap of (-prob); signal waits depend on arrival time.", "speed": "Dijkstra O(E log V) · 0-1 BFS O(V+E) · Floyd O(V³).", "problems": ["Path With Minimum Effort", "Minimum Obstacle Removal to Reach Corner", "Path with Maximum Probability", "Find the City With the Smallest Number of Neighbors"] }, "Segment & Fenwick Trees": { "use": "Range queries with updates (count smaller after self, mutable range sums), merge-sort counting (reverse pairs), interval sweeps (skyline, range module).", "steps": ["Fenwick: coordinate-compress values → rank; add/query with i ±= i&-i.", "Inversion-ish counts: merge sort counting right-half hits while merging (both halves sorted → pointer).", "Skyline: sweep events with max-heap of active heights, lazy pop, emit on height change.", "Range module: maintain sorted disjoint intervals with add/remove clip logic."], "watch": "Compression maps values to 1-based ranks; merge counting must run BEFORE writing merged output; heap lazy-deletion ordering when equal x.", "speed": "Fenwick/segment O(log n) per op · sweep O(n log n).", "problems": ["Count of Smaller Numbers After Self", "Reverse Pairs", "Range Sum Query - Mutable", "The Skyline Problem"] }, "String Matching": { "use": "Find pattern occurrences / borders in linear time; substring search, shortest palindrome, happy prefixes — classic KMP territory.", "steps": ["Build prefix table (pi) of needle: longest proper border of each prefix (j pointer, while mismatch j = pi[j-1]).", "Scan text with the same automaton; full match at j == m → occurrence.", "Shortest palindrome: run KMP on s + \"#\" + reversed(s); last pi value = longest palindromic prefix.", "Happy prefix of s = pi of s itself."], "watch": "pi of a single char = 0; the separator \"#\" prevents border leaks across the join; \"proper\" prefix (not the whole string).", "speed": "O(n + m) time · O(m) space.", "problems": ["Find the Index of the First Occurrence", "Shortest Palindrome", "Longest Happy Prefix", "Repeated String Match"] }, "Miscellaneous & Cache": { "use": "Standalone brainteasers: game theory (nim), math cycles (bulb), tricky scans (132), pigeonhole duplicates, exotic caches (LFU).", "steps": ["Detect periodic/symmetric structure by brute-forcing small inputs (nim mod 4, bulbs = squares).", "132: scan right with decreasing stack tracking the best \"3\" candidate.", "Duplicates in [1,n]: index the array itself with sign flips.", "LFU: frequency→OrderedDict buckets + min_freq pointer; bump keys between buckets."], "watch": "Proving the pattern for n (small-case intuition is not proof); mutating input while scanning; LFU tie-breaking on insertion order.", "speed": "Usually O(n) with constant space tricks.", "problems": ["Nim Game", "Bulb Switcher", "132 Pattern", "Find All Duplicates in an Array"] }, "ML Engineer Coding": { "use": "Implement classic ML algorithms from scratch in Python — regression, classifiers, clustering, kernels, loss/backprop — often without numpy.", "steps": ["Write the maths first: prediction → loss → gradient of each parameter.", "Implement forward pass over samples; accumulate gradients; step with lr/n.", "Stability: sigmoid/softmax need max-subtraction / branch for extreme z; add 1e-12 to logs.", "Validate: train on a toy dataset and check it learns (XOR net, line fit, separable clusters)."], "watch": "Convergence needs enough epochs + right lr; k-means empty cluster handling; NB smoothing with vocabulary size; sparse matrices must skip zeros.", "speed": "O(epochs × n × d) for gradient loops; vectorise when allowed.", "problems": ["Linear Regression from Scratch", "Logistic Regression from Scratch", "K-Means Clustering", "Neural Net Backprop (XOR)"] } };
+            const BONUS = [{ "name": "Fast & Slow Pointers", "use": "Cycle detection, middle of a list, \"find the duplicate value as a linked-list cycle\", palindrome via half-reversal.", "steps": ["slow += 1, fast += 2; they meet iff a cycle exists.", "To FIND the cycle start: reset one pointer to head, advance both by 1 — meet at the entry.", "Middle node: stop fast when fast.next is None (or fast.next.next)."], "watch": "Check fast and fast.next before advancing; cycle-start trick only valid after the first meeting.", "speed": "O(n) time · O(1) space.", "problems": ["Linked List Cycle", "Happy Number", "Find All Duplicates in an Array"] }, { "name": "Two Heaps", "use": "Streaming median, sliding median, \"largest/smallest half\" split queries.", "steps": ["Max-heap (negated) for the lower half, min-heap for the upper.", "Insert → push to lower, move top to upper, rebalance so |lower| ≥ |upper| by at most 1.", "Median = top of larger heap (odd) or average of both tops (even)."], "watch": "Keep the invariant after EVERY insert; negate values for max-heap.", "speed": "O(log n) insert · O(1) median.", "problems": ["Find Median from Data Stream"] }, { "name": "K-way Merge", "use": "Merging k sorted lists/arrays or \"next smallest across k sources\" repeatedly.", "steps": ["Heap of (value, sourceIdx, pointer) seeded with each list head.", "Pop min → append → push that source's next element."], "watch": "Do not push None tails; tie-break heap tuples with the source index.", "speed": "O(N log k) time · O(k) space.", "problems": ["Merge k Sorted Lists", "Kth Largest Element in an Array"] }, { "name": "Cyclic Sort", "use": "Array of n items in range [1, n] (or [0, n]) — find missing/duplicate numbers with O(1) space.", "steps": ["Swap nums[i] to its correct position nums[i]-1 while it is out of place and the target slot is not already equal.", "Second pass: index where nums[i] != i+1 reveals the missing / duplicate."], "watch": "Guard infinite swaps when the duplicate occupies the target slot; mutate a copy if input must be preserved.", "speed": "O(n) time · O(1) space.", "problems": ["Missing Number", "Find All Duplicates in an Array"] }, { "name": "Monotonic Queue (Sliding Extremes)", "use": "Max/min of every window of size k in O(n) — sliding window maximum/minimum.", "steps": ["Deque of indices with values in decreasing order (for max).", "Before push: pop back while back value ≤ current (newcomer dominates).", "Pop front while it falls outside the window; front = window max."], "watch": "Store indices for expiry checks; non-strict comparison (≤) keeps the newest dominant element.", "speed": "O(n) total · O(k) space.", "problems": ["Sliding Window Maximum"] }, { "name": "Knapsack (0/1 & Unbounded)", "use": "Choose items with weights/values, counts of ways to reach a sum, subset-sum targets — classic capacity DP.", "steps": ["dp[w] over capacities; 0/1 → iterate capacities downward so each item is used once.", "Unbounded → iterate upward so items repeat (coin change).", "Counts add dp[w - cost]; optimisation takes min/max; answer dp[target]."], "watch": "Direction of the capacity loop decides reuse — the #1 bug; dp[0] = 1 for counting, 0 for min-cost.", "speed": "O(items × capacity) time · O(capacity) space.", "problems": ["Coin Change", "Coin Change II", "Target Sum", "House Robber"] }, { "name": "Binary Search on Answer", "use": "Optimisation question with monotone feasibility: \"minimum X so that f(X) works\" (speed, capacity, effort, time).", "steps": ["Identify the answer range [lo, hi] and a feasibility check that is monotonic in the answer.", "mid → if feasible(mid): hi = mid (search smaller), else lo = mid + 1.", "Return lo — the first feasible value."], "watch": "Feasibility must be O(n)-ish so total = O(n log range); double-check the predicate direction on examples.", "speed": "O(n log answer-range).", "problems": ["Koko Eating Bananas", "Swim in Rising Water", "Path With Minimum Effort"] }, { "name": "Sweep Line", "use": "Overlaps/counts over a timeline or skyline events; active set changes only at event points.", "steps": ["Generate events: (position, +1/-1 or enter/exit with height).", "Sort events (same position: exits before entries for half-open semantics).", "Process sequentially, tracking an active aggregate (active intervals, current max height)."], "watch": "Event ordering at equal coordinates decides correctness for meetings/skyline.", "speed": "O(n log n).", "problems": ["Meeting Rooms II (LintCode)", "The Skyline Problem", "Non-overlapping Intervals"] }, { "name": "Divide & Conquer", "use": "Split → solve halves → combine: merge sort, counting inversions/pairs across halves, skyline, closest pair.", "steps": ["Recurse on [lo, mid) and [mid, hi) until size 1.", "Count cross-half answers with a pointer walk (both halves sorted).", "Merge the sorted halves back in place."], "watch": "Count cross pairs BEFORE mutating during the merge; keep indices correct in the merge loop.", "speed": "O(n log n) time · O(n) space.", "problems": ["Sort an Array", "Reverse Pairs", "Count of Smaller Numbers After Self"] }, { "name": "Grid BFS/DFS + Multi-source & 0-1", "use": "Shortest paths on grids, spreading processes (rot, fire, water), obstacles with two costs.", "steps": ["4-dir (or 8-dir) neighbours with bounds checks; mark visited on push.", "Multi-source: initialise the queue with every source at distance 0.", "0-1 costs: deque — cost-0 moves appendleft, cost-1 append."], "watch": "Mutation of the grid as a visited mark is fine when input reuse is allowed; levels vs distance counting for multi-source.", "speed": "O(cells) for BFS/0-1, O(cells log cells) for Dijkstra-on-grid.", "problems": ["Rotting Oranges", "Shortest Path in Binary Matrix", "Minimum Obstacle Removal to Reach Corner"] }, { "name": "Interval & Bitmask DP", "use": "Problems on subarrays/ranges (burst balloons, stone games) or small sets (≤ 20 items) with subsets as states.", "steps": ["Interval DP: dp[l][r] over lengths; extend by deciding the LAST action inside (balloon index k).", "Bitmask DP: dp[mask] = best using exactly the chosen set; transition = add one more element (mask | 1<<i).", "Iterate masks ascending so submasks are ready."], "watch": "Interval DP loops by length then left index; bitmask DP needs 2^n memory — only for n ≤ 20.", "speed": "Interval O(n³) · bitmask O(2^n · n).", "problems": ["Burst Balloons", "Shortest Path Visiting All Nodes"] }];
+
+            const main = document.querySelector('main.container');
+            const app = document.getElementById('app');
+            if (!main || !app) return;
+
+            const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            // ---------- toggle button in the controls row ----------
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'btn-ghost';
+            toggleBtn.id = 'cheat-toggle';
+            toggleBtn.textContent = '📘 Pattern Cheat Sheet';
+            const controls = document.querySelector('.controls-row');
+            if (controls) controls.appendChild(toggleBtn);
+
+            // ---------- container ----------
+            const view = document.createElement('section');
+            view.id = 'cheat-view';
+            view.setAttribute('aria-label', 'DSA pattern cheat sheet');
+            main.appendChild(view);
+
+            function frameworkHtml() {
+                return `
+    <details class="cheat-card cc-framework" open>
+      <summary><span class="cc-t">🧭 Universal approach — how to attack ANY problem</span><span class="cc-arrow">▾</span></summary>
+      <div class="cc-body">
+        <h4>1 · Clarify before coding</h4>
+        <ol>
+          <li>Restate input &amp; output. Ask: size range of n, duplicates allowed? negatives? sorted? can I mutate the input? how much extra space is allowed?</li>
+          <li>State edge cases out loud: empty input, single element, all equal, already sorted/reversed, overflow, off-by-one ends.</li>
+        </ol>
+        <h4>2 · Bound the target complexity from n</h4>
+        <div class="runtime-grid">
+          <div class="runtime-line"><b>n ≤ 10</b><span>O(n!) / O(2^n) ok — backtracking, bitmask DP, brute force</span></div>
+          <div class="runtime-line"><b>n ≤ 20</b><span>O(2^n) ok — subset enumeration, bitmask DP</span></div>
+          <div class="runtime-line"><b>n ≤ 500</b><span>O(n³) ok — Floyd, interval DP</span></div>
+          <div class="runtime-line"><b>n ≤ 5·10³</b><span>O(n²) ok — nested loops, 2D DP, expand-around-centre</span></div>
+          <div class="runtime-line"><b>n ≤ 10⁵</b><span>O(n log n) or O(n) — sort+scan, heap, binary search, sliding window</span></div>
+          <div class="runtime-line"><b>n ≤ 10⁶+</b><span>O(n) or better — one pass, prefix sums, hashing</span></div>
+        </div>
+        <h4>3 · Pick data structures by operation</h4>
+        <ol>
+          <li>Membership / seen / count → <b>hash set or map</b> · Order + quick remove → <b>linked list + map</b> · min/max/rank stream → <b>heaps</b></li>
+          <li>Most-recent-first / nesting → <b>stack</b> · queue / levels → <b>BFS deque</b> · prefix consistency → <b>prefix sums</b></li>
+          <li>Range queries with updates → <b>Fenwick / segment tree</b> · prefix sharing between strings → <b>trie</b> · adjacency → <b>graph algorithms</b></li>
+        </ol>
+        <h4>4 · Recognise the pattern (see the 47 cards below)</h4>
+        <ol>
+          <li><b>Sorted input</b> → two pointers · binary search · adjacent-merge · monotonic stack for next smaller/greater.</li>
+          <li><b>Contiguous subarray/substring optimum</b> → sliding window (positive contribution) or prefix sums; if window shrink is not monotone try two pointers / DP.</li>
+          <li><b>Count ways / min-max over choices</b> → DP when subproblems overlap; greedy only if you can prove the exchange argument.</li>
+          <li><b>All subsets / permutations / arrangements</b> → backtracking with pruning; binary-string trick for subsets when n ≤ 20.</li>
+          <li><b>Connectivity / levels / shortest unweighted</b> → BFS; DFS for existence/reachability/complex structures; detect cycles in directed → 3-colour or Kahn.</li>
+          <li><b>Every element waits for a future answer</b> → monotonic stack. <b>Tree by levels</b> → level-order BFS. <b>Prefix property</b> → trie.</li>
+          <li><b>Minimum X such that… / feasibility monotone</b> → binary search on the answer. <b>k smallest/largest</b> → heap (or quickselect).</li>
+          <li><b>Value range [1..n]</b> → cyclic sort, sign-flip tricks. <b>Bit-flip / parity / powers</b> → bit manipulation, XOR.</li>
+        </ol>
+        <h4>5 · Prove correctness &amp; test</h4>
+        <ol>
+          <li>State the <b>invariant</b> before/after every loop iteration; argue termination.</li>
+          <li>Dry-run on the sample, then on: empty, size 1, duplicates, sorted extremes, and a brute-force cross-check on small random inputs when unsure.</li>
+          <li>State complexity at the end (time AND space) — interviewers always ask.</li>
+        </ol>
+      </div>
+    </details>`;
+            }
+
+            function cardHtml(idx, name, data) {
+                const steps = (data.steps || []).map((s) => '<li>' + esc(s) + '</li>').join('');
+                const chips = (data.problems || []).map((p) =>
+                    '<button type="button" class="chip-btn" data-problem="' + esc(p) + '">' + esc(p) + '</button>').join('');
+                return `
+    <details class="cheat-card">
+      <summary>
+        <span class="cc-idx">${idx}</span><span class="cc-t">${esc(name)}</span>
+        <span class="cc-signal">🎯 ${esc(data.use || '')}</span><span class="cc-arrow">▾</span>
+      </summary>
+      <div class="cc-body">
+        <h4>Approach — step by step</h4>
+        <ol>${steps}</ol>
+        <div class="cc-watch"><b>⚠ Watch out:</b> ${esc(data.watch || '')}</div>
+        <div><span class="cc-speed">⏱ ${esc(data.speed || '')}</span></div>
+        ${chips ? '<div class="cc-problems"><span class="pl">Try first:</span>' + chips + '</div>' : ''}
+      </div>
+    </details>`;
+            }
+
+            // ---------- render ----------
+            let html = `
+    <div class="cheat-hero">
+      <h2>📘 DSA Pattern Cheat Sheet</h2>
+      <p>One card per pattern family: what it <i>sounds</i> like (signals) → the <i>approach</i> → common
+      pitfalls → complexity → the key problems to drill. Click any problem chip to jump to it.</p>
+      <div class="cheat-tools">
+        <button type="button" class="btn-ghost" id="cheat-expand">Expand all cards</button>
+        <button type="button" class="btn-ghost" id="cheat-collapse">Collapse all cards</button>
+        <button type="button" class="btn-ghost" id="cheat-print">🖨 Print / PDF</button>
+      </div>
+    </div>`;
+            html += frameworkHtml();
+
+            // topic cards (topics is mutated earlier: all categories incl. Tree BFS & ML)
+            const topicKeys = [];
+            topics.forEach((t, i) => { if (CHEATS[t[0]]) topicKeys.push(t); });
+            html += '<div class="cheat-group-title">Core patterns — one card per tracker category (' + topicKeys.length + ')</div>';
+            topicKeys.forEach((t, i) => {
+                html += cardHtml(String(i + 1).padStart(2, '0'), t[0], CHEATS[t[0]]);
+            });
+
+            if (BONUS && BONUS.length) {
+                html += '<div class="cheat-group-title">⭐ Bonus — cross-cutting patterns &amp; techniques</div>';
+                BONUS.forEach((b) => { html += cardHtml('★', b.name, b); });
+            }
+
+            view.innerHTML = html;
+
+            // ---------- enter / exit ----------
+            function enterCheat() {
+                main.classList.add('cheat-mode');
+                toggleBtn.textContent = '✕ Back to problems';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            function exitCheat() {
+                if (main.classList.contains('cheat-mode')) {
+                    main.classList.remove('cheat-mode');
+                    toggleBtn.textContent = '📘 Pattern Cheat Sheet';
+                }
+            }
+            toggleBtn.addEventListener('click', () => {
+                if (main.classList.contains('cheat-mode')) exitCheat(); else enterCheat();
+            });
+
+            // sidebar shortcut button (placed right after "All problems")
+            const allBtn = document.querySelector('#sidenav .sb-btn[data-key=""]');
+            if (allBtn) {
+                const cb = document.createElement('button');
+                cb.type = 'button';
+                cb.className = 'sb-btn';
+                cb.dataset.view = 'cheat';
+                cb.innerHTML = '<span class="label">📘 Pattern Cheat Sheet</span><span class="cnt">48</span>';
+                allBtn.after(cb);
+            }
+
+            // capture: leave cheat view before any sidebar action scrolls/filters
+            document.addEventListener('click', (e) => {
+                const sb = e.target.closest('#sidenav .sb-btn');
+                if (!sb) return;
+                if (sb.dataset.view === 'cheat') {
+                    if (main.classList.contains('cheat-mode')) exitCheat(); else enterCheat();
+                    return;
+                }
+                exitCheat();
+            }, true);
+
+            // typing in search exits cheat view
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                ['input', 'focus'].forEach((ev) => searchInput.addEventListener(ev, exitCheat));
+            }
+
+            // ---------- expand / collapse / print ----------
+            const expandBtn = document.getElementById('cheat-expand');
+            const collapseBtn = document.getElementById('cheat-collapse');
+            const printBtn = document.getElementById('cheat-print');
+            if (expandBtn) expandBtn.onclick = () => view.querySelectorAll('details.cheat-card').forEach((d) => { d.open = true; });
+            if (collapseBtn) collapseBtn.onclick = () => view.querySelectorAll('details.cheat-card').forEach((d) => { d.open = false; });
+            if (printBtn) printBtn.onclick = () => { if (!main.classList.contains('cheat-mode')) enterCheat(); window.print(); };
+
+            // ---------- chip: jump to that problem ----------
+            view.addEventListener('click', (e) => {
+                const chip = e.target.closest('.chip-btn');
+                if (!chip || !chip.dataset.problem) return;
+                const name = chip.dataset.problem;
+                exitCheat();
+                // reset any company/AI filter & search via the real "All problems" button
+                const showAll = document.querySelector('#sidenav .sb-btn[data-key=""]');
+                if (showAll) showAll.click();
+                setTimeout(() => {
+                    const row = [...document.querySelectorAll('.problem-row')]
+                        .find((r) => r.dataset.name === name.toLowerCase());
+                    if (!row) return;
+                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    row.classList.add('flash');
+                    setTimeout(() => row.classList.remove('flash'), 1600);
+                    const opener = row.querySelector('.problem-name');
+                    if (opener) opener.click();            // auto-open the solution
+                }, 80);
+            });
+        })();
+
     </script>
-    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a35e9d9d2a400522',t:'MTc4ODU0MTkxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a35ee3f42dc10522',t:'MTc4ODU0NDc5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 
 </html>
