@@ -919,6 +919,356 @@
         }
     </style>
 
+    <style>
+        /* ============ v4: BLACK / DARK theme ============ */
+        html {
+            background: var(--bg);
+        }
+
+        body {
+            transition: background .25s ease, color .25s ease;
+        }
+
+        /* dark palette (default for new visitors) */
+        html[data-theme='dark'] {
+            --bg: #080B12;
+            --surface: #11151F;
+            --border: #242B3A;
+            --ink: #E8EBF3;
+            --ink-2: #A7B0C2;
+            --ink-3: #5F6A80;
+            --accent: #5B8CFF;
+            --accent-soft: rgba(91, 140, 255, .14);
+            --success: #34D399;
+            --streak: #FB923C;
+            --code-bg: #0B0F18;
+            --code-text: #DFE6F3;
+        }
+
+        html[data-theme='dark'] body {
+            background: var(--bg);
+            color: var(--ink);
+        }
+
+        html[data-theme='dark'] .cheat-hero,
+        html[data-theme='dark'] .co-hero {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+        }
+
+        html[data-theme='dark'] .cc-framework .cc-body {
+            background: var(--surface);
+        }
+
+        html[data-theme='dark'] .chip-btn:hover {
+            background: #1D2434;
+            color: var(--accent);
+        }
+
+        html[data-theme='dark'] .cc-watch {
+            background: rgba(248, 113, 113, .10);
+            border-color: rgba(248, 113, 113, .28);
+            border-left-color: #F87171;
+        }
+
+        html[data-theme='dark'] .cc-watch b {
+            color: #F87171;
+        }
+
+        html[data-theme='dark'] .btn-ghost {
+            background: var(--surface);
+        }
+
+        html[data-theme='dark'] .controls-row input {
+            background: var(--surface);
+            color: var(--ink);
+        }
+
+        html[data-theme='dark'] input::placeholder {
+            color: var(--ink-3);
+        }
+
+        html[data-theme='dark'] #sidenav,
+        html[data-theme='dark'] .topic-section,
+        html[data-theme='dark'] .stat-card,
+        html[data-theme='dark'] #filter-banner {
+            box-shadow: none;
+        }
+
+        html[data-theme='dark'] details.cheat-card {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+        }
+
+        /* toggle button */
+        #theme-toggle {
+            white-space: nowrap;
+        }
+
+        /* force light output when printing */
+        @media print {
+
+            html,
+            html[data-theme='dark'] {
+                --bg: #F7F8FA;
+                --surface: #FFFFFF;
+                --border: #E4E7EC;
+                --ink: #0F1420;
+                --ink-2: #4B5565;
+                --ink-3: #8A94A6;
+                --accent: #1D4ED8;
+                --accent-soft: #EEF2FF;
+                --success: #15803D;
+                --streak: #C2410C;
+                --code-bg: #0F172A;
+                --code-text: #E2E8F0;
+            }
+        }
+
+        /* ============ v4: OFF-CAMPUS COMPANIES view ============ */
+        #companies-view {
+            display: none;
+        }
+
+        main.cheat-mode #companies-view,
+        main.companies-mode #cheat-view {
+            display: none !important;
+        }
+
+        main.companies-mode #app {
+            display: none;
+        }
+
+        main.companies-mode #companies-view {
+            display: block;
+        }
+
+        .co-hero {
+            margin: 4px 0 20px;
+            padding: 20px 22px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .co-hero h2 {
+            margin: 0 0 6px;
+            font-family: var(--font-mono);
+            font-size: 1.35rem;
+            font-weight: 600;
+        }
+
+        .co-hero p {
+            margin: 0;
+            color: var(--ink-2);
+            font-size: 14px;
+            max-width: 780px;
+            line-height: 1.6;
+        }
+
+        .co-hero .co-big {
+            font-family: var(--font-mono);
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .co-hero .co-big b {
+            color: var(--accent);
+        }
+
+        .co-tools {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        #company-search {
+            flex: 1;
+            min-width: 220px;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 9px 13px;
+        }
+
+        #company-search:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        .co-chip {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--ink-2);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            padding: 6px 13px;
+            cursor: pointer;
+        }
+
+        .co-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .co-chip.on {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .co-boards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin: 14px 0 4px;
+            padding: 12px 14px;
+            border: 1px dashed var(--border);
+            border-radius: 10px;
+            background: var(--bg);
+        }
+
+        .co-boards .lbl {
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin-right: 4px;
+        }
+
+        .co-boards a {
+            font-size: 12.5px;
+            color: var(--accent);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 99px;
+            padding: 4px 11px;
+        }
+
+        .co-boards a:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .co-group {
+            margin: 16px 0;
+        }
+
+        .co-group-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            font-size: 14.5px;
+            margin: 20px 2px 4px;
+            color: var(--ink);
+        }
+
+        .co-group-title .cnt {
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            color: var(--ink-3);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            padding: 1px 9px;
+        }
+
+        .co-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+            gap: 10px;
+        }
+
+        .co-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 11px 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .co-card.applied {
+            border-color: var(--success);
+        }
+
+        .co-card .nm {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.3;
+        }
+
+        .co-card .links {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+        .co-btn-careers {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            background: var(--accent-soft);
+            border-radius: 7px;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+
+        .co-btn-careers:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .co-btn-app {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--ink-3);
+            border: 1px solid var(--border);
+            background: transparent;
+            border-radius: 7px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .co-btn-app:hover {
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .co-card.applied .co-btn-app {
+            color: #fff;
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        #co-no-results {
+            font-family: var(--font-mono);
+            color: var(--ink-3);
+            padding: 10px 2px;
+        }
+    </style>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('cc-theme');
+                var dark = t ? t === 'dark' : true;   /* default: black mode */
+                document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+            } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+        })();
+    </script>
 </head>
 
 <body>
@@ -1749,8 +2099,223 @@
             });
         })();
 
+
+        // ============ v4: dark/black theme + off-campus companies view ============
+        (function () {
+            'use strict';
+            const COMPANIES = { "MAANG & Big Tech": [["Google", "https://careers.google.com"], ["Meta", "https://www.meta.com/careers"], ["Amazon", "https://www.amazon.jobs"], ["Apple", "https://jobs.apple.com"], ["Microsoft", "https://careers.microsoft.com"], ["Netflix", "https://jobs.netflix.com"], ["Nvidia", "https://www.nvidia.com/en-us/about-nvidia/careers"], ["Adobe", "https://www.adobe.com/careers.html"], ["Salesforce", "https://www.salesforce.com/company/careers"], ["Uber", "https://www.uber.com/us/en/careers"], ["LinkedIn", "https://careers.linkedin.com"], ["X (Twitter)", "https://about.x.com/careers"], ["Oracle", "https://www.oracle.com/careers"], ["IBM", "https://www.ibm.com/employment"], ["SAP", "https://www.sap.com/corporate/en/company/jobs.html"]], "AI & ML Labs": [["OpenAI", "https://openai.com/careers"], ["Anthropic", "https://www.anthropic.com/careers"], ["xAI", "https://x.ai/careers"], ["Google DeepMind", "https://deepmind.google/about/careers"], ["Cohere", "https://cohere.com/careers"], ["Hugging Face", "https://huggingface.co/careers"], ["Mistral AI", "https://mistral.ai/careers"], ["Stability AI", "https://stability.ai/careers"], ["Perplexity AI", "https://www.perplexity.ai/careers"], ["Scale AI", "https://scale.com/careers"], ["Pinecone", "https://www.pinecone.io/careers"], ["Weights & Biases", "https://wandb.ai/careers"], ["Together AI", "https://www.together.ai/careers"], ["Databricks", "https://www.databricks.com/company/careers"], ["Snowflake", "https://www.snowflake.com/careers"], ["Dataiku", "https://www.dataiku.com/company/careers"], ["Cursor (Anysphere)", "https://cursor.com/careers"], ["Runway", "https://runwayml.com/careers"]], "Global Product & SaaS": [["Atlassian", "https://www.atlassian.com/company/careers"], ["Shopify", "https://www.shopify.com/careers"], ["Stripe", "https://stripe.com/jobs"], ["Block (Square)", "https://block.xyz/careers"], ["Pinterest", "https://www.pinterestcareers.com"], ["Snap", "https://www.snap.com/en-US/jobs"], ["Dropbox", "https://www.dropbox.com/jobs"], ["Airbnb", "https://careers.airbnb.com"], ["DoorDash", "https://careers.doordash.com"], ["Miro", "https://miro.com/careers"], ["PayPal", "https://www.paypal.com/careers"], ["Intuit", "https://www.intuit.com/careers"], ["ServiceNow", "https://www.servicenow.com/careers"], ["Workday", "https://www.workday.com/careers"], ["Twilio", "https://www.twilio.com/company/jobs"], ["Zoom", "https://zoom.com/careers"], ["Box", "https://www.box.com/careers"], ["Asana", "https://asana.com/jobs"], ["Notion", "https://www.notion.so/careers"], ["Canva", "https://www.lifeatcanva.com"], ["Figma", "https://www.figma.com/careers"], ["HashiCorp", "https://www.hashicorp.com/careers"], ["Confluent", "https://www.confluent.io/careers"], ["MongoDB", "https://www.mongodb.com/careers"], ["Elastic", "https://www.elastic.co/careers"], ["Datadog", "https://www.datadoghq.com/careers"], ["Okta", "https://www.okta.com/company/careers"], ["Cloudflare", "https://www.cloudflare.com/careers"], ["CrowdStrike", "https://www.crowdstrike.com/careers"], ["Grammarly", "https://www.grammarly.com/jobs"], ["Duolingo", "https://careers.duolingo.com"]], "Indian Product & Unicorns": [["Flipkart", "https://www.flipkartcareers.com"], ["Swiggy", "https://careers.swiggy.com"], ["Zomato", "https://www.zomato.com/careers"], ["Meesho", "https://www.meesho.com/careers"], ["Myntra", "https://careers.myntra.com"], ["PhonePe", "https://www.phonepe.com/careers"], ["Paytm", "https://www.paytm.com/careers"], ["CRED", "https://cred.club/careers"], ["Razorpay", "https://razorpay.com/jobs"], ["Zerodha", "https://zerodha.com/careers"], ["Groww", "https://groww.in/careers"], ["Nykaa", "https://www.nykaa.com/careers"], ["Ola", "https://careers.olacabs.com"], ["OYO", "https://www.oyorooms.com/careers"], ["Dream11", "https://www.dream11.com/careers"], ["PolicyBazaar", "https://www.policybazaar.com/careers"], ["Udaan", "https://udaan.com/careers"], ["ShareChat", "https://careers.sharechat.com"], ["InMobi", "https://www.inmobi.com/careers"], ["Freshworks", "https://www.freshworks.com/company/careers"], ["Postman", "https://www.postman.com/company/careers"], ["BrowserStack", "https://www.browserstack.com/careers"], ["Zoho", "https://www.zoho.com/careers.html"], ["HackerRank", "https://www.hackerrank.com/careers"], ["Chargebee", "https://www.chargebee.com/careers"], ["Hasura", "https://hasura.io/careers"], ["Juspay", "https://juspay.in/careers"], ["Zeta", "https://zeta.tech/careers"], ["Zepto", "https://www.zepto.com/careers"], ["Blinkit", "https://blinkit.com/careers"], ["upGrad", "https://www.upgrad.com/careers"], ["Unacademy", "https://unacademy.com/careers"], ["Vedantu", "https://www.vedantu.com/careers"], ["Curefit", "https://www.cure.fit/careers"], ["Jupiter", "https://jupiter.money/careers"], ["Navi", "https://navi.com/careers"], ["Games24x7", "https://www.games24x7.com/careers"], ["Spinny", "https://www.spinny.com/careers"]], "Banks, Fintech & Quant": [["JPMorgan Chase", "https://careers.jpmorgan.com"], ["Goldman Sachs", "https://www.goldmansachs.com/careers"], ["Morgan Stanley", "https://www.morganstanley.com/careers"], ["Citigroup", "https://www.citigroup.com/careers"], ["Barclays", "https://home.barclays/careers"], ["Deutsche Bank", "https://www.db.com/careers"], ["Wells Fargo", "https://www.wellsfargo.com/about/careers"], ["American Express", "https://www.americanexpress.com/en-us/careers"], ["BlackRock", "https://careers.blackrock.com"], ["Bloomberg", "https://www.bloomberg.com/company/careers"], ["Citadel", "https://www.citadel.com/careers"], ["Jane Street", "https://www.janestreet.com/join-jane-street"], ["Optiver", "https://www.optiver.com/careers"], ["Tower Research", "https://www.tower-research.com/careers"], ["WorldQuant", "https://www.worldquant.com/careers"], ["DE Shaw", "https://www.deshaw.com/careers"], ["Two Sigma", "https://www.twosigma.com/careers"], ["Hudson River Trading", "https://www.hrt.co/careers"], ["HDFC Bank", "https://careers.hdfcbank.com"], ["ICICI Bank", "https://www.icicicareers.com"], ["Bajaj Finserv", "https://www.bajajfinserv.in/careers"], ["PayU", "https://payu.com/careers"]], "IT Services & GCCs (off-campus friendly)": [["TCS", "https://www.tcs.com/careers"], ["Infosys", "https://www.infosys.com/careers"], ["Wipro", "https://careers.wipro.com"], ["HCLTech", "https://www.hcltech.com/careers"], ["Tech Mahindra", "https://careers.techmahindra.com"], ["Cognizant", "https://www.cognizant.com/careers"], ["Accenture", "https://www.accenture.com/in-en/careers"], ["Capgemini", "https://www.capgemini.com/careers"], ["LTIMindtree", "https://www.ltimindtree.com/careers"], ["Mphasis", "https://www.mphasis.com/careers"], ["DXC Technology", "https://dxc.com/us/en/careers"], ["Persistent", "https://www.persistent.com/careers"], ["Coforge", "https://www.coforge.com/careers"], ["Hexaware", "https://www.hexaware.com/careers"], ["Zensar", "https://www.zensar.com/careers"], ["UST", "https://www.ust.com/careers"], ["EPAM", "https://www.epam.com/careers"], ["Globant", "https://www.globant.com/careers"], ["Publicis Sapient", "https://www.publicissapient.com/careers"], ["GlobalLogic", "https://www.globallogic.com/careers"], ["Brillio", "https://www.brillio.com/careers"], ["Virtusa", "https://www.virtusa.com/careers"], ["Happiest Minds", "https://www.happiestminds.com/careers"], ["Nagarro", "https://www.nagarro.com/careers"], ["Thoughtworks", "https://www.thoughtworks.com/careers"], ["Cvent", "https://www.cvent.com/careers"], ["Fractal", "https://fractal.ai/careers"], ["Quantiphi", "https://quantiphi.com/careers"], ["Tiger Analytics", "https://www.tigeranalytics.com/careers"], ["Tredence", "https://www.tredence.com/careers"]], "Gaming, Media & Entertainment": [["Roblox", "https://corp.roblox.com/careers"], ["Epic Games", "https://www.epicgames.com/site/en-US/careers"], ["Riot Games", "https://www.riotgames.com/en/work-with-us"], ["Unity", "https://unity.com/careers"], ["Electronic Arts", "https://www.ea.com/careers"], ["Ubisoft", "https://www.ubisoft.com/en-US/company/careers"], ["Spotify", "https://www.lifeatspotify.com"], ["Disney+ Hotstar", "https://careers.hotstar.com"], ["Nazara", "https://www.nazara.com/careers"], ["JetSynthesys", "https://www.jetsynthesys.com/careers"], ["Supercell", "https://supercell.com/en/careers"], ["Take-Two Interactive", "https://www.take2games.com/careers"]], "Hardware, Semiconductors & Auto R&D": [["Intel", "https://www.intel.com/content/www/us/en/jobs/careers.html"], ["AMD", "https://www.amd.com/en/corporate/careers"], ["Qualcomm", "https://www.qualcomm.com/company/careers"], ["Broadcom", "https://www.broadcom.com/company/careers"], ["Texas Instruments", "https://careers.ti.com"], ["Micron", "https://www.micron.com/careers"], ["Arm", "https://www.arm.com/company/careers"], ["Samsung R&D India", "https://research.samsung.com/sri-bengaluru"], ["Bosch", "https://www.bosch.in/careers"], ["Continental", "https://www.continental.com/en/careers"], ["Mercedes-Benz", "https://group.mercedes-benz.com/careers"], ["Aptiv", "https://www.aptiv.com/careers"], ["Harman", "https://careers.harman.com"], ["Siemens", "https://www.siemens.com/global/en/company/jobs.html"], ["Honeywell", "https://careers.honeywell.com"], ["ABB", "https://new.abb.com/careers"], ["Schneider Electric", "https://www.se.com/ww/en/about-us/careers"]] };
+            const BOARDS = [["LinkedIn Jobs", "https://www.linkedin.com/jobs"], ["Indeed", "https://www.indeed.com"], ["Naukri", "https://www.naukri.com"], ["Instahyre", "https://www.instahyre.com"], ["Cutshort", "https://cutshort.io"], ["Wellfound (AngelList)", "https://wellfound.com"], ["Internshala", "https://internshala.com"], ["Unstop", "https://unstop.com"], ["Hacker News \"Who is hiring\"", "https://hn.algolia.com/?dateRange=pastMonth&type=story&query=%22Who%20is%20hiring%22"], ["Glassdoor Jobs", "https://www.glassdoor.com/Job/index.htm"]];
+            const main = document.querySelector('main.container');
+            const app = document.getElementById('app');
+            if (!main || !app) return;
+            const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            const THEME_KEY = 'cc-theme';
+            const APPLY_KEY = 'cc-applied-v1';
+
+            // ---------------- THEME ----------------
+            const themeBtn = document.createElement('button');
+            themeBtn.type = 'button';
+            themeBtn.className = 'btn-ghost';
+            themeBtn.id = 'theme-toggle';
+            const applyThemeBtn = () => {
+                const dark = document.documentElement.getAttribute('data-theme') !== 'light';
+                themeBtn.textContent = dark ? '☀️ Light mode' : '🌙 Black mode';
+            };
+            themeBtn.addEventListener('click', () => {
+                const dark = document.documentElement.getAttribute('data-theme') !== 'light';
+                const next = dark ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                try { localStorage.setItem(THEME_KEY, next); } catch (e) { }
+                applyThemeBtn();
+            });
+            const controls = document.querySelector('.controls-row');
+            if (controls) controls.appendChild(themeBtn);
+            applyThemeBtn();
+
+            // ---------------- VIEW state ----------------
+            function viewOff() {
+                main.classList.remove('cheat-mode', 'companies-mode');
+            }
+
+            // ---------------- BUILD companies view ----------------
+            const view = document.createElement('section');
+            view.id = 'companies-view';
+            view.setAttribute('aria-label', 'Off-campus companies to apply');
+            main.appendChild(view);
+
+            // applied map
+            let applied = {};
+            try { applied = JSON.parse(localStorage.getItem(APPLY_KEY) || '{}'); } catch (e) { }
+
+            let appliedCount = 0;
+            for (const k in applied) if (applied[k]) appliedCount++;
+
+            const flatCount = Object.keys(COMPANIES).reduce((a, g) => a + COMPANIES[g].length, 0);
+
+            const chipsDef = [
+                { k: 'all', label: 'Show all' },
+                { k: 'todo', label: 'Not applied yet' },
+                { k: 'done', label: 'Applied' },
+            ];
+            let chipState = 'all';
+
+            const state = { q: '' };
+            const slugs = {};          // company name -> slug
+            for (const g of Object.keys(COMPANIES)) {
+                for (const [n] of COMPANIES[g]) slugs[n.toLowerCase()] = 1;
+            }
+
+            function slugOf(name) { return name.toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
+
+            // build static frame
+            view.innerHTML = `
+    <div class="co-hero">
+      <h2>💼 Off-campus companies — where to apply</h2>
+      <p>Direct links to the official careers pages of ${flatCount}+ companies that hire through off-campus /
+      open applications. Tick <b>“Applied”</b> to track your job hunt — it is saved on your device.
+      Prioritise companies where a referral can get you past screening, and check each page for
+      fresher / 0–2 yrs roles.</p>
+      <div class="co-big">✅ Applied: <b id="co-applied-count">${appliedCount}</b> &nbsp;·&nbsp; 🎯 Total: <b>${flatCount}</b></div>
+      <div class="co-tools">
+        <input id="company-search" type="search" placeholder="Search 160+ companies… (e.g. google, flipkart, quant)" aria-label="Search companies">
+        ${chipsDef.map((c) => `<button type="button" class="co-chip${c.k === 'all' ? ' on' : ''}" data-chip="${c.k}">${c.label}</button>`).join('')}
+      </div>
+      <div class="co-boards">
+        <span class="lbl">Job boards</span>
+        ${BOARDS.map(([n, u]) => `<a target="_blank" rel="noopener noreferrer" href="${esc(u)}">${esc(n)} ↗</a>`).join('')}
+      </div>
+      <p id="co-no-results" class="hidden">No companies match your search. Try a broader keyword.</p>
+    </div>
+    <div id="co-groups"></div>`;
+
+            const groupsEl = view.querySelector('#co-groups');
+            const searchEl = view.querySelector('#company-search');
+            const noResultsEl = view.querySelector('#co-no-results');
+
+            // render groups/cards
+            function renderCompanies() {
+                const q = state.q.toLowerCase().trim();
+                let visibleCards = 0;
+                groupsEl.innerHTML = '';
+                for (const g of Object.keys(COMPANIES)) {
+                    const list = COMPANIES[g];
+                    const groupCards = [];
+                    for (const [name, url] of list) {
+                        const slug = slugOf(name);
+                        const isApplied = !!applied[slug];
+                        if (chipState === 'done' && !isApplied) continue;
+                        if (chipState === 'todo' && isApplied) continue;
+                        if (q && !name.toLowerCase().includes(q) && !g.toLowerCase().includes(q)) continue;
+                        visibleCards++;
+                        groupCards.push(`
+          <div class="co-card${isApplied ? ' applied' : ''}" data-slug="${esc(slug)}">
+            <div class="nm">${esc(name)}</div>
+            <div class="links">
+              <a class="co-btn-careers" target="_blank" rel="noopener noreferrer" href="${esc(url)}">Careers ↗</a>
+              <button type="button" class="co-btn-app" data-app="${esc(slug)}" aria-pressed="${isApplied}">${isApplied ? '✓ Applied' : 'Applied'}</button>
+            </div>
+          </div>`);
+                    }
+                    if (groupCards.length === 0) continue;
+                    const group = document.createElement('div');
+                    group.className = 'co-group';
+                    group.innerHTML = `<div class="co-group-title">${esc(g)} <span class="cnt">${groupCards.length}</span></div>
+        <div class="co-grid">${groupCards.join('')}</div>`;
+                    groupsEl.appendChild(group);
+                }
+                noResultsEl.classList.toggle('hidden', visibleCards !== 0);
+            }
+            renderCompanies();
+
+            // applied toggle
+            groupsEl.addEventListener('click', (e) => {
+                const btn = e.target.closest('.co-btn-app');
+                if (!btn) return;
+                const slug = btn.dataset.app;
+                applied[slug] = !applied[slug];
+                const card = btn.closest('.co-card');
+                if (card) card.classList.toggle('applied', applied[slug]);
+                btn.textContent = applied[slug] ? '✓ Applied' : 'Applied';
+                btn.setAttribute('aria-pressed', String(applied[slug]));
+                try { localStorage.setItem(APPLY_KEY, JSON.stringify(applied)); } catch (err) { }
+                let c = 0; for (const k in applied) if (applied[k]) c++;
+                const el = view.querySelector('#co-applied-count');
+                if (el) el.textContent = c;
+                if (chipState !== 'all') renderCompanies();
+            });
+
+            // search input
+            searchEl.addEventListener('input', (e) => { state.q = e.target.value; renderCompanies(); });
+
+            // chips
+            view.querySelectorAll('.co-chip').forEach((chip) => {
+                chip.addEventListener('click', () => {
+                    chipState = chip.dataset.chip;
+                    view.querySelectorAll('.co-chip').forEach((c) => c.classList.toggle('on', c === chip));
+                    renderCompanies();
+                });
+            });
+
+            // ---------------- OPEN / CLOSE companies view ----------------
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'btn-ghost';
+            toggleBtn.id = 'companies-toggle';
+            toggleBtn.textContent = '💼 Off-campus Companies';
+            if (controls) controls.appendChild(toggleBtn);
+
+            function enterCompanies() {
+                main.classList.remove('cheat-mode');
+                main.classList.add('companies-mode');
+                toggleBtn.textContent = '✕ Back to problems';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            function exitCompanies() {
+                if (main.classList.contains('companies-mode')) {
+                    main.classList.remove('companies-mode');
+                    toggleBtn.textContent = '💼 Off-campus Companies';
+                }
+            }
+            toggleBtn.addEventListener('click', () => {
+                if (main.classList.contains('companies-mode')) exitCompanies(); else enterCompanies();
+            });
+
+            // sidebar shortcut (right after the cheat-sheet entry)
+            const cheatSide = document.querySelector('#sidenav .sb-btn[data-view="cheat"]');
+            const sc = document.createElement('button');
+            sc.type = 'button';
+            sc.className = 'sb-btn';
+            sc.dataset.view = 'companies';
+            sc.innerHTML = '<span class="label">💼 Off-campus Companies</span><span class="cnt">' + flatCount + '</span>';
+            if (cheatSide && cheatSide.parentNode) cheatSide.parentNode.insertBefore(sc, cheatSide.nextSibling);
+            else {
+                const allBtn = document.querySelector('#sidenav .sb-btn[data-key=""]');
+                if (allBtn) allBtn.after(sc);
+            }
+
+            // leave companies view when clicking any other sidebar action
+            document.addEventListener('click', (e) => {
+                const sb = e.target.closest('#sidenav .sb-btn');
+                if (!sb) return;
+                if (sb.dataset.view === 'companies') {
+                    if (!main.classList.contains('companies-mode')) enterCompanies();
+                    return;
+                }
+                exitCompanies();
+            }, true);
+
+            // cheat toggle also closes companies (and vice-versa handled in cheat's own logic)
+            const cheatToggle = document.getElementById('cheat-toggle');
+            if (cheatToggle) cheatToggle.addEventListener('click', exitCompanies);
+
+            // search/focus in main search bar exits companies
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) ['input', 'focus'].forEach((ev) => searchInput.addEventListener(ev, exitCompanies));
+        })();
+
     </script>
-    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a35ee3f42dc10522',t:'MTc4ODU0NDc5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a35f3147195a0522',t:'MTc4ODU0Nzk1OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 
 </html>
