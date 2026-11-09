@@ -1,0 +1,65 @@
+{
+  "_syncedAt": "2026-11-10T03:00:00.000Z",
+  "_syncedAtIST": "2026-11-10 08:30 IST",
+  "_source": "leetcode.com/graphql matchedUser + userCalendar",
+  "username": "Devesht373",
+  "profile": {
+    "ranking": 1625079
+  },
+  "submitStatsGlobal": {
+    "acSubmissionNum": [
+      { "difficulty": "All", "count": 107, "submissions": 298 },
+      { "difficulty": "Easy", "count": 63, "submissions": 142 },
+      { "difficulty": "Medium", "count": 39, "submissions": 133 },
+      { "difficulty": "Hard", "count": 5, "submissions": 23 }
+    ]
+  },
+  "userCalendar": {
+    "streak": 24,
+    "totalActiveDays": 96,
+    "activeYears": [2025, 2026],
+    "submissionCalendar": "{\"1730678400\":2,\"1730764800\":1,\"1730851200\":3,\"1730937600\":1,\"1731024000\":4,\"1731110400\":2,\"1731196800\":1,\"1731283200\":5,\"1731369600\":2,\"1731456000\":3,\"1731542400\":1,\"1731628800\":2,\"1731715200\":4,\"1731801600\":1}",
+    "recentAcSubmissionList": [
+      { "id": "1849237421", "title": "Two Sum", "titleSlug": "two-sum", "timestamp": "1731283200" },
+      { "id": "1849231123", "title": "Valid Parentheses", "titleSlug": "valid-parentheses", "timestamp": "1731196800" },
+      { "id": "1849219987", "title": "Merge Two Sorted Lists", "titleSlug": "merge-two-sorted-lists", "timestamp": "1731110400" },
+      { "id": "1849204431", "title": "Binary Search", "titleSlug": "binary-search", "timestamp": "1731024000" },
+      { "id": "1849190021", "title": "Contains Duplicate", "titleSlug": "contains-duplicate", "timestamp": "1730937600" }
+    ]
+  },
+  "tagProblemCounts": {
+    "fundamental": [
+      { "tagName": "Array", "problemsSolved": 43 },
+      { "tagName": "String", "problemsSolved": 28 },
+      { "tagName": "Linked List", "problemsSolved": 7 },
+      { "tagName": "Stack", "problemsSolved": 5 },
+      { "tagName": "Queue", "problemsSolved": 1 },
+      { "tagName": "Hash Table", "problemsSolved": 24 },
+      { "tagName": "Math", "problemsSolved": 39 },
+      { "tagName": "Sorting", "problemsSolved": 13 }
+    ],
+    "intermediate": [
+      { "tagName": "Two Pointers", "problemsSolved": 20 },
+      { "tagName": "Binary Search", "problemsSolved": 13 },
+      { "tagName": "Recursion", "problemsSolved": 9 },
+      { "tagName": "Bit Manipulation", "problemsSolved": 7 },
+      { "tagName": "Greedy", "problemsSolved": 6 },
+      { "tagName": "Sliding Window", "problemsSolved": 2 },
+      { "tagName": "Breadth-First Search", "problemsSolved": 0 },
+      { "tagName": "Depth-First Search", "problemsSolved": 0 },
+      { "tagName": "Tree", "problemsSolved": 0 },
+      { "tagName": "Binary Tree", "problemsSolved": 0 },
+      { "tagName": "Graph", "problemsSolved": 0 }
+    ],
+    "advanced": [
+      { "tagName": "Dynamic Programming", "problemsSolved": 12 },
+      { "tagName": "Backtracking", "problemsSolved": 4 },
+      { "tagName": "Monotonic Stack", "problemsSolved": 1 },
+      { "tagName": "Union Find", "problemsSolved": 1 },
+      { "tagName": "Trie", "problemsSolved": 1 },
+      { "tagName": "Heap (Priority Queue)", "problemsSolved": 0 },
+      { "tagName": "Design", "problemsSolved": 2 },
+      { "tagName": "Segment Tree", "problemsSolved": 0 }
+    ]
+  }
+}

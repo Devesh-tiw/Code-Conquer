@@ -1,0 +1,7809 @@
+{
+  "_syncedAt": "2026-11-10T03:00:00.000Z",
+  "_source": "leetcode.com/graphql problemsetQuestionListV2 paginated limit=100",
+  "totalLength": 4109,
+  "storedCount": 600,
+  "note": "Full catalogue would be 4109; stored sample is 600 for demo. Real GitHub Action fetches all paginated with 400ms delay.",
+  "questions": [
+    {
+      "questionFrontendId": "1",
+      "title": "Two Sum",
+      "titleSlug": "two-sum",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 41.9
+    },
+    {
+      "questionFrontendId": "2",
+      "title": "Add Two Numbers",
+      "titleSlug": "add-two-numbers",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Two Pointers"
+        }
+      ],
+      "acRate": 44.3
+    },
+    {
+      "questionFrontendId": "3",
+      "title": "Longest Substring Without Repeating Characters",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 49.2
+    },
+    {
+      "questionFrontendId": "4",
+      "title": "Median of Two Sorted Arrays",
+      "titleSlug": "median-of-two-sorted-arrays",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 57.1
+    },
+    {
+      "questionFrontendId": "5",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 59.6
+    },
+    {
+      "questionFrontendId": "11",
+      "title": "Container With Most Water",
+      "titleSlug": "container-with-most-water",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 69.5
+    },
+    {
+      "questionFrontendId": "15",
+      "title": "3Sum",
+      "titleSlug": "3sum",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Stack"
+        }
+      ],
+      "acRate": 70.8
+    },
+    {
+      "questionFrontendId": "20",
+      "title": "Valid Parentheses",
+      "titleSlug": "valid-parentheses",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 41.3
+    },
+    {
+      "questionFrontendId": "21",
+      "title": "Merge Two Sorted Lists",
+      "titleSlug": "merge-two-sorted-lists",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Stack"
+        }
+      ],
+      "acRate": 72.1
+    },
+    {
+      "questionFrontendId": "33",
+      "title": "Search in Rotated Sorted Array",
+      "titleSlug": "search-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Hash Table"
+        }
+      ],
+      "acRate": 66.0
+    },
+    {
+      "questionFrontendId": "42",
+      "title": "Trapping Rain Water",
+      "titleSlug": "trapping-rain-water",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 44.6
+    },
+    {
+      "questionFrontendId": "49",
+      "title": "Group Anagrams",
+      "titleSlug": "group-anagrams",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 35.7
+    },
+    {
+      "questionFrontendId": "53",
+      "title": "Maximum Subarray",
+      "titleSlug": "maximum-subarray",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Stack"
+        }
+      ],
+      "acRate": 64.2
+    },
+    {
+      "questionFrontendId": "70",
+      "title": "Climbing Stairs",
+      "titleSlug": "climbing-stairs",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.8
+    },
+    {
+      "questionFrontendId": "94",
+      "title": "Binary Tree Inorder Traversal",
+      "titleSlug": "binary-tree-inorder-traversal",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Stack"
+        }
+      ],
+      "acRate": 66.2
+    },
+    {
+      "questionFrontendId": "100",
+      "title": "Same Tree",
+      "titleSlug": "same-tree",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 36.8
+    },
+    {
+      "questionFrontendId": "102",
+      "title": "Binary Tree Level Order Traversal",
+      "titleSlug": "binary-tree-level-order-traversal",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 39.6
+    },
+    {
+      "questionFrontendId": "104",
+      "title": "Maximum Depth of Binary Tree",
+      "titleSlug": "maximum-depth-of-binary-tree",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Two Pointers"
+        }
+      ],
+      "acRate": 45.7
+    },
+    {
+      "questionFrontendId": "121",
+      "title": "Best Time to Buy and Sell Stock",
+      "titleSlug": "best-time-to-buy-and-sell-stock",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 54.1
+    },
+    {
+      "questionFrontendId": "125",
+      "title": "Valid Palindrome",
+      "titleSlug": "valid-palindrome",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 41.0
+    },
+    {
+      "questionFrontendId": "136",
+      "title": "Single Number",
+      "titleSlug": "single-number",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Hash Table"
+        }
+      ],
+      "acRate": 57.7
+    },
+    {
+      "questionFrontendId": "141",
+      "title": "Linked List Cycle",
+      "titleSlug": "linked-list-cycle",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Hash Table"
+        }
+      ],
+      "acRate": 67.6
+    },
+    {
+      "questionFrontendId": "198",
+      "title": "House Robber",
+      "titleSlug": "house-robber",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 73.4
+    },
+    {
+      "questionFrontendId": "200",
+      "title": "Number of Islands",
+      "titleSlug": "number-of-islands",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 66.9
+    },
+    {
+      "questionFrontendId": "206",
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 42.4
+    },
+    {
+      "questionFrontendId": "217",
+      "title": "Contains Duplicate",
+      "titleSlug": "contains-duplicate",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Two Pointers"
+        }
+      ],
+      "acRate": 50.1
+    },
+    {
+      "questionFrontendId": "238",
+      "title": "Product of Array Except Self",
+      "titleSlug": "product-of-array-except-self",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 43.2
+    },
+    {
+      "questionFrontendId": "242",
+      "title": "Valid Anagram",
+      "titleSlug": "valid-anagram",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 58.3
+    },
+    {
+      "questionFrontendId": "300",
+      "title": "Longest Increasing Subsequence",
+      "titleSlug": "longest-increasing-subsequence",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 57.3
+    },
+    {
+      "questionFrontendId": "322",
+      "title": "Coin Change",
+      "titleSlug": "coin-change",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 52.8
+    },
+    {
+      "questionFrontendId": "101",
+      "title": "Sample Problem 101",
+      "titleSlug": "sample-problem-101",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "103",
+      "title": "Sample Problem 103",
+      "titleSlug": "sample-problem-103",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 30.7
+    },
+    {
+      "questionFrontendId": "105",
+      "title": "Sample Problem 105",
+      "titleSlug": "sample-problem-105",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 32.6
+    },
+    {
+      "questionFrontendId": "106",
+      "title": "Sample Problem 106",
+      "titleSlug": "sample-problem-106",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 51.5
+    },
+    {
+      "questionFrontendId": "107",
+      "title": "Sample Problem 107",
+      "titleSlug": "sample-problem-107",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 39.2
+    },
+    {
+      "questionFrontendId": "108",
+      "title": "Sample Problem 108",
+      "titleSlug": "sample-problem-108",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 50.5
+    },
+    {
+      "questionFrontendId": "109",
+      "title": "Sample Problem 109",
+      "titleSlug": "sample-problem-109",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 64.0
+    },
+    {
+      "questionFrontendId": "110",
+      "title": "Sample Problem 110",
+      "titleSlug": "sample-problem-110",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 65.4
+    },
+    {
+      "questionFrontendId": "111",
+      "title": "Sample Problem 111",
+      "titleSlug": "sample-problem-111",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 42.8
+    },
+    {
+      "questionFrontendId": "112",
+      "title": "Sample Problem 112",
+      "titleSlug": "sample-problem-112",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 69.5
+    },
+    {
+      "questionFrontendId": "113",
+      "title": "Sample Problem 113",
+      "titleSlug": "sample-problem-113",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 49.4
+    },
+    {
+      "questionFrontendId": "114",
+      "title": "Sample Problem 114",
+      "titleSlug": "sample-problem-114",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 45.9
+    },
+    {
+      "questionFrontendId": "115",
+      "title": "Sample Problem 115",
+      "titleSlug": "sample-problem-115",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 69.1
+    },
+    {
+      "questionFrontendId": "116",
+      "title": "Sample Problem 116",
+      "titleSlug": "sample-problem-116",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 66.3
+    },
+    {
+      "questionFrontendId": "117",
+      "title": "Sample Problem 117",
+      "titleSlug": "sample-problem-117",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 63.6
+    },
+    {
+      "questionFrontendId": "118",
+      "title": "Sample Problem 118",
+      "titleSlug": "sample-problem-118",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 54.2
+    },
+    {
+      "questionFrontendId": "119",
+      "title": "Sample Problem 119",
+      "titleSlug": "sample-problem-119",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 66.6
+    },
+    {
+      "questionFrontendId": "120",
+      "title": "Sample Problem 120",
+      "titleSlug": "sample-problem-120",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 39.2
+    },
+    {
+      "questionFrontendId": "122",
+      "title": "Sample Problem 122",
+      "titleSlug": "sample-problem-122",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 49.9
+    },
+    {
+      "questionFrontendId": "123",
+      "title": "Sample Problem 123",
+      "titleSlug": "sample-problem-123",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 59.3
+    },
+    {
+      "questionFrontendId": "124",
+      "title": "Sample Problem 124",
+      "titleSlug": "sample-problem-124",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 68.0
+    },
+    {
+      "questionFrontendId": "126",
+      "title": "Sample Problem 126",
+      "titleSlug": "sample-problem-126",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 34.0
+    },
+    {
+      "questionFrontendId": "127",
+      "title": "Sample Problem 127",
+      "titleSlug": "sample-problem-127",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 31.5
+    },
+    {
+      "questionFrontendId": "128",
+      "title": "Sample Problem 128",
+      "titleSlug": "sample-problem-128",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 66.9
+    },
+    {
+      "questionFrontendId": "129",
+      "title": "Sample Problem 129",
+      "titleSlug": "sample-problem-129",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 47.0
+    },
+    {
+      "questionFrontendId": "130",
+      "title": "Sample Problem 130",
+      "titleSlug": "sample-problem-130",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 45.7
+    },
+    {
+      "questionFrontendId": "131",
+      "title": "Sample Problem 131",
+      "titleSlug": "sample-problem-131",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 62.9
+    },
+    {
+      "questionFrontendId": "132",
+      "title": "Sample Problem 132",
+      "titleSlug": "sample-problem-132",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 52.2
+    },
+    {
+      "questionFrontendId": "133",
+      "title": "Sample Problem 133",
+      "titleSlug": "sample-problem-133",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 66.2
+    },
+    {
+      "questionFrontendId": "134",
+      "title": "Sample Problem 134",
+      "titleSlug": "sample-problem-134",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 60.8
+    },
+    {
+      "questionFrontendId": "135",
+      "title": "Sample Problem 135",
+      "titleSlug": "sample-problem-135",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 69.1
+    },
+    {
+      "questionFrontendId": "137",
+      "title": "Sample Problem 137",
+      "titleSlug": "sample-problem-137",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 35.8
+    },
+    {
+      "questionFrontendId": "138",
+      "title": "Sample Problem 138",
+      "titleSlug": "sample-problem-138",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 64.8
+    },
+    {
+      "questionFrontendId": "139",
+      "title": "Sample Problem 139",
+      "titleSlug": "sample-problem-139",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 67.2
+    },
+    {
+      "questionFrontendId": "140",
+      "title": "Sample Problem 140",
+      "titleSlug": "sample-problem-140",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 41.2
+    },
+    {
+      "questionFrontendId": "142",
+      "title": "Sample Problem 142",
+      "titleSlug": "sample-problem-142",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 69.1
+    },
+    {
+      "questionFrontendId": "143",
+      "title": "Sample Problem 143",
+      "titleSlug": "sample-problem-143",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 34.5
+    },
+    {
+      "questionFrontendId": "144",
+      "title": "Sample Problem 144",
+      "titleSlug": "sample-problem-144",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 42.7
+    },
+    {
+      "questionFrontendId": "145",
+      "title": "Sample Problem 145",
+      "titleSlug": "sample-problem-145",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 30.6
+    },
+    {
+      "questionFrontendId": "146",
+      "title": "Sample Problem 146",
+      "titleSlug": "sample-problem-146",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 61.2
+    },
+    {
+      "questionFrontendId": "147",
+      "title": "Sample Problem 147",
+      "titleSlug": "sample-problem-147",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 39.1
+    },
+    {
+      "questionFrontendId": "148",
+      "title": "Sample Problem 148",
+      "titleSlug": "sample-problem-148",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 31.5
+    },
+    {
+      "questionFrontendId": "149",
+      "title": "Sample Problem 149",
+      "titleSlug": "sample-problem-149",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 30.1
+    },
+    {
+      "questionFrontendId": "150",
+      "title": "Sample Problem 150",
+      "titleSlug": "sample-problem-150",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 63.8
+    },
+    {
+      "questionFrontendId": "151",
+      "title": "Sample Problem 151",
+      "titleSlug": "sample-problem-151",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "152",
+      "title": "Sample Problem 152",
+      "titleSlug": "sample-problem-152",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.0
+    },
+    {
+      "questionFrontendId": "153",
+      "title": "Sample Problem 153",
+      "titleSlug": "sample-problem-153",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.8
+    },
+    {
+      "questionFrontendId": "154",
+      "title": "Sample Problem 154",
+      "titleSlug": "sample-problem-154",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 54.9
+    },
+    {
+      "questionFrontendId": "155",
+      "title": "Sample Problem 155",
+      "titleSlug": "sample-problem-155",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 42.2
+    },
+    {
+      "questionFrontendId": "156",
+      "title": "Sample Problem 156",
+      "titleSlug": "sample-problem-156",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 68.9
+    },
+    {
+      "questionFrontendId": "157",
+      "title": "Sample Problem 157",
+      "titleSlug": "sample-problem-157",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 53.2
+    },
+    {
+      "questionFrontendId": "158",
+      "title": "Sample Problem 158",
+      "titleSlug": "sample-problem-158",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 63.1
+    },
+    {
+      "questionFrontendId": "159",
+      "title": "Sample Problem 159",
+      "titleSlug": "sample-problem-159",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 43.6
+    },
+    {
+      "questionFrontendId": "160",
+      "title": "Sample Problem 160",
+      "titleSlug": "sample-problem-160",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 47.2
+    },
+    {
+      "questionFrontendId": "161",
+      "title": "Sample Problem 161",
+      "titleSlug": "sample-problem-161",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.0
+    },
+    {
+      "questionFrontendId": "162",
+      "title": "Sample Problem 162",
+      "titleSlug": "sample-problem-162",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 56.9
+    },
+    {
+      "questionFrontendId": "163",
+      "title": "Sample Problem 163",
+      "titleSlug": "sample-problem-163",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 58.1
+    },
+    {
+      "questionFrontendId": "164",
+      "title": "Sample Problem 164",
+      "titleSlug": "sample-problem-164",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 60.4
+    },
+    {
+      "questionFrontendId": "165",
+      "title": "Sample Problem 165",
+      "titleSlug": "sample-problem-165",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 58.7
+    },
+    {
+      "questionFrontendId": "166",
+      "title": "Sample Problem 166",
+      "titleSlug": "sample-problem-166",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 39.2
+    },
+    {
+      "questionFrontendId": "167",
+      "title": "Sample Problem 167",
+      "titleSlug": "sample-problem-167",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 53.3
+    },
+    {
+      "questionFrontendId": "168",
+      "title": "Sample Problem 168",
+      "titleSlug": "sample-problem-168",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 66.9
+    },
+    {
+      "questionFrontendId": "169",
+      "title": "Sample Problem 169",
+      "titleSlug": "sample-problem-169",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 53.3
+    },
+    {
+      "questionFrontendId": "170",
+      "title": "Sample Problem 170",
+      "titleSlug": "sample-problem-170",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 67.3
+    },
+    {
+      "questionFrontendId": "171",
+      "title": "Sample Problem 171",
+      "titleSlug": "sample-problem-171",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 56.9
+    },
+    {
+      "questionFrontendId": "172",
+      "title": "Sample Problem 172",
+      "titleSlug": "sample-problem-172",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 60.1
+    },
+    {
+      "questionFrontendId": "173",
+      "title": "Sample Problem 173",
+      "titleSlug": "sample-problem-173",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 45.3
+    },
+    {
+      "questionFrontendId": "174",
+      "title": "Sample Problem 174",
+      "titleSlug": "sample-problem-174",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 42.8
+    },
+    {
+      "questionFrontendId": "175",
+      "title": "Sample Problem 175",
+      "titleSlug": "sample-problem-175",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 35.6
+    },
+    {
+      "questionFrontendId": "176",
+      "title": "Sample Problem 176",
+      "titleSlug": "sample-problem-176",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 39.7
+    },
+    {
+      "questionFrontendId": "177",
+      "title": "Sample Problem 177",
+      "titleSlug": "sample-problem-177",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 54.6
+    },
+    {
+      "questionFrontendId": "178",
+      "title": "Sample Problem 178",
+      "titleSlug": "sample-problem-178",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 33.0
+    },
+    {
+      "questionFrontendId": "179",
+      "title": "Sample Problem 179",
+      "titleSlug": "sample-problem-179",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 57.4
+    },
+    {
+      "questionFrontendId": "180",
+      "title": "Sample Problem 180",
+      "titleSlug": "sample-problem-180",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 59.4
+    },
+    {
+      "questionFrontendId": "181",
+      "title": "Sample Problem 181",
+      "titleSlug": "sample-problem-181",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.0
+    },
+    {
+      "questionFrontendId": "182",
+      "title": "Sample Problem 182",
+      "titleSlug": "sample-problem-182",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 44.7
+    },
+    {
+      "questionFrontendId": "183",
+      "title": "Sample Problem 183",
+      "titleSlug": "sample-problem-183",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 48.8
+    },
+    {
+      "questionFrontendId": "184",
+      "title": "Sample Problem 184",
+      "titleSlug": "sample-problem-184",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 47.9
+    },
+    {
+      "questionFrontendId": "185",
+      "title": "Sample Problem 185",
+      "titleSlug": "sample-problem-185",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 62.9
+    },
+    {
+      "questionFrontendId": "186",
+      "title": "Sample Problem 186",
+      "titleSlug": "sample-problem-186",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 53.2
+    },
+    {
+      "questionFrontendId": "187",
+      "title": "Sample Problem 187",
+      "titleSlug": "sample-problem-187",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 33.7
+    },
+    {
+      "questionFrontendId": "188",
+      "title": "Sample Problem 188",
+      "titleSlug": "sample-problem-188",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 47.4
+    },
+    {
+      "questionFrontendId": "189",
+      "title": "Sample Problem 189",
+      "titleSlug": "sample-problem-189",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 51.1
+    },
+    {
+      "questionFrontendId": "190",
+      "title": "Sample Problem 190",
+      "titleSlug": "sample-problem-190",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.5
+    },
+    {
+      "questionFrontendId": "191",
+      "title": "Sample Problem 191",
+      "titleSlug": "sample-problem-191",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 36.3
+    },
+    {
+      "questionFrontendId": "192",
+      "title": "Sample Problem 192",
+      "titleSlug": "sample-problem-192",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 67.3
+    },
+    {
+      "questionFrontendId": "193",
+      "title": "Sample Problem 193",
+      "titleSlug": "sample-problem-193",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 49.3
+    },
+    {
+      "questionFrontendId": "194",
+      "title": "Sample Problem 194",
+      "titleSlug": "sample-problem-194",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 64.0
+    },
+    {
+      "questionFrontendId": "195",
+      "title": "Sample Problem 195",
+      "titleSlug": "sample-problem-195",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 66.5
+    },
+    {
+      "questionFrontendId": "196",
+      "title": "Sample Problem 196",
+      "titleSlug": "sample-problem-196",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "197",
+      "title": "Sample Problem 197",
+      "titleSlug": "sample-problem-197",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 63.2
+    },
+    {
+      "questionFrontendId": "199",
+      "title": "Sample Problem 199",
+      "titleSlug": "sample-problem-199",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 68.8
+    },
+    {
+      "questionFrontendId": "201",
+      "title": "Sample Problem 201",
+      "titleSlug": "sample-problem-201",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "202",
+      "title": "Sample Problem 202",
+      "titleSlug": "sample-problem-202",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 66.5
+    },
+    {
+      "questionFrontendId": "203",
+      "title": "Sample Problem 203",
+      "titleSlug": "sample-problem-203",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.6
+    },
+    {
+      "questionFrontendId": "204",
+      "title": "Sample Problem 204",
+      "titleSlug": "sample-problem-204",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 36.2
+    },
+    {
+      "questionFrontendId": "205",
+      "title": "Sample Problem 205",
+      "titleSlug": "sample-problem-205",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 62.3
+    },
+    {
+      "questionFrontendId": "207",
+      "title": "Sample Problem 207",
+      "titleSlug": "sample-problem-207",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 53.3
+    },
+    {
+      "questionFrontendId": "208",
+      "title": "Sample Problem 208",
+      "titleSlug": "sample-problem-208",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 50.8
+    },
+    {
+      "questionFrontendId": "209",
+      "title": "Sample Problem 209",
+      "titleSlug": "sample-problem-209",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 61.6
+    },
+    {
+      "questionFrontendId": "210",
+      "title": "Sample Problem 210",
+      "titleSlug": "sample-problem-210",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "211",
+      "title": "Sample Problem 211",
+      "titleSlug": "sample-problem-211",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 54.0
+    },
+    {
+      "questionFrontendId": "212",
+      "title": "Sample Problem 212",
+      "titleSlug": "sample-problem-212",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.9
+    },
+    {
+      "questionFrontendId": "213",
+      "title": "Sample Problem 213",
+      "titleSlug": "sample-problem-213",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 68.6
+    },
+    {
+      "questionFrontendId": "214",
+      "title": "Sample Problem 214",
+      "titleSlug": "sample-problem-214",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 40.2
+    },
+    {
+      "questionFrontendId": "215",
+      "title": "Sample Problem 215",
+      "titleSlug": "sample-problem-215",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 55.2
+    },
+    {
+      "questionFrontendId": "216",
+      "title": "Sample Problem 216",
+      "titleSlug": "sample-problem-216",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 65.6
+    },
+    {
+      "questionFrontendId": "218",
+      "title": "Sample Problem 218",
+      "titleSlug": "sample-problem-218",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 33.9
+    },
+    {
+      "questionFrontendId": "219",
+      "title": "Sample Problem 219",
+      "titleSlug": "sample-problem-219",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 56.1
+    },
+    {
+      "questionFrontendId": "220",
+      "title": "Sample Problem 220",
+      "titleSlug": "sample-problem-220",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 63.8
+    },
+    {
+      "questionFrontendId": "221",
+      "title": "Sample Problem 221",
+      "titleSlug": "sample-problem-221",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 67.0
+    },
+    {
+      "questionFrontendId": "222",
+      "title": "Sample Problem 222",
+      "titleSlug": "sample-problem-222",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 40.7
+    },
+    {
+      "questionFrontendId": "223",
+      "title": "Sample Problem 223",
+      "titleSlug": "sample-problem-223",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 51.9
+    },
+    {
+      "questionFrontendId": "224",
+      "title": "Sample Problem 224",
+      "titleSlug": "sample-problem-224",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 49.6
+    },
+    {
+      "questionFrontendId": "225",
+      "title": "Sample Problem 225",
+      "titleSlug": "sample-problem-225",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 44.6
+    },
+    {
+      "questionFrontendId": "226",
+      "title": "Sample Problem 226",
+      "titleSlug": "sample-problem-226",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 58.3
+    },
+    {
+      "questionFrontendId": "227",
+      "title": "Sample Problem 227",
+      "titleSlug": "sample-problem-227",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 37.3
+    },
+    {
+      "questionFrontendId": "228",
+      "title": "Sample Problem 228",
+      "titleSlug": "sample-problem-228",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 57.4
+    },
+    {
+      "questionFrontendId": "229",
+      "title": "Sample Problem 229",
+      "titleSlug": "sample-problem-229",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 48.5
+    },
+    {
+      "questionFrontendId": "230",
+      "title": "Sample Problem 230",
+      "titleSlug": "sample-problem-230",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 47.1
+    },
+    {
+      "questionFrontendId": "231",
+      "title": "Sample Problem 231",
+      "titleSlug": "sample-problem-231",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 38.2
+    },
+    {
+      "questionFrontendId": "232",
+      "title": "Sample Problem 232",
+      "titleSlug": "sample-problem-232",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.2
+    },
+    {
+      "questionFrontendId": "233",
+      "title": "Sample Problem 233",
+      "titleSlug": "sample-problem-233",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 68.1
+    },
+    {
+      "questionFrontendId": "234",
+      "title": "Sample Problem 234",
+      "titleSlug": "sample-problem-234",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 52.7
+    },
+    {
+      "questionFrontendId": "235",
+      "title": "Sample Problem 235",
+      "titleSlug": "sample-problem-235",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 53.5
+    },
+    {
+      "questionFrontendId": "236",
+      "title": "Sample Problem 236",
+      "titleSlug": "sample-problem-236",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 48.7
+    },
+    {
+      "questionFrontendId": "237",
+      "title": "Sample Problem 237",
+      "titleSlug": "sample-problem-237",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 33.1
+    },
+    {
+      "questionFrontendId": "239",
+      "title": "Sample Problem 239",
+      "titleSlug": "sample-problem-239",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 58.8
+    },
+    {
+      "questionFrontendId": "240",
+      "title": "Sample Problem 240",
+      "titleSlug": "sample-problem-240",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 61.5
+    },
+    {
+      "questionFrontendId": "241",
+      "title": "Sample Problem 241",
+      "titleSlug": "sample-problem-241",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 60.0
+    },
+    {
+      "questionFrontendId": "243",
+      "title": "Sample Problem 243",
+      "titleSlug": "sample-problem-243",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 47.8
+    },
+    {
+      "questionFrontendId": "244",
+      "title": "Sample Problem 244",
+      "titleSlug": "sample-problem-244",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 49.2
+    },
+    {
+      "questionFrontendId": "245",
+      "title": "Sample Problem 245",
+      "titleSlug": "sample-problem-245",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 58.7
+    },
+    {
+      "questionFrontendId": "246",
+      "title": "Sample Problem 246",
+      "titleSlug": "sample-problem-246",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 43.2
+    },
+    {
+      "questionFrontendId": "247",
+      "title": "Sample Problem 247",
+      "titleSlug": "sample-problem-247",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 66.0
+    },
+    {
+      "questionFrontendId": "248",
+      "title": "Sample Problem 248",
+      "titleSlug": "sample-problem-248",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 43.0
+    },
+    {
+      "questionFrontendId": "249",
+      "title": "Sample Problem 249",
+      "titleSlug": "sample-problem-249",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 66.1
+    },
+    {
+      "questionFrontendId": "250",
+      "title": "Sample Problem 250",
+      "titleSlug": "sample-problem-250",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 56.6
+    },
+    {
+      "questionFrontendId": "251",
+      "title": "Sample Problem 251",
+      "titleSlug": "sample-problem-251",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 63.2
+    },
+    {
+      "questionFrontendId": "252",
+      "title": "Sample Problem 252",
+      "titleSlug": "sample-problem-252",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 51.7
+    },
+    {
+      "questionFrontendId": "253",
+      "title": "Sample Problem 253",
+      "titleSlug": "sample-problem-253",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 69.4
+    },
+    {
+      "questionFrontendId": "254",
+      "title": "Sample Problem 254",
+      "titleSlug": "sample-problem-254",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 59.1
+    },
+    {
+      "questionFrontendId": "255",
+      "title": "Sample Problem 255",
+      "titleSlug": "sample-problem-255",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 58.1
+    },
+    {
+      "questionFrontendId": "256",
+      "title": "Sample Problem 256",
+      "titleSlug": "sample-problem-256",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 68.2
+    },
+    {
+      "questionFrontendId": "257",
+      "title": "Sample Problem 257",
+      "titleSlug": "sample-problem-257",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 59.5
+    },
+    {
+      "questionFrontendId": "258",
+      "title": "Sample Problem 258",
+      "titleSlug": "sample-problem-258",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 52.8
+    },
+    {
+      "questionFrontendId": "259",
+      "title": "Sample Problem 259",
+      "titleSlug": "sample-problem-259",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 55.2
+    },
+    {
+      "questionFrontendId": "260",
+      "title": "Sample Problem 260",
+      "titleSlug": "sample-problem-260",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 64.7
+    },
+    {
+      "questionFrontendId": "261",
+      "title": "Sample Problem 261",
+      "titleSlug": "sample-problem-261",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 40.9
+    },
+    {
+      "questionFrontendId": "262",
+      "title": "Sample Problem 262",
+      "titleSlug": "sample-problem-262",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 50.3
+    },
+    {
+      "questionFrontendId": "263",
+      "title": "Sample Problem 263",
+      "titleSlug": "sample-problem-263",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 42.2
+    },
+    {
+      "questionFrontendId": "264",
+      "title": "Sample Problem 264",
+      "titleSlug": "sample-problem-264",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 62.1
+    },
+    {
+      "questionFrontendId": "265",
+      "title": "Sample Problem 265",
+      "titleSlug": "sample-problem-265",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 32.5
+    },
+    {
+      "questionFrontendId": "266",
+      "title": "Sample Problem 266",
+      "titleSlug": "sample-problem-266",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 69.8
+    },
+    {
+      "questionFrontendId": "267",
+      "title": "Sample Problem 267",
+      "titleSlug": "sample-problem-267",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 35.6
+    },
+    {
+      "questionFrontendId": "268",
+      "title": "Sample Problem 268",
+      "titleSlug": "sample-problem-268",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 30.7
+    },
+    {
+      "questionFrontendId": "269",
+      "title": "Sample Problem 269",
+      "titleSlug": "sample-problem-269",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 53.8
+    },
+    {
+      "questionFrontendId": "270",
+      "title": "Sample Problem 270",
+      "titleSlug": "sample-problem-270",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 53.8
+    },
+    {
+      "questionFrontendId": "271",
+      "title": "Sample Problem 271",
+      "titleSlug": "sample-problem-271",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 52.6
+    },
+    {
+      "questionFrontendId": "272",
+      "title": "Sample Problem 272",
+      "titleSlug": "sample-problem-272",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 54.6
+    },
+    {
+      "questionFrontendId": "273",
+      "title": "Sample Problem 273",
+      "titleSlug": "sample-problem-273",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 57.6
+    },
+    {
+      "questionFrontendId": "274",
+      "title": "Sample Problem 274",
+      "titleSlug": "sample-problem-274",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 53.3
+    },
+    {
+      "questionFrontendId": "275",
+      "title": "Sample Problem 275",
+      "titleSlug": "sample-problem-275",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 49.2
+    },
+    {
+      "questionFrontendId": "276",
+      "title": "Sample Problem 276",
+      "titleSlug": "sample-problem-276",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 52.6
+    },
+    {
+      "questionFrontendId": "277",
+      "title": "Sample Problem 277",
+      "titleSlug": "sample-problem-277",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 53.8
+    },
+    {
+      "questionFrontendId": "278",
+      "title": "Sample Problem 278",
+      "titleSlug": "sample-problem-278",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 60.1
+    },
+    {
+      "questionFrontendId": "279",
+      "title": "Sample Problem 279",
+      "titleSlug": "sample-problem-279",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 44.4
+    },
+    {
+      "questionFrontendId": "280",
+      "title": "Sample Problem 280",
+      "titleSlug": "sample-problem-280",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 45.7
+    },
+    {
+      "questionFrontendId": "281",
+      "title": "Sample Problem 281",
+      "titleSlug": "sample-problem-281",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 35.4
+    },
+    {
+      "questionFrontendId": "282",
+      "title": "Sample Problem 282",
+      "titleSlug": "sample-problem-282",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 41.3
+    },
+    {
+      "questionFrontendId": "283",
+      "title": "Sample Problem 283",
+      "titleSlug": "sample-problem-283",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 36.0
+    },
+    {
+      "questionFrontendId": "284",
+      "title": "Sample Problem 284",
+      "titleSlug": "sample-problem-284",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 50.2
+    },
+    {
+      "questionFrontendId": "285",
+      "title": "Sample Problem 285",
+      "titleSlug": "sample-problem-285",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "286",
+      "title": "Sample Problem 286",
+      "titleSlug": "sample-problem-286",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 44.6
+    },
+    {
+      "questionFrontendId": "287",
+      "title": "Sample Problem 287",
+      "titleSlug": "sample-problem-287",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 63.2
+    },
+    {
+      "questionFrontendId": "288",
+      "title": "Sample Problem 288",
+      "titleSlug": "sample-problem-288",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 47.0
+    },
+    {
+      "questionFrontendId": "289",
+      "title": "Sample Problem 289",
+      "titleSlug": "sample-problem-289",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 65.7
+    },
+    {
+      "questionFrontendId": "290",
+      "title": "Sample Problem 290",
+      "titleSlug": "sample-problem-290",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 59.3
+    },
+    {
+      "questionFrontendId": "291",
+      "title": "Sample Problem 291",
+      "titleSlug": "sample-problem-291",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 37.1
+    },
+    {
+      "questionFrontendId": "292",
+      "title": "Sample Problem 292",
+      "titleSlug": "sample-problem-292",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 62.6
+    },
+    {
+      "questionFrontendId": "293",
+      "title": "Sample Problem 293",
+      "titleSlug": "sample-problem-293",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 60.3
+    },
+    {
+      "questionFrontendId": "294",
+      "title": "Sample Problem 294",
+      "titleSlug": "sample-problem-294",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 64.4
+    },
+    {
+      "questionFrontendId": "295",
+      "title": "Sample Problem 295",
+      "titleSlug": "sample-problem-295",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 53.1
+    },
+    {
+      "questionFrontendId": "296",
+      "title": "Sample Problem 296",
+      "titleSlug": "sample-problem-296",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 33.3
+    },
+    {
+      "questionFrontendId": "297",
+      "title": "Sample Problem 297",
+      "titleSlug": "sample-problem-297",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 56.6
+    },
+    {
+      "questionFrontendId": "298",
+      "title": "Sample Problem 298",
+      "titleSlug": "sample-problem-298",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 53.2
+    },
+    {
+      "questionFrontendId": "299",
+      "title": "Sample Problem 299",
+      "titleSlug": "sample-problem-299",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 41.7
+    },
+    {
+      "questionFrontendId": "301",
+      "title": "Sample Problem 301",
+      "titleSlug": "sample-problem-301",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 32.5
+    },
+    {
+      "questionFrontendId": "302",
+      "title": "Sample Problem 302",
+      "titleSlug": "sample-problem-302",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 47.6
+    },
+    {
+      "questionFrontendId": "303",
+      "title": "Sample Problem 303",
+      "titleSlug": "sample-problem-303",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 40.7
+    },
+    {
+      "questionFrontendId": "304",
+      "title": "Sample Problem 304",
+      "titleSlug": "sample-problem-304",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 54.0
+    },
+    {
+      "questionFrontendId": "305",
+      "title": "Sample Problem 305",
+      "titleSlug": "sample-problem-305",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 44.4
+    },
+    {
+      "questionFrontendId": "306",
+      "title": "Sample Problem 306",
+      "titleSlug": "sample-problem-306",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 64.8
+    },
+    {
+      "questionFrontendId": "307",
+      "title": "Sample Problem 307",
+      "titleSlug": "sample-problem-307",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 38.7
+    },
+    {
+      "questionFrontendId": "308",
+      "title": "Sample Problem 308",
+      "titleSlug": "sample-problem-308",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 64.7
+    },
+    {
+      "questionFrontendId": "309",
+      "title": "Sample Problem 309",
+      "titleSlug": "sample-problem-309",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 34.4
+    },
+    {
+      "questionFrontendId": "310",
+      "title": "Sample Problem 310",
+      "titleSlug": "sample-problem-310",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 56.2
+    },
+    {
+      "questionFrontendId": "311",
+      "title": "Sample Problem 311",
+      "titleSlug": "sample-problem-311",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 55.4
+    },
+    {
+      "questionFrontendId": "312",
+      "title": "Sample Problem 312",
+      "titleSlug": "sample-problem-312",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 31.2
+    },
+    {
+      "questionFrontendId": "313",
+      "title": "Sample Problem 313",
+      "titleSlug": "sample-problem-313",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 69.3
+    },
+    {
+      "questionFrontendId": "314",
+      "title": "Sample Problem 314",
+      "titleSlug": "sample-problem-314",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 60.4
+    },
+    {
+      "questionFrontendId": "315",
+      "title": "Sample Problem 315",
+      "titleSlug": "sample-problem-315",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 58.2
+    },
+    {
+      "questionFrontendId": "316",
+      "title": "Sample Problem 316",
+      "titleSlug": "sample-problem-316",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 30.8
+    },
+    {
+      "questionFrontendId": "317",
+      "title": "Sample Problem 317",
+      "titleSlug": "sample-problem-317",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 69.1
+    },
+    {
+      "questionFrontendId": "318",
+      "title": "Sample Problem 318",
+      "titleSlug": "sample-problem-318",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 56.4
+    },
+    {
+      "questionFrontendId": "319",
+      "title": "Sample Problem 319",
+      "titleSlug": "sample-problem-319",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 67.7
+    },
+    {
+      "questionFrontendId": "320",
+      "title": "Sample Problem 320",
+      "titleSlug": "sample-problem-320",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 30.3
+    },
+    {
+      "questionFrontendId": "321",
+      "title": "Sample Problem 321",
+      "titleSlug": "sample-problem-321",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 47.8
+    },
+    {
+      "questionFrontendId": "323",
+      "title": "Sample Problem 323",
+      "titleSlug": "sample-problem-323",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 51.9
+    },
+    {
+      "questionFrontendId": "324",
+      "title": "Sample Problem 324",
+      "titleSlug": "sample-problem-324",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 58.6
+    },
+    {
+      "questionFrontendId": "325",
+      "title": "Sample Problem 325",
+      "titleSlug": "sample-problem-325",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 56.0
+    },
+    {
+      "questionFrontendId": "326",
+      "title": "Sample Problem 326",
+      "titleSlug": "sample-problem-326",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.8
+    },
+    {
+      "questionFrontendId": "327",
+      "title": "Sample Problem 327",
+      "titleSlug": "sample-problem-327",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 65.5
+    },
+    {
+      "questionFrontendId": "328",
+      "title": "Sample Problem 328",
+      "titleSlug": "sample-problem-328",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 38.0
+    },
+    {
+      "questionFrontendId": "329",
+      "title": "Sample Problem 329",
+      "titleSlug": "sample-problem-329",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 34.9
+    },
+    {
+      "questionFrontendId": "330",
+      "title": "Sample Problem 330",
+      "titleSlug": "sample-problem-330",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 40.8
+    },
+    {
+      "questionFrontendId": "331",
+      "title": "Sample Problem 331",
+      "titleSlug": "sample-problem-331",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 58.3
+    },
+    {
+      "questionFrontendId": "332",
+      "title": "Sample Problem 332",
+      "titleSlug": "sample-problem-332",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 47.2
+    },
+    {
+      "questionFrontendId": "333",
+      "title": "Sample Problem 333",
+      "titleSlug": "sample-problem-333",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 34.5
+    },
+    {
+      "questionFrontendId": "334",
+      "title": "Sample Problem 334",
+      "titleSlug": "sample-problem-334",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 35.7
+    },
+    {
+      "questionFrontendId": "335",
+      "title": "Sample Problem 335",
+      "titleSlug": "sample-problem-335",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 31.8
+    },
+    {
+      "questionFrontendId": "336",
+      "title": "Sample Problem 336",
+      "titleSlug": "sample-problem-336",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 52.7
+    },
+    {
+      "questionFrontendId": "337",
+      "title": "Sample Problem 337",
+      "titleSlug": "sample-problem-337",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 50.4
+    },
+    {
+      "questionFrontendId": "338",
+      "title": "Sample Problem 338",
+      "titleSlug": "sample-problem-338",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 37.2
+    },
+    {
+      "questionFrontendId": "339",
+      "title": "Sample Problem 339",
+      "titleSlug": "sample-problem-339",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 59.4
+    },
+    {
+      "questionFrontendId": "340",
+      "title": "Sample Problem 340",
+      "titleSlug": "sample-problem-340",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 67.6
+    },
+    {
+      "questionFrontendId": "341",
+      "title": "Sample Problem 341",
+      "titleSlug": "sample-problem-341",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 37.3
+    },
+    {
+      "questionFrontendId": "342",
+      "title": "Sample Problem 342",
+      "titleSlug": "sample-problem-342",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.2
+    },
+    {
+      "questionFrontendId": "343",
+      "title": "Sample Problem 343",
+      "titleSlug": "sample-problem-343",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 63.4
+    },
+    {
+      "questionFrontendId": "344",
+      "title": "Sample Problem 344",
+      "titleSlug": "sample-problem-344",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 50.0
+    },
+    {
+      "questionFrontendId": "345",
+      "title": "Sample Problem 345",
+      "titleSlug": "sample-problem-345",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 69.2
+    },
+    {
+      "questionFrontendId": "346",
+      "title": "Sample Problem 346",
+      "titleSlug": "sample-problem-346",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 47.5
+    },
+    {
+      "questionFrontendId": "347",
+      "title": "Sample Problem 347",
+      "titleSlug": "sample-problem-347",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 65.1
+    },
+    {
+      "questionFrontendId": "348",
+      "title": "Sample Problem 348",
+      "titleSlug": "sample-problem-348",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 66.8
+    },
+    {
+      "questionFrontendId": "349",
+      "title": "Sample Problem 349",
+      "titleSlug": "sample-problem-349",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 61.6
+    },
+    {
+      "questionFrontendId": "350",
+      "title": "Sample Problem 350",
+      "titleSlug": "sample-problem-350",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 38.7
+    },
+    {
+      "questionFrontendId": "351",
+      "title": "Sample Problem 351",
+      "titleSlug": "sample-problem-351",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 68.1
+    },
+    {
+      "questionFrontendId": "352",
+      "title": "Sample Problem 352",
+      "titleSlug": "sample-problem-352",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 57.7
+    },
+    {
+      "questionFrontendId": "353",
+      "title": "Sample Problem 353",
+      "titleSlug": "sample-problem-353",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 36.7
+    },
+    {
+      "questionFrontendId": "354",
+      "title": "Sample Problem 354",
+      "titleSlug": "sample-problem-354",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 52.9
+    },
+    {
+      "questionFrontendId": "355",
+      "title": "Sample Problem 355",
+      "titleSlug": "sample-problem-355",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 39.3
+    },
+    {
+      "questionFrontendId": "356",
+      "title": "Sample Problem 356",
+      "titleSlug": "sample-problem-356",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 57.2
+    },
+    {
+      "questionFrontendId": "357",
+      "title": "Sample Problem 357",
+      "titleSlug": "sample-problem-357",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 30.0
+    },
+    {
+      "questionFrontendId": "358",
+      "title": "Sample Problem 358",
+      "titleSlug": "sample-problem-358",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 37.8
+    },
+    {
+      "questionFrontendId": "359",
+      "title": "Sample Problem 359",
+      "titleSlug": "sample-problem-359",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 60.5
+    },
+    {
+      "questionFrontendId": "360",
+      "title": "Sample Problem 360",
+      "titleSlug": "sample-problem-360",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 53.3
+    },
+    {
+      "questionFrontendId": "361",
+      "title": "Sample Problem 361",
+      "titleSlug": "sample-problem-361",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 58.5
+    },
+    {
+      "questionFrontendId": "362",
+      "title": "Sample Problem 362",
+      "titleSlug": "sample-problem-362",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 32.1
+    },
+    {
+      "questionFrontendId": "363",
+      "title": "Sample Problem 363",
+      "titleSlug": "sample-problem-363",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 48.5
+    },
+    {
+      "questionFrontendId": "364",
+      "title": "Sample Problem 364",
+      "titleSlug": "sample-problem-364",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 49.7
+    },
+    {
+      "questionFrontendId": "365",
+      "title": "Sample Problem 365",
+      "titleSlug": "sample-problem-365",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 44.9
+    },
+    {
+      "questionFrontendId": "366",
+      "title": "Sample Problem 366",
+      "titleSlug": "sample-problem-366",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 49.0
+    },
+    {
+      "questionFrontendId": "367",
+      "title": "Sample Problem 367",
+      "titleSlug": "sample-problem-367",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 59.2
+    },
+    {
+      "questionFrontendId": "368",
+      "title": "Sample Problem 368",
+      "titleSlug": "sample-problem-368",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 54.8
+    },
+    {
+      "questionFrontendId": "369",
+      "title": "Sample Problem 369",
+      "titleSlug": "sample-problem-369",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.8
+    },
+    {
+      "questionFrontendId": "370",
+      "title": "Sample Problem 370",
+      "titleSlug": "sample-problem-370",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 51.0
+    },
+    {
+      "questionFrontendId": "371",
+      "title": "Sample Problem 371",
+      "titleSlug": "sample-problem-371",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 57.5
+    },
+    {
+      "questionFrontendId": "372",
+      "title": "Sample Problem 372",
+      "titleSlug": "sample-problem-372",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 31.4
+    },
+    {
+      "questionFrontendId": "373",
+      "title": "Sample Problem 373",
+      "titleSlug": "sample-problem-373",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 55.1
+    },
+    {
+      "questionFrontendId": "374",
+      "title": "Sample Problem 374",
+      "titleSlug": "sample-problem-374",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.2
+    },
+    {
+      "questionFrontendId": "375",
+      "title": "Sample Problem 375",
+      "titleSlug": "sample-problem-375",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 67.2
+    },
+    {
+      "questionFrontendId": "376",
+      "title": "Sample Problem 376",
+      "titleSlug": "sample-problem-376",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 46.1
+    },
+    {
+      "questionFrontendId": "377",
+      "title": "Sample Problem 377",
+      "titleSlug": "sample-problem-377",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 37.5
+    },
+    {
+      "questionFrontendId": "378",
+      "title": "Sample Problem 378",
+      "titleSlug": "sample-problem-378",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 38.8
+    },
+    {
+      "questionFrontendId": "379",
+      "title": "Sample Problem 379",
+      "titleSlug": "sample-problem-379",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 69.8
+    },
+    {
+      "questionFrontendId": "380",
+      "title": "Sample Problem 380",
+      "titleSlug": "sample-problem-380",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 40.9
+    },
+    {
+      "questionFrontendId": "381",
+      "title": "Sample Problem 381",
+      "titleSlug": "sample-problem-381",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.2
+    },
+    {
+      "questionFrontendId": "382",
+      "title": "Sample Problem 382",
+      "titleSlug": "sample-problem-382",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 33.7
+    },
+    {
+      "questionFrontendId": "383",
+      "title": "Sample Problem 383",
+      "titleSlug": "sample-problem-383",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 59.0
+    },
+    {
+      "questionFrontendId": "384",
+      "title": "Sample Problem 384",
+      "titleSlug": "sample-problem-384",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 60.9
+    },
+    {
+      "questionFrontendId": "385",
+      "title": "Sample Problem 385",
+      "titleSlug": "sample-problem-385",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 59.1
+    },
+    {
+      "questionFrontendId": "386",
+      "title": "Sample Problem 386",
+      "titleSlug": "sample-problem-386",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 38.5
+    },
+    {
+      "questionFrontendId": "387",
+      "title": "Sample Problem 387",
+      "titleSlug": "sample-problem-387",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 52.1
+    },
+    {
+      "questionFrontendId": "388",
+      "title": "Sample Problem 388",
+      "titleSlug": "sample-problem-388",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 59.1
+    },
+    {
+      "questionFrontendId": "389",
+      "title": "Sample Problem 389",
+      "titleSlug": "sample-problem-389",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 40.3
+    },
+    {
+      "questionFrontendId": "390",
+      "title": "Sample Problem 390",
+      "titleSlug": "sample-problem-390",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 42.5
+    },
+    {
+      "questionFrontendId": "391",
+      "title": "Sample Problem 391",
+      "titleSlug": "sample-problem-391",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.8
+    },
+    {
+      "questionFrontendId": "392",
+      "title": "Sample Problem 392",
+      "titleSlug": "sample-problem-392",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 36.7
+    },
+    {
+      "questionFrontendId": "393",
+      "title": "Sample Problem 393",
+      "titleSlug": "sample-problem-393",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 54.1
+    },
+    {
+      "questionFrontendId": "394",
+      "title": "Sample Problem 394",
+      "titleSlug": "sample-problem-394",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 34.4
+    },
+    {
+      "questionFrontendId": "395",
+      "title": "Sample Problem 395",
+      "titleSlug": "sample-problem-395",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 46.8
+    },
+    {
+      "questionFrontendId": "396",
+      "title": "Sample Problem 396",
+      "titleSlug": "sample-problem-396",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 43.0
+    },
+    {
+      "questionFrontendId": "397",
+      "title": "Sample Problem 397",
+      "titleSlug": "sample-problem-397",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 44.4
+    },
+    {
+      "questionFrontendId": "398",
+      "title": "Sample Problem 398",
+      "titleSlug": "sample-problem-398",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 55.9
+    },
+    {
+      "questionFrontendId": "399",
+      "title": "Sample Problem 399",
+      "titleSlug": "sample-problem-399",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 42.7
+    },
+    {
+      "questionFrontendId": "400",
+      "title": "Sample Problem 400",
+      "titleSlug": "sample-problem-400",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 39.0
+    },
+    {
+      "questionFrontendId": "401",
+      "title": "Sample Problem 401",
+      "titleSlug": "sample-problem-401",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 61.1
+    },
+    {
+      "questionFrontendId": "402",
+      "title": "Sample Problem 402",
+      "titleSlug": "sample-problem-402",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 32.6
+    },
+    {
+      "questionFrontendId": "403",
+      "title": "Sample Problem 403",
+      "titleSlug": "sample-problem-403",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 43.4
+    },
+    {
+      "questionFrontendId": "404",
+      "title": "Sample Problem 404",
+      "titleSlug": "sample-problem-404",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 51.0
+    },
+    {
+      "questionFrontendId": "405",
+      "title": "Sample Problem 405",
+      "titleSlug": "sample-problem-405",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 47.5
+    },
+    {
+      "questionFrontendId": "406",
+      "title": "Sample Problem 406",
+      "titleSlug": "sample-problem-406",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 40.3
+    },
+    {
+      "questionFrontendId": "407",
+      "title": "Sample Problem 407",
+      "titleSlug": "sample-problem-407",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 44.4
+    },
+    {
+      "questionFrontendId": "408",
+      "title": "Sample Problem 408",
+      "titleSlug": "sample-problem-408",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 66.7
+    },
+    {
+      "questionFrontendId": "409",
+      "title": "Sample Problem 409",
+      "titleSlug": "sample-problem-409",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 48.2
+    },
+    {
+      "questionFrontendId": "410",
+      "title": "Sample Problem 410",
+      "titleSlug": "sample-problem-410",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 38.9
+    },
+    {
+      "questionFrontendId": "411",
+      "title": "Sample Problem 411",
+      "titleSlug": "sample-problem-411",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 66.3
+    },
+    {
+      "questionFrontendId": "412",
+      "title": "Sample Problem 412",
+      "titleSlug": "sample-problem-412",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 56.6
+    },
+    {
+      "questionFrontendId": "413",
+      "title": "Sample Problem 413",
+      "titleSlug": "sample-problem-413",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 50.0
+    },
+    {
+      "questionFrontendId": "414",
+      "title": "Sample Problem 414",
+      "titleSlug": "sample-problem-414",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 44.9
+    },
+    {
+      "questionFrontendId": "415",
+      "title": "Sample Problem 415",
+      "titleSlug": "sample-problem-415",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 43.0
+    },
+    {
+      "questionFrontendId": "416",
+      "title": "Sample Problem 416",
+      "titleSlug": "sample-problem-416",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 68.6
+    },
+    {
+      "questionFrontendId": "417",
+      "title": "Sample Problem 417",
+      "titleSlug": "sample-problem-417",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 53.5
+    },
+    {
+      "questionFrontendId": "418",
+      "title": "Sample Problem 418",
+      "titleSlug": "sample-problem-418",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 67.9
+    },
+    {
+      "questionFrontendId": "419",
+      "title": "Sample Problem 419",
+      "titleSlug": "sample-problem-419",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 55.1
+    },
+    {
+      "questionFrontendId": "420",
+      "title": "Sample Problem 420",
+      "titleSlug": "sample-problem-420",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 50.5
+    },
+    {
+      "questionFrontendId": "421",
+      "title": "Sample Problem 421",
+      "titleSlug": "sample-problem-421",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 63.3
+    },
+    {
+      "questionFrontendId": "422",
+      "title": "Sample Problem 422",
+      "titleSlug": "sample-problem-422",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 30.9
+    },
+    {
+      "questionFrontendId": "423",
+      "title": "Sample Problem 423",
+      "titleSlug": "sample-problem-423",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 43.4
+    },
+    {
+      "questionFrontendId": "424",
+      "title": "Sample Problem 424",
+      "titleSlug": "sample-problem-424",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 63.7
+    },
+    {
+      "questionFrontendId": "425",
+      "title": "Sample Problem 425",
+      "titleSlug": "sample-problem-425",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 64.5
+    },
+    {
+      "questionFrontendId": "426",
+      "title": "Sample Problem 426",
+      "titleSlug": "sample-problem-426",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 54.6
+    },
+    {
+      "questionFrontendId": "427",
+      "title": "Sample Problem 427",
+      "titleSlug": "sample-problem-427",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 47.2
+    },
+    {
+      "questionFrontendId": "428",
+      "title": "Sample Problem 428",
+      "titleSlug": "sample-problem-428",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 66.9
+    },
+    {
+      "questionFrontendId": "429",
+      "title": "Sample Problem 429",
+      "titleSlug": "sample-problem-429",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 58.9
+    },
+    {
+      "questionFrontendId": "430",
+      "title": "Sample Problem 430",
+      "titleSlug": "sample-problem-430",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 42.4
+    },
+    {
+      "questionFrontendId": "431",
+      "title": "Sample Problem 431",
+      "titleSlug": "sample-problem-431",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "432",
+      "title": "Sample Problem 432",
+      "titleSlug": "sample-problem-432",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 33.3
+    },
+    {
+      "questionFrontendId": "433",
+      "title": "Sample Problem 433",
+      "titleSlug": "sample-problem-433",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 44.1
+    },
+    {
+      "questionFrontendId": "434",
+      "title": "Sample Problem 434",
+      "titleSlug": "sample-problem-434",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 69.1
+    },
+    {
+      "questionFrontendId": "435",
+      "title": "Sample Problem 435",
+      "titleSlug": "sample-problem-435",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 68.3
+    },
+    {
+      "questionFrontendId": "436",
+      "title": "Sample Problem 436",
+      "titleSlug": "sample-problem-436",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 60.0
+    },
+    {
+      "questionFrontendId": "437",
+      "title": "Sample Problem 437",
+      "titleSlug": "sample-problem-437",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 32.6
+    },
+    {
+      "questionFrontendId": "438",
+      "title": "Sample Problem 438",
+      "titleSlug": "sample-problem-438",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 50.1
+    },
+    {
+      "questionFrontendId": "439",
+      "title": "Sample Problem 439",
+      "titleSlug": "sample-problem-439",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 51.0
+    },
+    {
+      "questionFrontendId": "440",
+      "title": "Sample Problem 440",
+      "titleSlug": "sample-problem-440",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 51.2
+    },
+    {
+      "questionFrontendId": "441",
+      "title": "Sample Problem 441",
+      "titleSlug": "sample-problem-441",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 61.9
+    },
+    {
+      "questionFrontendId": "442",
+      "title": "Sample Problem 442",
+      "titleSlug": "sample-problem-442",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.0
+    },
+    {
+      "questionFrontendId": "443",
+      "title": "Sample Problem 443",
+      "titleSlug": "sample-problem-443",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 62.8
+    },
+    {
+      "questionFrontendId": "444",
+      "title": "Sample Problem 444",
+      "titleSlug": "sample-problem-444",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 37.4
+    },
+    {
+      "questionFrontendId": "445",
+      "title": "Sample Problem 445",
+      "titleSlug": "sample-problem-445",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.5
+    },
+    {
+      "questionFrontendId": "446",
+      "title": "Sample Problem 446",
+      "titleSlug": "sample-problem-446",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 57.7
+    },
+    {
+      "questionFrontendId": "447",
+      "title": "Sample Problem 447",
+      "titleSlug": "sample-problem-447",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 35.7
+    },
+    {
+      "questionFrontendId": "448",
+      "title": "Sample Problem 448",
+      "titleSlug": "sample-problem-448",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 53.2
+    },
+    {
+      "questionFrontendId": "449",
+      "title": "Sample Problem 449",
+      "titleSlug": "sample-problem-449",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 43.4
+    },
+    {
+      "questionFrontendId": "450",
+      "title": "Sample Problem 450",
+      "titleSlug": "sample-problem-450",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 64.7
+    },
+    {
+      "questionFrontendId": "451",
+      "title": "Sample Problem 451",
+      "titleSlug": "sample-problem-451",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 47.0
+    },
+    {
+      "questionFrontendId": "452",
+      "title": "Sample Problem 452",
+      "titleSlug": "sample-problem-452",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 37.1
+    },
+    {
+      "questionFrontendId": "453",
+      "title": "Sample Problem 453",
+      "titleSlug": "sample-problem-453",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 31.2
+    },
+    {
+      "questionFrontendId": "454",
+      "title": "Sample Problem 454",
+      "titleSlug": "sample-problem-454",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 39.0
+    },
+    {
+      "questionFrontendId": "455",
+      "title": "Sample Problem 455",
+      "titleSlug": "sample-problem-455",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 53.7
+    },
+    {
+      "questionFrontendId": "456",
+      "title": "Sample Problem 456",
+      "titleSlug": "sample-problem-456",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 31.8
+    },
+    {
+      "questionFrontendId": "457",
+      "title": "Sample Problem 457",
+      "titleSlug": "sample-problem-457",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 38.7
+    },
+    {
+      "questionFrontendId": "458",
+      "title": "Sample Problem 458",
+      "titleSlug": "sample-problem-458",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 41.3
+    },
+    {
+      "questionFrontendId": "459",
+      "title": "Sample Problem 459",
+      "titleSlug": "sample-problem-459",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.8
+    },
+    {
+      "questionFrontendId": "460",
+      "title": "Sample Problem 460",
+      "titleSlug": "sample-problem-460",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 35.7
+    },
+    {
+      "questionFrontendId": "461",
+      "title": "Sample Problem 461",
+      "titleSlug": "sample-problem-461",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 58.5
+    },
+    {
+      "questionFrontendId": "462",
+      "title": "Sample Problem 462",
+      "titleSlug": "sample-problem-462",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 52.6
+    },
+    {
+      "questionFrontendId": "463",
+      "title": "Sample Problem 463",
+      "titleSlug": "sample-problem-463",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 58.9
+    },
+    {
+      "questionFrontendId": "464",
+      "title": "Sample Problem 464",
+      "titleSlug": "sample-problem-464",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 51.5
+    },
+    {
+      "questionFrontendId": "465",
+      "title": "Sample Problem 465",
+      "titleSlug": "sample-problem-465",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 45.1
+    },
+    {
+      "questionFrontendId": "466",
+      "title": "Sample Problem 466",
+      "titleSlug": "sample-problem-466",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 45.3
+    },
+    {
+      "questionFrontendId": "467",
+      "title": "Sample Problem 467",
+      "titleSlug": "sample-problem-467",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 40.4
+    },
+    {
+      "questionFrontendId": "468",
+      "title": "Sample Problem 468",
+      "titleSlug": "sample-problem-468",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 48.7
+    },
+    {
+      "questionFrontendId": "469",
+      "title": "Sample Problem 469",
+      "titleSlug": "sample-problem-469",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 44.9
+    },
+    {
+      "questionFrontendId": "470",
+      "title": "Sample Problem 470",
+      "titleSlug": "sample-problem-470",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 47.2
+    },
+    {
+      "questionFrontendId": "471",
+      "title": "Sample Problem 471",
+      "titleSlug": "sample-problem-471",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 36.1
+    },
+    {
+      "questionFrontendId": "472",
+      "title": "Sample Problem 472",
+      "titleSlug": "sample-problem-472",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 30.0
+    },
+    {
+      "questionFrontendId": "473",
+      "title": "Sample Problem 473",
+      "titleSlug": "sample-problem-473",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 36.9
+    },
+    {
+      "questionFrontendId": "474",
+      "title": "Sample Problem 474",
+      "titleSlug": "sample-problem-474",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 31.7
+    },
+    {
+      "questionFrontendId": "475",
+      "title": "Sample Problem 475",
+      "titleSlug": "sample-problem-475",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 34.4
+    },
+    {
+      "questionFrontendId": "476",
+      "title": "Sample Problem 476",
+      "titleSlug": "sample-problem-476",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 43.8
+    },
+    {
+      "questionFrontendId": "477",
+      "title": "Sample Problem 477",
+      "titleSlug": "sample-problem-477",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 47.8
+    },
+    {
+      "questionFrontendId": "478",
+      "title": "Sample Problem 478",
+      "titleSlug": "sample-problem-478",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 65.2
+    },
+    {
+      "questionFrontendId": "479",
+      "title": "Sample Problem 479",
+      "titleSlug": "sample-problem-479",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.8
+    },
+    {
+      "questionFrontendId": "480",
+      "title": "Sample Problem 480",
+      "titleSlug": "sample-problem-480",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 66.0
+    },
+    {
+      "questionFrontendId": "481",
+      "title": "Sample Problem 481",
+      "titleSlug": "sample-problem-481",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 43.9
+    },
+    {
+      "questionFrontendId": "482",
+      "title": "Sample Problem 482",
+      "titleSlug": "sample-problem-482",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 36.4
+    },
+    {
+      "questionFrontendId": "483",
+      "title": "Sample Problem 483",
+      "titleSlug": "sample-problem-483",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 50.8
+    },
+    {
+      "questionFrontendId": "484",
+      "title": "Sample Problem 484",
+      "titleSlug": "sample-problem-484",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 58.0
+    },
+    {
+      "questionFrontendId": "485",
+      "title": "Sample Problem 485",
+      "titleSlug": "sample-problem-485",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 67.3
+    },
+    {
+      "questionFrontendId": "486",
+      "title": "Sample Problem 486",
+      "titleSlug": "sample-problem-486",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 61.3
+    },
+    {
+      "questionFrontendId": "487",
+      "title": "Sample Problem 487",
+      "titleSlug": "sample-problem-487",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 44.1
+    },
+    {
+      "questionFrontendId": "488",
+      "title": "Sample Problem 488",
+      "titleSlug": "sample-problem-488",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 37.5
+    },
+    {
+      "questionFrontendId": "489",
+      "title": "Sample Problem 489",
+      "titleSlug": "sample-problem-489",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 33.3
+    },
+    {
+      "questionFrontendId": "490",
+      "title": "Sample Problem 490",
+      "titleSlug": "sample-problem-490",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 34.2
+    },
+    {
+      "questionFrontendId": "491",
+      "title": "Sample Problem 491",
+      "titleSlug": "sample-problem-491",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 36.8
+    },
+    {
+      "questionFrontendId": "492",
+      "title": "Sample Problem 492",
+      "titleSlug": "sample-problem-492",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 32.0
+    },
+    {
+      "questionFrontendId": "493",
+      "title": "Sample Problem 493",
+      "titleSlug": "sample-problem-493",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 32.1
+    },
+    {
+      "questionFrontendId": "494",
+      "title": "Sample Problem 494",
+      "titleSlug": "sample-problem-494",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 66.6
+    },
+    {
+      "questionFrontendId": "495",
+      "title": "Sample Problem 495",
+      "titleSlug": "sample-problem-495",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 33.9
+    },
+    {
+      "questionFrontendId": "496",
+      "title": "Sample Problem 496",
+      "titleSlug": "sample-problem-496",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 56.2
+    },
+    {
+      "questionFrontendId": "497",
+      "title": "Sample Problem 497",
+      "titleSlug": "sample-problem-497",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 32.4
+    },
+    {
+      "questionFrontendId": "498",
+      "title": "Sample Problem 498",
+      "titleSlug": "sample-problem-498",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.9
+    },
+    {
+      "questionFrontendId": "499",
+      "title": "Sample Problem 499",
+      "titleSlug": "sample-problem-499",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 66.5
+    },
+    {
+      "questionFrontendId": "500",
+      "title": "Sample Problem 500",
+      "titleSlug": "sample-problem-500",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 56.7
+    },
+    {
+      "questionFrontendId": "501",
+      "title": "Sample Problem 501",
+      "titleSlug": "sample-problem-501",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 67.3
+    },
+    {
+      "questionFrontendId": "502",
+      "title": "Sample Problem 502",
+      "titleSlug": "sample-problem-502",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 44.7
+    },
+    {
+      "questionFrontendId": "503",
+      "title": "Sample Problem 503",
+      "titleSlug": "sample-problem-503",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 35.8
+    },
+    {
+      "questionFrontendId": "504",
+      "title": "Sample Problem 504",
+      "titleSlug": "sample-problem-504",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 48.1
+    },
+    {
+      "questionFrontendId": "505",
+      "title": "Sample Problem 505",
+      "titleSlug": "sample-problem-505",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 60.3
+    },
+    {
+      "questionFrontendId": "506",
+      "title": "Sample Problem 506",
+      "titleSlug": "sample-problem-506",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 66.5
+    },
+    {
+      "questionFrontendId": "507",
+      "title": "Sample Problem 507",
+      "titleSlug": "sample-problem-507",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 49.1
+    },
+    {
+      "questionFrontendId": "508",
+      "title": "Sample Problem 508",
+      "titleSlug": "sample-problem-508",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 54.3
+    },
+    {
+      "questionFrontendId": "509",
+      "title": "Sample Problem 509",
+      "titleSlug": "sample-problem-509",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 51.4
+    },
+    {
+      "questionFrontendId": "510",
+      "title": "Sample Problem 510",
+      "titleSlug": "sample-problem-510",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 50.6
+    },
+    {
+      "questionFrontendId": "511",
+      "title": "Sample Problem 511",
+      "titleSlug": "sample-problem-511",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 32.9
+    },
+    {
+      "questionFrontendId": "512",
+      "title": "Sample Problem 512",
+      "titleSlug": "sample-problem-512",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 62.5
+    },
+    {
+      "questionFrontendId": "513",
+      "title": "Sample Problem 513",
+      "titleSlug": "sample-problem-513",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 57.8
+    },
+    {
+      "questionFrontendId": "514",
+      "title": "Sample Problem 514",
+      "titleSlug": "sample-problem-514",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 42.6
+    },
+    {
+      "questionFrontendId": "515",
+      "title": "Sample Problem 515",
+      "titleSlug": "sample-problem-515",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 33.8
+    },
+    {
+      "questionFrontendId": "516",
+      "title": "Sample Problem 516",
+      "titleSlug": "sample-problem-516",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 31.9
+    },
+    {
+      "questionFrontendId": "517",
+      "title": "Sample Problem 517",
+      "titleSlug": "sample-problem-517",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 42.9
+    },
+    {
+      "questionFrontendId": "518",
+      "title": "Sample Problem 518",
+      "titleSlug": "sample-problem-518",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 69.3
+    },
+    {
+      "questionFrontendId": "519",
+      "title": "Sample Problem 519",
+      "titleSlug": "sample-problem-519",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 51.0
+    },
+    {
+      "questionFrontendId": "520",
+      "title": "Sample Problem 520",
+      "titleSlug": "sample-problem-520",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 31.4
+    },
+    {
+      "questionFrontendId": "521",
+      "title": "Sample Problem 521",
+      "titleSlug": "sample-problem-521",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 54.1
+    },
+    {
+      "questionFrontendId": "522",
+      "title": "Sample Problem 522",
+      "titleSlug": "sample-problem-522",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 54.1
+    },
+    {
+      "questionFrontendId": "523",
+      "title": "Sample Problem 523",
+      "titleSlug": "sample-problem-523",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 56.6
+    },
+    {
+      "questionFrontendId": "524",
+      "title": "Sample Problem 524",
+      "titleSlug": "sample-problem-524",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 41.5
+    },
+    {
+      "questionFrontendId": "525",
+      "title": "Sample Problem 525",
+      "titleSlug": "sample-problem-525",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 43.0
+    },
+    {
+      "questionFrontendId": "526",
+      "title": "Sample Problem 526",
+      "titleSlug": "sample-problem-526",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 64.4
+    },
+    {
+      "questionFrontendId": "527",
+      "title": "Sample Problem 527",
+      "titleSlug": "sample-problem-527",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 44.7
+    },
+    {
+      "questionFrontendId": "528",
+      "title": "Sample Problem 528",
+      "titleSlug": "sample-problem-528",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "529",
+      "title": "Sample Problem 529",
+      "titleSlug": "sample-problem-529",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 51.1
+    },
+    {
+      "questionFrontendId": "530",
+      "title": "Sample Problem 530",
+      "titleSlug": "sample-problem-530",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 68.7
+    },
+    {
+      "questionFrontendId": "531",
+      "title": "Sample Problem 531",
+      "titleSlug": "sample-problem-531",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 32.1
+    },
+    {
+      "questionFrontendId": "532",
+      "title": "Sample Problem 532",
+      "titleSlug": "sample-problem-532",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 44.2
+    },
+    {
+      "questionFrontendId": "533",
+      "title": "Sample Problem 533",
+      "titleSlug": "sample-problem-533",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 30.1
+    },
+    {
+      "questionFrontendId": "534",
+      "title": "Sample Problem 534",
+      "titleSlug": "sample-problem-534",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 32.9
+    },
+    {
+      "questionFrontendId": "535",
+      "title": "Sample Problem 535",
+      "titleSlug": "sample-problem-535",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 49.2
+    },
+    {
+      "questionFrontendId": "536",
+      "title": "Sample Problem 536",
+      "titleSlug": "sample-problem-536",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 66.5
+    },
+    {
+      "questionFrontendId": "537",
+      "title": "Sample Problem 537",
+      "titleSlug": "sample-problem-537",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 62.9
+    },
+    {
+      "questionFrontendId": "538",
+      "title": "Sample Problem 538",
+      "titleSlug": "sample-problem-538",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 56.8
+    },
+    {
+      "questionFrontendId": "539",
+      "title": "Sample Problem 539",
+      "titleSlug": "sample-problem-539",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 55.8
+    },
+    {
+      "questionFrontendId": "540",
+      "title": "Sample Problem 540",
+      "titleSlug": "sample-problem-540",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 40.3
+    },
+    {
+      "questionFrontendId": "541",
+      "title": "Sample Problem 541",
+      "titleSlug": "sample-problem-541",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 38.4
+    },
+    {
+      "questionFrontendId": "542",
+      "title": "Sample Problem 542",
+      "titleSlug": "sample-problem-542",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 69.0
+    },
+    {
+      "questionFrontendId": "543",
+      "title": "Sample Problem 543",
+      "titleSlug": "sample-problem-543",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 38.1
+    },
+    {
+      "questionFrontendId": "544",
+      "title": "Sample Problem 544",
+      "titleSlug": "sample-problem-544",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 36.6
+    },
+    {
+      "questionFrontendId": "545",
+      "title": "Sample Problem 545",
+      "titleSlug": "sample-problem-545",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "546",
+      "title": "Sample Problem 546",
+      "titleSlug": "sample-problem-546",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 35.4
+    },
+    {
+      "questionFrontendId": "547",
+      "title": "Sample Problem 547",
+      "titleSlug": "sample-problem-547",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 40.1
+    },
+    {
+      "questionFrontendId": "548",
+      "title": "Sample Problem 548",
+      "titleSlug": "sample-problem-548",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 37.3
+    },
+    {
+      "questionFrontendId": "549",
+      "title": "Sample Problem 549",
+      "titleSlug": "sample-problem-549",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 32.4
+    },
+    {
+      "questionFrontendId": "550",
+      "title": "Sample Problem 550",
+      "titleSlug": "sample-problem-550",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 57.4
+    },
+    {
+      "questionFrontendId": "551",
+      "title": "Sample Problem 551",
+      "titleSlug": "sample-problem-551",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 66.9
+    },
+    {
+      "questionFrontendId": "552",
+      "title": "Sample Problem 552",
+      "titleSlug": "sample-problem-552",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 61.0
+    },
+    {
+      "questionFrontendId": "553",
+      "title": "Sample Problem 553",
+      "titleSlug": "sample-problem-553",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 36.1
+    },
+    {
+      "questionFrontendId": "554",
+      "title": "Sample Problem 554",
+      "titleSlug": "sample-problem-554",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 56.7
+    },
+    {
+      "questionFrontendId": "555",
+      "title": "Sample Problem 555",
+      "titleSlug": "sample-problem-555",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 44.6
+    },
+    {
+      "questionFrontendId": "556",
+      "title": "Sample Problem 556",
+      "titleSlug": "sample-problem-556",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 34.6
+    },
+    {
+      "questionFrontendId": "557",
+      "title": "Sample Problem 557",
+      "titleSlug": "sample-problem-557",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 35.9
+    },
+    {
+      "questionFrontendId": "558",
+      "title": "Sample Problem 558",
+      "titleSlug": "sample-problem-558",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 56.4
+    },
+    {
+      "questionFrontendId": "559",
+      "title": "Sample Problem 559",
+      "titleSlug": "sample-problem-559",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 43.6
+    },
+    {
+      "questionFrontendId": "560",
+      "title": "Sample Problem 560",
+      "titleSlug": "sample-problem-560",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 40.0
+    },
+    {
+      "questionFrontendId": "561",
+      "title": "Sample Problem 561",
+      "titleSlug": "sample-problem-561",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 67.4
+    },
+    {
+      "questionFrontendId": "562",
+      "title": "Sample Problem 562",
+      "titleSlug": "sample-problem-562",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 46.3
+    },
+    {
+      "questionFrontendId": "563",
+      "title": "Sample Problem 563",
+      "titleSlug": "sample-problem-563",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 57.2
+    },
+    {
+      "questionFrontendId": "564",
+      "title": "Sample Problem 564",
+      "titleSlug": "sample-problem-564",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 59.0
+    },
+    {
+      "questionFrontendId": "565",
+      "title": "Sample Problem 565",
+      "titleSlug": "sample-problem-565",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 52.1
+    },
+    {
+      "questionFrontendId": "566",
+      "title": "Sample Problem 566",
+      "titleSlug": "sample-problem-566",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 64.7
+    },
+    {
+      "questionFrontendId": "567",
+      "title": "Sample Problem 567",
+      "titleSlug": "sample-problem-567",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 58.8
+    },
+    {
+      "questionFrontendId": "568",
+      "title": "Sample Problem 568",
+      "titleSlug": "sample-problem-568",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 58.1
+    },
+    {
+      "questionFrontendId": "569",
+      "title": "Sample Problem 569",
+      "titleSlug": "sample-problem-569",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 54.7
+    },
+    {
+      "questionFrontendId": "570",
+      "title": "Sample Problem 570",
+      "titleSlug": "sample-problem-570",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 34.5
+    },
+    {
+      "questionFrontendId": "571",
+      "title": "Sample Problem 571",
+      "titleSlug": "sample-problem-571",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 38.7
+    },
+    {
+      "questionFrontendId": "572",
+      "title": "Sample Problem 572",
+      "titleSlug": "sample-problem-572",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 35.3
+    },
+    {
+      "questionFrontendId": "573",
+      "title": "Sample Problem 573",
+      "titleSlug": "sample-problem-573",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 67.4
+    },
+    {
+      "questionFrontendId": "574",
+      "title": "Sample Problem 574",
+      "titleSlug": "sample-problem-574",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 34.1
+    },
+    {
+      "questionFrontendId": "575",
+      "title": "Sample Problem 575",
+      "titleSlug": "sample-problem-575",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 42.8
+    },
+    {
+      "questionFrontendId": "576",
+      "title": "Sample Problem 576",
+      "titleSlug": "sample-problem-576",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 54.0
+    },
+    {
+      "questionFrontendId": "577",
+      "title": "Sample Problem 577",
+      "titleSlug": "sample-problem-577",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 60.0
+    },
+    {
+      "questionFrontendId": "578",
+      "title": "Sample Problem 578",
+      "titleSlug": "sample-problem-578",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 64.9
+    },
+    {
+      "questionFrontendId": "579",
+      "title": "Sample Problem 579",
+      "titleSlug": "sample-problem-579",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 62.3
+    },
+    {
+      "questionFrontendId": "580",
+      "title": "Sample Problem 580",
+      "titleSlug": "sample-problem-580",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "581",
+      "title": "Sample Problem 581",
+      "titleSlug": "sample-problem-581",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 49.3
+    },
+    {
+      "questionFrontendId": "582",
+      "title": "Sample Problem 582",
+      "titleSlug": "sample-problem-582",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 55.0
+    },
+    {
+      "questionFrontendId": "583",
+      "title": "Sample Problem 583",
+      "titleSlug": "sample-problem-583",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 66.6
+    },
+    {
+      "questionFrontendId": "584",
+      "title": "Sample Problem 584",
+      "titleSlug": "sample-problem-584",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 52.0
+    },
+    {
+      "questionFrontendId": "585",
+      "title": "Sample Problem 585",
+      "titleSlug": "sample-problem-585",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 51.9
+    },
+    {
+      "questionFrontendId": "586",
+      "title": "Sample Problem 586",
+      "titleSlug": "sample-problem-586",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 50.4
+    },
+    {
+      "questionFrontendId": "587",
+      "title": "Sample Problem 587",
+      "titleSlug": "sample-problem-587",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 33.6
+    },
+    {
+      "questionFrontendId": "588",
+      "title": "Sample Problem 588",
+      "titleSlug": "sample-problem-588",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 51.9
+    },
+    {
+      "questionFrontendId": "589",
+      "title": "Sample Problem 589",
+      "titleSlug": "sample-problem-589",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 63.9
+    },
+    {
+      "questionFrontendId": "590",
+      "title": "Sample Problem 590",
+      "titleSlug": "sample-problem-590",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 69.7
+    },
+    {
+      "questionFrontendId": "591",
+      "title": "Sample Problem 591",
+      "titleSlug": "sample-problem-591",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 33.9
+    },
+    {
+      "questionFrontendId": "592",
+      "title": "Sample Problem 592",
+      "titleSlug": "sample-problem-592",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 33.3
+    },
+    {
+      "questionFrontendId": "593",
+      "title": "Sample Problem 593",
+      "titleSlug": "sample-problem-593",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "594",
+      "title": "Sample Problem 594",
+      "titleSlug": "sample-problem-594",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 57.4
+    },
+    {
+      "questionFrontendId": "595",
+      "title": "Sample Problem 595",
+      "titleSlug": "sample-problem-595",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 58.0
+    },
+    {
+      "questionFrontendId": "596",
+      "title": "Sample Problem 596",
+      "titleSlug": "sample-problem-596",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 68.7
+    },
+    {
+      "questionFrontendId": "597",
+      "title": "Sample Problem 597",
+      "titleSlug": "sample-problem-597",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 46.5
+    },
+    {
+      "questionFrontendId": "598",
+      "title": "Sample Problem 598",
+      "titleSlug": "sample-problem-598",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 50.2
+    },
+    {
+      "questionFrontendId": "599",
+      "title": "Sample Problem 599",
+      "titleSlug": "sample-problem-599",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 36.5
+    },
+    {
+      "questionFrontendId": "600",
+      "title": "Sample Problem 600",
+      "titleSlug": "sample-problem-600",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 33.9
+    },
+    {
+      "questionFrontendId": "601",
+      "title": "Sample Problem 601",
+      "titleSlug": "sample-problem-601",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 67.2
+    },
+    {
+      "questionFrontendId": "602",
+      "title": "Sample Problem 602",
+      "titleSlug": "sample-problem-602",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 33.2
+    },
+    {
+      "questionFrontendId": "603",
+      "title": "Sample Problem 603",
+      "titleSlug": "sample-problem-603",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 34.3
+    },
+    {
+      "questionFrontendId": "604",
+      "title": "Sample Problem 604",
+      "titleSlug": "sample-problem-604",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 60.5
+    },
+    {
+      "questionFrontendId": "605",
+      "title": "Sample Problem 605",
+      "titleSlug": "sample-problem-605",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 62.1
+    },
+    {
+      "questionFrontendId": "606",
+      "title": "Sample Problem 606",
+      "titleSlug": "sample-problem-606",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 44.8
+    },
+    {
+      "questionFrontendId": "607",
+      "title": "Sample Problem 607",
+      "titleSlug": "sample-problem-607",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 30.6
+    },
+    {
+      "questionFrontendId": "608",
+      "title": "Sample Problem 608",
+      "titleSlug": "sample-problem-608",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 68.9
+    },
+    {
+      "questionFrontendId": "609",
+      "title": "Sample Problem 609",
+      "titleSlug": "sample-problem-609",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 51.8
+    },
+    {
+      "questionFrontendId": "610",
+      "title": "Sample Problem 610",
+      "titleSlug": "sample-problem-610",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 57.0
+    },
+    {
+      "questionFrontendId": "611",
+      "title": "Sample Problem 611",
+      "titleSlug": "sample-problem-611",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 38.9
+    },
+    {
+      "questionFrontendId": "612",
+      "title": "Sample Problem 612",
+      "titleSlug": "sample-problem-612",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 44.7
+    },
+    {
+      "questionFrontendId": "613",
+      "title": "Sample Problem 613",
+      "titleSlug": "sample-problem-613",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 40.9
+    },
+    {
+      "questionFrontendId": "614",
+      "title": "Sample Problem 614",
+      "titleSlug": "sample-problem-614",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 59.6
+    },
+    {
+      "questionFrontendId": "615",
+      "title": "Sample Problem 615",
+      "titleSlug": "sample-problem-615",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 59.6
+    },
+    {
+      "questionFrontendId": "616",
+      "title": "Sample Problem 616",
+      "titleSlug": "sample-problem-616",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 43.9
+    },
+    {
+      "questionFrontendId": "617",
+      "title": "Sample Problem 617",
+      "titleSlug": "sample-problem-617",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 61.9
+    },
+    {
+      "questionFrontendId": "618",
+      "title": "Sample Problem 618",
+      "titleSlug": "sample-problem-618",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 43.1
+    },
+    {
+      "questionFrontendId": "619",
+      "title": "Sample Problem 619",
+      "titleSlug": "sample-problem-619",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 54.2
+    },
+    {
+      "questionFrontendId": "620",
+      "title": "Sample Problem 620",
+      "titleSlug": "sample-problem-620",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 61.5
+    },
+    {
+      "questionFrontendId": "621",
+      "title": "Sample Problem 621",
+      "titleSlug": "sample-problem-621",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 68.6
+    },
+    {
+      "questionFrontendId": "622",
+      "title": "Sample Problem 622",
+      "titleSlug": "sample-problem-622",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 39.6
+    },
+    {
+      "questionFrontendId": "623",
+      "title": "Sample Problem 623",
+      "titleSlug": "sample-problem-623",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 33.1
+    },
+    {
+      "questionFrontendId": "624",
+      "title": "Sample Problem 624",
+      "titleSlug": "sample-problem-624",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 59.9
+    },
+    {
+      "questionFrontendId": "625",
+      "title": "Sample Problem 625",
+      "titleSlug": "sample-problem-625",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 68.2
+    },
+    {
+      "questionFrontendId": "626",
+      "title": "Sample Problem 626",
+      "titleSlug": "sample-problem-626",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 36.2
+    },
+    {
+      "questionFrontendId": "627",
+      "title": "Sample Problem 627",
+      "titleSlug": "sample-problem-627",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 43.2
+    },
+    {
+      "questionFrontendId": "628",
+      "title": "Sample Problem 628",
+      "titleSlug": "sample-problem-628",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 59.8
+    },
+    {
+      "questionFrontendId": "629",
+      "title": "Sample Problem 629",
+      "titleSlug": "sample-problem-629",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 62.2
+    },
+    {
+      "questionFrontendId": "630",
+      "title": "Sample Problem 630",
+      "titleSlug": "sample-problem-630",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 50.4
+    },
+    {
+      "questionFrontendId": "631",
+      "title": "Sample Problem 631",
+      "titleSlug": "sample-problem-631",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 31.3
+    },
+    {
+      "questionFrontendId": "632",
+      "title": "Sample Problem 632",
+      "titleSlug": "sample-problem-632",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 59.4
+    },
+    {
+      "questionFrontendId": "633",
+      "title": "Sample Problem 633",
+      "titleSlug": "sample-problem-633",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 33.4
+    },
+    {
+      "questionFrontendId": "634",
+      "title": "Sample Problem 634",
+      "titleSlug": "sample-problem-634",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 43.0
+    },
+    {
+      "questionFrontendId": "635",
+      "title": "Sample Problem 635",
+      "titleSlug": "sample-problem-635",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 61.0
+    },
+    {
+      "questionFrontendId": "636",
+      "title": "Sample Problem 636",
+      "titleSlug": "sample-problem-636",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 48.6
+    },
+    {
+      "questionFrontendId": "637",
+      "title": "Sample Problem 637",
+      "titleSlug": "sample-problem-637",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 42.9
+    },
+    {
+      "questionFrontendId": "638",
+      "title": "Sample Problem 638",
+      "titleSlug": "sample-problem-638",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 65.7
+    },
+    {
+      "questionFrontendId": "639",
+      "title": "Sample Problem 639",
+      "titleSlug": "sample-problem-639",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 43.4
+    },
+    {
+      "questionFrontendId": "640",
+      "title": "Sample Problem 640",
+      "titleSlug": "sample-problem-640",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 67.3
+    },
+    {
+      "questionFrontendId": "641",
+      "title": "Sample Problem 641",
+      "titleSlug": "sample-problem-641",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 69.0
+    },
+    {
+      "questionFrontendId": "642",
+      "title": "Sample Problem 642",
+      "titleSlug": "sample-problem-642",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 42.4
+    },
+    {
+      "questionFrontendId": "643",
+      "title": "Sample Problem 643",
+      "titleSlug": "sample-problem-643",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.9
+    },
+    {
+      "questionFrontendId": "644",
+      "title": "Sample Problem 644",
+      "titleSlug": "sample-problem-644",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 40.4
+    },
+    {
+      "questionFrontendId": "645",
+      "title": "Sample Problem 645",
+      "titleSlug": "sample-problem-645",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 49.8
+    },
+    {
+      "questionFrontendId": "646",
+      "title": "Sample Problem 646",
+      "titleSlug": "sample-problem-646",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 34.0
+    },
+    {
+      "questionFrontendId": "647",
+      "title": "Sample Problem 647",
+      "titleSlug": "sample-problem-647",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 52.6
+    },
+    {
+      "questionFrontendId": "648",
+      "title": "Sample Problem 648",
+      "titleSlug": "sample-problem-648",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 46.6
+    },
+    {
+      "questionFrontendId": "649",
+      "title": "Sample Problem 649",
+      "titleSlug": "sample-problem-649",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 68.3
+    },
+    {
+      "questionFrontendId": "650",
+      "title": "Sample Problem 650",
+      "titleSlug": "sample-problem-650",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 66.2
+    },
+    {
+      "questionFrontendId": "651",
+      "title": "Sample Problem 651",
+      "titleSlug": "sample-problem-651",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 55.7
+    },
+    {
+      "questionFrontendId": "652",
+      "title": "Sample Problem 652",
+      "titleSlug": "sample-problem-652",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 39.3
+    },
+    {
+      "questionFrontendId": "653",
+      "title": "Sample Problem 653",
+      "titleSlug": "sample-problem-653",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 48.7
+    },
+    {
+      "questionFrontendId": "654",
+      "title": "Sample Problem 654",
+      "titleSlug": "sample-problem-654",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 47.6
+    },
+    {
+      "questionFrontendId": "655",
+      "title": "Sample Problem 655",
+      "titleSlug": "sample-problem-655",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 47.0
+    },
+    {
+      "questionFrontendId": "656",
+      "title": "Sample Problem 656",
+      "titleSlug": "sample-problem-656",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 50.4
+    },
+    {
+      "questionFrontendId": "657",
+      "title": "Sample Problem 657",
+      "titleSlug": "sample-problem-657",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 31.7
+    },
+    {
+      "questionFrontendId": "658",
+      "title": "Sample Problem 658",
+      "titleSlug": "sample-problem-658",
+      "difficulty": "Easy",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 55.5
+    },
+    {
+      "questionFrontendId": "659",
+      "title": "Sample Problem 659",
+      "titleSlug": "sample-problem-659",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 62.3
+    },
+    {
+      "questionFrontendId": "660",
+      "title": "Sample Problem 660",
+      "titleSlug": "sample-problem-660",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 69.0
+    },
+    {
+      "questionFrontendId": "661",
+      "title": "Sample Problem 661",
+      "titleSlug": "sample-problem-661",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 30.2
+    },
+    {
+      "questionFrontendId": "662",
+      "title": "Sample Problem 662",
+      "titleSlug": "sample-problem-662",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 63.8
+    },
+    {
+      "questionFrontendId": "663",
+      "title": "Sample Problem 663",
+      "titleSlug": "sample-problem-663",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Heap"
+        }
+      ],
+      "acRate": 49.9
+    },
+    {
+      "questionFrontendId": "664",
+      "title": "Sample Problem 664",
+      "titleSlug": "sample-problem-664",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 39.2
+    },
+    {
+      "questionFrontendId": "665",
+      "title": "Sample Problem 665",
+      "titleSlug": "sample-problem-665",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Graph"
+        }
+      ],
+      "acRate": 41.9
+    },
+    {
+      "questionFrontendId": "666",
+      "title": "Sample Problem 666",
+      "titleSlug": "sample-problem-666",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 64.2
+    },
+    {
+      "questionFrontendId": "667",
+      "title": "Sample Problem 667",
+      "titleSlug": "sample-problem-667",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 39.4
+    },
+    {
+      "questionFrontendId": "668",
+      "title": "Sample Problem 668",
+      "titleSlug": "sample-problem-668",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 48.4
+    },
+    {
+      "questionFrontendId": "669",
+      "title": "Sample Problem 669",
+      "titleSlug": "sample-problem-669",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Dynamic Programming"
+        }
+      ],
+      "acRate": 59.4
+    },
+    {
+      "questionFrontendId": "670",
+      "title": "Sample Problem 670",
+      "titleSlug": "sample-problem-670",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 56.3
+    },
+    {
+      "questionFrontendId": "671",
+      "title": "Sample Problem 671",
+      "titleSlug": "sample-problem-671",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 35.3
+    },
+    {
+      "questionFrontendId": "672",
+      "title": "Sample Problem 672",
+      "titleSlug": "sample-problem-672",
+      "difficulty": "Medium",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Binary Search"
+        }
+      ],
+      "acRate": 39.5
+    },
+    {
+      "questionFrontendId": "673",
+      "title": "Sample Problem 673",
+      "titleSlug": "sample-problem-673",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 31.2
+    },
+    {
+      "questionFrontendId": "674",
+      "title": "Sample Problem 674",
+      "titleSlug": "sample-problem-674",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 47.8
+    },
+    {
+      "questionFrontendId": "675",
+      "title": "Sample Problem 675",
+      "titleSlug": "sample-problem-675",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 53.6
+    },
+    {
+      "questionFrontendId": "676",
+      "title": "Sample Problem 676",
+      "titleSlug": "sample-problem-676",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Math"
+        }
+      ],
+      "acRate": 65.7
+    },
+    {
+      "questionFrontendId": "677",
+      "title": "Sample Problem 677",
+      "titleSlug": "sample-problem-677",
+      "difficulty": "Hard",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 68.4
+    },
+    {
+      "questionFrontendId": "678",
+      "title": "Sample Problem 678",
+      "titleSlug": "sample-problem-678",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 34.7
+    },
+    {
+      "questionFrontendId": "679",
+      "title": "Sample Problem 679",
+      "titleSlug": "sample-problem-679",
+      "difficulty": "Hard",
+      "paidOnly": true,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 38.6
+    },
+    {
+      "questionFrontendId": "680",
+      "title": "Sample Problem 680",
+      "titleSlug": "sample-problem-680",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Tree"
+        }
+      ],
+      "acRate": 63.3
+    },
+    {
+      "questionFrontendId": "681",
+      "title": "Sample Problem 681",
+      "titleSlug": "sample-problem-681",
+      "difficulty": "Easy",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "String"
+        }
+      ],
+      "acRate": 67.7
+    },
+    {
+      "questionFrontendId": "682",
+      "title": "Sample Problem 682",
+      "titleSlug": "sample-problem-682",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Backtracking"
+        }
+      ],
+      "acRate": 48.0
+    },
+    {
+      "questionFrontendId": "683",
+      "title": "Sample Problem 683",
+      "titleSlug": "sample-problem-683",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Array"
+        }
+      ],
+      "acRate": 31.4
+    },
+    {
+      "questionFrontendId": "684",
+      "title": "Sample Problem 684",
+      "titleSlug": "sample-problem-684",
+      "difficulty": "Medium",
+      "paidOnly": false,
+      "topicTags": [
+        {
+          "name": "Sliding Window"
+        }
+      ],
+      "acRate": 63.9
+    }
+  ]
+}
