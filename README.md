@@ -105,6 +105,21 @@ Manual checks: empty state → Stage 0 first 2; 3 backdated 40d confidence 1 →
 
 No auth, no server/DB/serverless, no analytics, no extension, no ML, no solution scraping.
 
+
+## Companies desk (restored pro feature)
+
+- `data/companies.json` — 8 companies (Google, Amazon, Microsoft, Meta, Flipkart, Uber, Swiggy, Atlassian) × levels (Intern / SDE-1 / SDE-2+), CTC band, deadline, focus topics → linked stages
+- View: `Companies` tab filters by company/level, shows salary bands, **Apply ↗** direct official links, and readiness `✓ Ready (X/Y)` based on your solved count
+- Professional Linear-style dark UI (toggle light/dark, dense cards)
+
+## Domain Game — multiplayer without servers
+
+- `Domain Game` tab: create a group, add members (name + solves), see **10×10 territory map** — each solve = 1 tile, share = solves/total×100 tiles
+- Leaderboard with 👑 + tile count + %
+- Storage: `localStorage cc:v2:groups` only, no backend
+- Sharing: **Copy share link** encodes group JSON as `base64` in URL `#game&share=...` — friends open link → auto-import (send on WhatsApp/Telegram). Send link, no server.
+- Map auto-adjusts to 100 tiles, biggest remainder to leader.
+
 ## Appendix A baseline (9 Nov 2026)
 
 `107 total · 63E/39M/5H · ranking 1,625,079 · active 96 · streak 24 · last 7 Nov`  

@@ -1,4 +1,4 @@
-const CACHE = 'cc-v2';
+const CACHE = 'cc-v2-pro';
 const CORE = [
   './',
   './index.html',
@@ -11,10 +11,13 @@ const CORE = [
   './js/views/today.js',
   './js/views/dashboard.js',
   './js/views/ladder.js',
+  './js/views/companies.js',
+  './js/views/game.js',
   './js/views/audit.js',
   './js/views/log.js',
   './js/views/settings.js',
   './data/ladder.json',
+  './data/companies.json',
   './manifest.json'
 ];
 
@@ -28,7 +31,6 @@ self.addEventListener('activate', e=>{
 });
 self.addEventListener('fetch', e=>{
   const url = new URL(e.request.url);
-  // network-first for data/*.json so stale sync never sticks
   if (url.pathname.includes('/data/')) {
     e.respondWith(
       fetch(e.request, { cache:'no-store' })
@@ -41,7 +43,6 @@ self.addEventListener('fetch', e=>{
     );
     return;
   }
-  // cache-first for core
   e.respondWith(
     caches.match(e.request).then(cached=> cached || fetch(e.request).then(res=>{
       if (res.ok) {

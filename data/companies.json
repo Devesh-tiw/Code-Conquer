@@ -1,0 +1,115 @@
+{
+  "_generated": "2026-11-10",
+  "_note": "Curated for Code-Conquer v2 — company → levels → apply links + salary bands (Indian product loop). Replace apply URLs when deadlines change.",
+  "companies": [
+    {
+      "id": "google",
+      "name": "Google",
+      "logo": "G",
+      "color": "#4285F4",
+      "hq": "Bengaluru / Hyderabad",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 80K stipend + PPO", "applyUrl": "https://careers.google.com/jobs/results/?q=Software%20Engineer%20Intern%20India", "deadline": "Rolling", "focus": ["Array","Graph","DP"], "stages": ["s00","s05","s07","s09"] },
+        { "level": "SDE-1 (L3)", "yoe": "0–1 yr", "ctc": "₹ 35–45 LPA", "applyUrl": "https://careers.google.com/jobs/results/?q=SWE%20II%20India", "deadline": "Rolling", "focus": ["Tree","Graph","Binary Search","Design"], "stages": ["s03","s05","s06","s07"] },
+        { "level": "SDE-2 (L4)", "yoe": "2–5 yr", "ctc": "₹ 55–85 LPA", "applyUrl": "https://careers.google.com/jobs/results/?q=Software%20Engineer%20III%20India", "deadline": "Rolling", "focus": ["DP","Graph","System Design"], "stages": ["s07","s09","s10","s11"] }
+      ],
+      "interview": "3 DSA + 1 Googliness. Heavy on Trees/Graphs + DP. Phone screen → onsite.",
+      "tags": ["Top Tier","High Bar"]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "logo": "a",
+      "color": "#FF9900",
+      "hq": "Bengaluru / Hyderabad",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 60K stipend", "applyUrl": "https://www.amazon.jobs/en/search?base_query=SDE+Intern+India", "deadline": "Nov–Jan", "focus": ["Array","Stack","Linked List"], "stages": ["s00","s01","s02","s04"] },
+        { "level": "SDE-1", "yoe": "0–2 yr", "ctc": "₹ 30–45 LPA", "applyUrl": "https://www.amazon.jobs/en/search?base_query=SDE1+India", "deadline": "Rolling", "focus": ["Trees","Graphs","DP"], "stages": ["s05","s07","s09"] },
+        { "level": "SDE-2", "yoe": "2–5 yr", "ctc": "₹ 50–80 LPA", "applyUrl": "https://www.amazon.jobs/en/search?base_query=SDE2+India", "deadline": "Rolling", "focus": ["Design","Graphs","LRU"], "stages": ["s06","s07","s08","s11"] }
+      ],
+      "interview": "OA + 4 rounds (DSA + LPs). Amazon loves LPs + graph/tree DP.",
+      "tags": ["Hiring Fast"]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "logo": "M",
+      "color": "#00A4EF",
+      "hq": "Hyderabad / Bengaluru",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 1.2L stipend", "applyUrl": "https://careers.microsoft.com/students/us/en/search-results?keywords=India%20Intern", "deadline": "Sep–Nov", "focus": ["Array","Tree"], "stages": ["s00","s05"] },
+        { "level": "SDE-1 (59)", "yoe": "0–2 yr", "ctc": "₹ 32–50 LPA", "applyUrl": "https://careers.microsoft.com/search?k=Software%20Engineer%20India", "deadline": "Rolling", "focus": ["DP","Graph","Binary Search"], "stages": ["s03","s05","s07","s09"] },
+        { "level": "SDE-2 (60/61)", "yoe": "2–6 yr", "ctc": "₹ 55–90 LPA", "applyUrl": "https://careers.microsoft.com/search?k=Senior%20Software%20Engineer%20India", "deadline": "Rolling", "focus": ["Design","DP Hard"], "stages": ["s06","s09","s10","s11"] }
+      ],
+      "interview": "OA + 3 tech. Microsoft Hyd asks DB + DP heavily.",
+      "tags": ["Hyd Heavy"]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "logo": "∞",
+      "color": "#0081FB",
+      "hq": "Remote / Bengaluru (small)",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 1.5L stipend", "applyUrl": "https://www.metacareers.com/jobs/?q=intern%20india", "deadline": "Aug–Oct", "focus": ["Array","String","Graph"], "stages": ["s00","s01","s07"] },
+        { "level": "E3 (SDE-1)", "yoe": "0–2 yr", "ctc": "₹ 40–60 LPA", "applyUrl": "https://www.metacareers.com/jobs/?q=software%20engineer%20india", "deadline": "Rolling", "focus": ["Tree","Graph","DP"], "stages": ["s05","s07","s09"] },
+        { "level": "E4 (SDE-2)", "yoe": "2–6 yr", "ctc": "₹ 70–1.1Cr", "applyUrl": "https://www.metacareers.com/jobs/?q=senior%20software%20engineer%20india", "deadline": "Rolling", "focus": ["Production Design","Backtracking"], "stages": ["s08","s11"] }
+      ],
+      "interview": "2 DSA + 1 Behavioural + 1 System. Meta product speed matters.",
+      "tags": ["US Comp"]
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "logo": "F",
+      "color": "#047BD5",
+      "hq": "Bengaluru",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 50K stipend", "applyUrl": "https://www.flipkartcareers.com/#!/joblist", "deadline": "Sep–Dec", "focus": ["Array","DP"], "stages": ["s00","s09"] },
+        { "level": "SDE-1", "yoe": "0–2 yr", "ctc": "₹ 20–32 LPA", "applyUrl": "https://www.flipkartcareers.com/#!/joblist", "deadline": "Rolling", "focus": ["Tree","Graph","Hash"], "stages": ["s05","s07"] },
+        { "level": "SDE-2", "yoe": "2–5 yr", "ctc": "₹ 35–60 LPA", "applyUrl": "https://www.flipkartcareers.com/#!/joblist", "deadline": "Rolling", "focus": ["Design","Graphs"], "stages": ["s06","s07","s11"] }
+      ],
+      "interview": "DSA heavy + HM round. Flipkart asks LRU, graphs, DP mediums.",
+      "tags": ["India Big"]
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "logo": "U",
+      "color": "#000000",
+      "hq": "Bengaluru / Hyderabad",
+      "levels": [
+        { "level": "SDE Intern", "yoe": "0", "ctc": "₹ 70K stipend", "applyUrl": "https://www.uber.com/global/en/careers/list/?query=intern%20india", "deadline": "Rolling", "focus": ["Array","Stack"], "stages": ["s00","s01","s02"] },
+        { "level": "SDE-1", "yoe": "0–3 yr", "ctc": "₹ 28–45 LPA", "applyUrl": "https://www.uber.com/global/en/careers/list/?query=software%20engineer%20india", "deadline": "Rolling", "focus": ["Graph","Heap","DP"], "stages": ["s06","s07","s09"] }
+      ],
+      "interview": "Bar-raiser + 3 DSA. Uber loves graph + heap.",
+      "tags": []
+    },
+    {
+      "id": "swiggy",
+      "name": "Swiggy",
+      "logo": "S",
+      "color": "#FC8019",
+      "hq": "Bengaluru",
+      "levels": [
+        { "level": "SDE-1", "yoe": "0–2 yr", "ctc": "₹ 18–28 LPA", "applyUrl": "https://careers.swiggy.com/#/career", "deadline": "Rolling", "focus": ["Array","Stack","Tree"], "stages": ["s00","s02","s05"] },
+        { "level": "SDE-2", "yoe": "2–5 yr", "ctc": "₹ 30–50 LPA", "applyUrl": "https://careers.swiggy.com/#/career", "deadline": "Rolling", "focus": ["Design","DP"], "stages": ["s09","s11"] }
+      ],
+      "interview": "2 DSA + Machine Coding + HM.",
+      "tags": []
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "logo": "A",
+      "color": "#0052CC",
+      "hq": "Bengaluru",
+      "levels": [
+        { "level": "SDE-1 (P40)", "yoe": "0–2 yr", "ctc": "₹ 30–50 LPA", "applyUrl": "https://www.atlassian.com/company/careers/all-jobs?team=Engineering&q=India", "deadline": "Rolling", "focus": ["Graph","Design"], "stages": ["s07","s11"] },
+        { "level": "SDE-2 (P50)", "yoe": "2–6 yr", "ctc": "₹ 55–85 LPA", "applyUrl": "https://www.atlassian.com/company/careers/all-jobs?team=Engineering&q=India", "deadline": "Rolling", "focus": ["Design","DP"], "stages": ["s07","s09","s11"] }
+      ],
+      "interview": "Karat + 2 tech + values. Heavy design + coding.",
+      "tags": ["Design Heavy"]
+    }
+  ]
+}

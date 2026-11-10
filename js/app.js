@@ -7,11 +7,15 @@ import { renderLadder } from './views/ladder.js';
 import { renderAudit } from './views/audit.js';
 import { renderLog } from './views/log.js';
 import { renderSettings } from './views/settings.js';
+import { renderCompanies } from './views/companies.js';
+import { renderGame } from './views/game.js';
 
 const VIEWS = {
   'today': renderToday,
   'dashboard': renderDashboard,
   'ladder': renderLadder,
+  'companies': renderCompanies,
+  'game': renderGame,
   'audit': renderAudit,
   'log': renderLog,
   'settings': renderSettings
@@ -21,12 +25,15 @@ let cache = null;
 
 async function init(){
   cache = await loadAll();
-  // expose for debugging
+  // also load companies if present
+  try {
+    const r = await fetch('./data/companies.json', {cache:'no-store'});
+    if (r.ok) cache.companies = (await r.json()).companies || (await r.json());
+  } catch {}
   window.__CC_DATA__ = cache;
   mount();
   window.addEventListener('hashchange', mount);
-  subscribe(()=> mount()); // re-render on state change
-  // footer timestamp
+  subscribe(()=> mount());
   const footer = document.getElementById('footer-sync');
   if (footer && cache?.user?._syncedAt) {
     const d = cache.user._syncedAtIST || cache.user._syncedAt;
@@ -41,9 +48,9 @@ async function init(){
 }
 
 function mount(){
-  const hash = (location.hash.replace('#','') || 'today').toLowerCase();
-  const view = VIEWS[hash] ? hash : 'today';
-  // nav active
+  const raw = location.hash.replace('#','') || 'today';
+  const hash = raw.split('&')[0].toLowerCase(); // support #game&share=...
+  const view = VIEWS[hash] ? hash : (raw.startsWith('game') ? 'game' : 'today');
   document.querySelectorAll('.nav-tab').forEach(a=>{
     a.classList.toggle('active', a.dataset.view===view);
   });

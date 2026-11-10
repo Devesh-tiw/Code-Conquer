@@ -4,29 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Code-Conquer v2 — Daily DSA System</title>
-  <meta name="description" content="Personal DSA study system — LeetCode sync, spaced repetition, explainable recommendations.">
+  <meta name="description" content="Personal DSA study system + Companies hiring desk + Domain group game.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0F1420">
+  <meta name="theme-color" content="#0A0A0B">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="eyebrow">Devesh Tiwary • SDE Interview Loop • IST</div>
-      <h1>Code-Conquer v2</h1>
-      <p class="tagline">From static reader to daily driver. Syncs LeetCode live, tracks spaced repetition, and tells you the <b>4 things to do today</b> — with reasons. No server, no auth, one user.</p>
+      <div class="eyebrow">Devesh Tiwary • SDE Interview Loop • IST • v2 Pro</div>
+      <h1>Code-Conquer <span style="color:var(--accent)">v2</span></h1>
+      <p class="tagline">From static reader to daily driver. Syncs LeetCode live, tracks spaced repetition, tells you <b>4 tasks today</b> — plus <b>Companies desk</b> (level → apply) + <b>Domain game</b> for study groups. No server, just browser.</p>
       <nav class="nav" aria-label="Primary">
         <a class="nav-tab" data-view="today" href="#today">Today</a>
         <a class="nav-tab" data-view="dashboard" href="#dashboard">Dashboard</a>
-        <a class="nav-tab" data-view="ladder" href="#ladder">Ladder (152)</a>
-        <a class="nav-tab" data-view="audit" href="#audit">Topic Audit</a>
+        <a class="nav-tab" data-view="ladder" href="#ladder">Ladder 152</a>
+        <a class="nav-tab" data-view="companies" href="#companies">Companies</a>
+        <a class="nav-tab" data-view="game" href="#game">Domain Game</a>
+        <a class="nav-tab" data-view="audit" href="#audit">Audit</a>
         <a class="nav-tab" data-view="log" href="#log">Log</a>
         <a class="nav-tab" data-view="settings" href="#settings">Settings</a>
       </nav>
-      <div class="muted small" style="margin-top:8px">Static on GitHub Pages • localStorage <code>cc:v2:state</code> • <a href="https://github.com/Devesh-tiw/Code-Conquer" target="_blank">github.com/Devesh-tiw/Code-Conquer</a> — reference solutions in Python; I practise in Java.</div>
+      <div class="muted small" style="margin-top:8px;display:flex;gap:12px;flex-wrap:wrap">
+        <span>Static GitHub Pages • <code>cc:v2:state</code> + <code>cc:v2:groups</code></span>
+        <span>•</span>
+        <a href="https://github.com/Devesh-tiw/Code-Conquer" target="_blank">GitHub</a>
+        <span>•</span>
+        <span>ref solutions in Python; you practise in Java</span>
+        <span>•</span>
+        <button id="theme-toggle" class="btn btn-ghost" style="padding:4px 8px;font-size:11px;min-height:26px">🌗 Theme</button>
+      </div>
     </header>
 
     <main id="app" aria-live="polite">
@@ -35,7 +45,7 @@
 
     <footer>
       <span id="footer-sync">Loading sync status…</span>
-      <span>Built for Devesh • Vanilla JS, no deps • <a href="#settings">Export/Import</a></span>
+      <span>Built for Devesh • Vanilla JS, no deps • <a href="#settings">Export/Import</a> • Domain: 1 solve = 1 tile</span>
     </footer>
   </div>
 
@@ -44,6 +54,14 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
     }
+    // tiny theme toggle (persists)
+    const t = localStorage.getItem('cc:theme');
+    if (t==='light') document.documentElement.setAttribute('data-theme','light');
+    document.getElementById('theme-toggle')?.addEventListener('click', ()=>{
+      const cur = document.documentElement.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+      if (cur==='light') document.documentElement.setAttribute('data-theme','light'); else document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('cc:theme', cur);
+    });
   </script>
 </body>
 </html>
